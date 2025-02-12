@@ -1,0 +1,2464 @@
+/* ==================== GLOBAL STYLES & VARIABLES ==================== */
+/* CSS Custom Properties for consistent theming and easier maintenance */
+:root {
+  /* Color System */
+  --primary-blue: #e3f2fd;
+  --accent-blue: #005799;
+  --neutral-gray: #3a3a3a;
+  --text-black: #161616;
+  --background-white: #fcfcfc;
+  --critical-red: #d32f2f;
+  --warning-orange: #f57c00;
+  --success-green: #388e3c;
+  --info-blue: #1976d2;
+
+  /* Spacing & Sizing */
+  --radius-lg: 8px;
+  --radius-sm: 4px;
+  --base-spacing: 1rem;
+
+  /* Effects */
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==================== BASE STYLES ==================== */
+
+/* ==================== BODY FIX FÜR ÜBERBREITE ==================== */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Horizontalen Scroll verhindern */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: var(--text-black);
+  background-color: var(--background-white);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.6rem; /* Base font size (16px equivalent) */
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+/* Status indicators - use BEM-like modifiers */
+.status-indicator {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.status-indicator--critical {
+  color: var(--critical-red);
+  border-left: 4px solid var(--critical-red);
+  padding-left: 0.75rem;
+  background: transparent;
+}
+
+.status-indicator--warning {
+  background-color: var(--warning-orange);
+  color: var(--background-white);
+}
+
+.status-indicator--success {
+  background-color: var(--success-green);
+  color: var(--background-white);
+}
+
+.status-indicator--info {
+  color: var(--info-blue);
+  background: transparent;
+}
+
+/* ==================== HEADER & NAVIGATION ==================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0; /* Damit der Header auch am linken Bildschirmrand sitzt */
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+  width: 100%; /* Header über die gesamte Breite */
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Volle Breite */
+  padding: 0 2rem;
+  height: 7rem;
+}
+
+.nav-link {
+  color: var(--neutral-gray);
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-blue);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--accent-blue);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.factico-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #2a2a2a; /* Farbe für den Text */
+  font-family: "Helvetica Neue", sans-serif; /* Beispiel-Schriftart */
+  font-size: 2.6rem; /* Schriftgröße */
+  font-weight: bold; /* Fettdruck */
+  margin-left: 10px; /* Abstand zwischen Logo und Text */
+}
+
+/* Hover-Effekt */
+.factico-logo:hover {
+  color: #4a90e2; /* Wenn man mit der Maus darüber fährt */
+  transition: color 0.3s ease;
+}
+
+.factico-logo-img {
+  width: 50px; /* Fixierte Größe des Logos */
+  height: auto;
+  margin-right: 20px; /* Abstand zwischen Logo und Text */
+  border: 2px solid #fff; /* Weißer Rand */
+  border-radius: 5px; /* Abgerundete Ecken */
+  padding: 5px; /* Abstand zwischen Rand und Logo */
+  box-sizing: border-box; /* Stellt sicher, dass width = 50px bleibt */
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--text-black);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 1.6rem;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-right: 8rem; /* Abstand zum Rand */
+}
+
+.nav-link {
+  color: var(--neutral-gray);
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: var(--accent-blue);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-blue);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Modern Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #ffffff 100%);
+  padding: 8rem 1rem 4rem;
+  position: relative; /* Stellt sicher, dass die Hero-Section nicht hinter dem Header verschwindet */
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  line-height: 1.2;
+  margin: 3rem auto 1.5rem; /* Mehr Abstand nach oben */
+  max-width: 85%;
+  letter-spacing: -0.5px;
+}
+
+.mission-statement {
+  font-size: 1.25rem;
+  color: var(--neutral-gray);
+  margin: 1.5rem auto;
+  max-width: 90%;
+  font-weight: 400;
+}
+
+.factico-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 1rem;
+  font-style: italic; /* Optional für den Textstil */
+}
+
+/* Suchfeld-Container  */
+.search-container {
+  position: relative;
+  max-width: 720px;
+  width: 90%;
+  margin: 1.5rem auto;
+}
+
+/* Suchfeld  */
+#searchInput {
+  width: 100%;
+  padding: 1.25rem 2rem;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  background: var(--background-white);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  box-sizing: border-box;
+}
+
+/* Fokus-Effekt  */
+#searchInput:focus {
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 102, 179, 0.15);
+}
+
+/* Suchergebnis-Container  */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--background-white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  margin-top: 0.5rem;
+  overflow: hidden;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+/* Einzelne Suchergebnisse (angepasst) */
+.search-item {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(
+    --text-color-dark
+  ); /* Schriftfarbe auf dunkleren Standardwert setzen */
+  background-color: transparent; /* Standard-Hintergrund transparent */
+}
+
+.search-item:hover {
+  background-color: var(--primary-blue-light); /* Hellere blaue Hover-Farbe */
+  color: var(
+    --text-color-dark
+  ); /* Schriftfarbe beim Hover ist jetzt auch dunkel (SCHWARZ) */
+}
+
+/* Ausgewähltes Suchergebnis (angepasst und vereinfacht) */
+.search-item.selected {
+  background-color: var(
+    --primary-blue
+  ); /* Blaue Hintergrundfarbe beibehalten */
+  color: var(--text-color-dark); /* Textfarbe auf Dark für Auswahl */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover-Effekt für ausgewähltes Element entfernen (optional, für cleanere Optik) (unverändert) */
+.search-item.selected:hover {
+  background-color: var(
+    --primary-blue
+  ); /* Farbe beim Hover über Ausgewähltes beibehalten */
+  color: var(--text-color-dark);
+}
+
+/* Modern Content Cards */
+.content-block {
+  max-width: 92%;
+  margin: 0 auto;
+  padding: 3rem 2rem; /* Weniger seitlicher Abstand, um mehr Platz zu lassen */
+}
+
+.about-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center; /* Zentriert alle Elemente */
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.about h3 {
+  font-size: 1.6rem;
+}
+
+.about-item {
+  padding: 2rem;
+  background: var(--background-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.about-item p {
+  font-size: 0.7em; /*  Verkleinerte Schriftgröße:  0.9em (oder kleiner, je nach Wunsch) */
+  line-height: 1.5; /* Optional:  Angepasste Zeilenhöhe für bessere Lesbarkeit bei kleinerer Schrift */
+}
+
+.about-item:hover {
+  transform: translateY(-4px);
+}
+
+.steps h2 {
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.steps h3 {
+  font-size: 1.6rem;
+}
+
+.step-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center; /* Zentriert die Schritte */
+  box-sizing: border-box; /* Verhindert, dass padding den Container breiter macht */
+}
+
+.step {
+  text-align: center;
+  padding: 2rem;
+  background: var(--background-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.step:hover {
+  transform: translateY(-4px);
+}
+
+.step-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+/* Enhanced Party Grid */
+.party-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-auto-flow: column; /* Karten bleiben in einer Zeile */
+  overflow-x: auto; /* Falls der Platz nicht reicht, wird horizontal gescrollt */
+  white-space: nowrap;
+}
+
+.party-grid .party-card {
+  margin-bottom: 20px; /* Abstand nach unten */
+}
+
+.parties h2 {
+  font-size: 2.4em;
+  text-align: center;
+}
+
+/* Links-Rechts-Ausrichtung */ /* Links-Rechts-Ausrichtung */
+.party-axis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.party-axis .left-symbol,
+.party-axis .right-symbol {
+  color: var(--neutral-gray);
+}
+
+.axis-line {
+  flex: 1;
+  height: 8px; /* Dickere Linie für bessere Sichtbarkeit */
+  background: linear-gradient(
+    to right,
+    #d32f2f,
+    #f57c00,
+    #1976d2
+  ); /* Farbverlauf von Blau (links) zu Rot (rechts) */
+  border-radius: 50px; /* Runde Ecken für weicheren Look */
+  margin: 0 1rem;
+}
+
+/* Optional: Feinerer Stil für den Pfeil */
+.left-symbol::after {
+  content: " ← ";
+}
+
+.right-symbol::after {
+  content: " → ";
+}
+
+.party-card {
+  background: var(--background-white);
+  border-radius: var(--radius-lg);
+  flex: 1 1 auto; /* Karten passen sich der verfügbaren Breite an */
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  flex-direction: column; /* Stellt sicher, dass Logo und Name vertikal angeordnet sind */
+  justify-content: flex-start; /* Verhindert, dass der Name nach oben verschoben wird */
+  height: 300px; /* Feste Höhe für die Karten */
+}
+
+.party-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.party-link {
+  color: inherit; /* Linkfarbe erbt die Farbe der Karte */
+  text-decoration: none; /* Entfernt die Unterstreichung */
+  display: flex;
+  flex-direction: column; /* Ordnet das Logo und den Namen vertikal an */
+  height: 100%; /* Stellt sicher, dass die gesamte Karte genutzt wird */
+}
+
+.party-logo {
+  width: auto; /* Verhindert, dass das Logo die gesamte Breite einnimmt */
+  max-width: 220px; /* Maximale Breite für das Logo */
+  height: auto; /* Beibehaltung des Seitenverhältnisses */
+  max-height: 120px; /* Maximale Höhe des Logos */
+  margin-bottom: 1rem; /* Abstand zwischen Logo und Name */
+  object-fit: contain; /* Stellt sicher, dass das Bild das Seitenverhältnis beibehält und vollständig sichtbar ist */
+  flex-grow: 1; /* Verhindert, dass das Logo den verfügbaren Raum füllt */
+}
+
+.party-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: auto; /* Verschiebt den Namen an den unteren Rand der Karte */
+  text-transform: uppercase; /* Optional: Namen in Großbuchstaben */
+}
+
+/* skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background: #fff;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Video-Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin: 20px auto;
+  border-radius: 15px; /* Abgerundete Ecken */
+  overflow: hidden; /* Damit das Video nicht übersteht */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Schatten für Tiefe */
+  background: rgba(255, 255, 255, 0.15); /* Leicht transparenter Hintergrund */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+  aspect-ratio: 16 / 9; /* Automatische Anpassung des Seitenverhältnisses */
+}
+
+/* Hover-Effekt */
+.video-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Video-Element */
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Kompakter Footer */
+.footer {
+  background: var(--text-black);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem 0; /* Weniger Abstand oben und unten */
+  margin-top: 6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem; /* Weniger innerer Abstand */
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Kleinere Spaltenbreite */
+  gap: 1.5rem; /* Weniger Abstand zwischen den Sektionen */
+  justify-items: center; /* Zentriert die Spalten horizontal */
+  align-items: start; /* Beginnt die Sektionen oben innerhalb der Spalten */
+}
+
+.footer-section h4 {
+  color: white;
+  margin-bottom: 1rem; /* Weniger Abstand */
+  font-size: 0.95rem; /* Kleinere Schrift */
+  font-weight: 600;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Weniger Abstand zwischen den Links */
+}
+
+.footer-section a {
+  color: rgba(255, 255, 255, 0.9); /* Mehr Kontrast */
+  text-decoration: none;
+  font-size: 0.85rem; /* Kleinere Schrift */
+  transition: var(--transition);
+}
+
+.footer-section a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0 0; /* Weniger Abstand oben */
+  margin-top: 1.5rem; /* Weniger Abstand nach oben */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* PARTY-Footer */
+.party-footer {
+  background-color: var(--main-color);
+  color: white; /* Weißer Text */
+  text-align: center; /* Zentrierter Text */
+  font-size: 0.8em; /* Sehr kleine Schriftgröße */
+  padding: 2px 0; /* Minimales vertikales Padding */
+  margin-top: 10px; /* Reduzierter Abstand zum oberen Inhalt */
+  border-top: 1px solid #ccc; /* Dünne Trennlinie */
+}
+
+.disclaimer {
+  font-size: 0.8rem; /* Kleinere Schrift */
+  opacity: 0.8; /* Wenig mehr Sichtbarkeit */
+  margin: 0;
+}
+/* !!!!!!!!!!!!!!! SPD !!!!!!!!!!!!!!! */
+
+.spd-root {
+  --main-color: #e0001a; /* Offizielles SPD Rot (kräftiges Rot) */
+  --accent-color: #f2f2f2; /*  Helles Grau/Beige als Akzentfarbe (für Hintergründe, subtile Hervorhebungen) */
+  --background-color: #ffffff; /* Weiß als klarer, sauberer Hintergrund */
+  --text-color: #000000; /* Schwarz für Haupttext (optimale Lesbarkeit) */
+  --light-text-color: #ffffff; /* Weiß für Text auf farbigem Hintergrund (z.B. im Header) */
+  --dark-text-color: #333333; /* Dunkleres Grau für subtile Textelemente */
+  font-family: Arial, sans-serif; /* Schriftart beibehalten (Arial oder generische serifenlose Schrift) */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.spd-root a {
+  color: var(--main-color); /* Links im kräftigen SPD Rot */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.spd-root a:hover {
+  color: var(
+    --dark-text-color
+  ); /* Link-Hover in dunklerem Grau für subtilen Effekt */
+  text-decoration: underline;
+}
+
+.spd-root .party-header {
+  background-color: var(
+    --main-color
+  ); /* Header-Hintergrund im kräftigen SPD Rot */
+  color: var(
+    --light-text-color
+  ); /* Header-Text in Weiß für maximalen Kontrast */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.spd-root .party-section-title {
+  color: var(--main-color); /* Abschnittstitel im kräftigen SPD Rot */
+  border-bottom: 2px solid var(--main-color); /*  Dezente Linie unter Titeln im gleichen SPD Rot */
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.spd-root .party-highlight {
+  border: 1px solid var(--main-color); /* Rahmen um Highlight-Boxen im kräftigen SPD Rot */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.spd-root .party-highlight-title {
+  color: var(--main-color); /* Highlight-Titel im kräftigen SPD Rot */
+  margin-top: 0;
+}
+
+.spd-root .highlight-skandal-scale h4 {
+  color: var(--dark-text-color); /* Skalenbeschriftung in dunklerem Grau */
+}
+
+.spd-root .gradient-bar-container {
+  background-color: #eeeeee; /* Hintergrund der Skala in sehr hellem Grau, fast Weiß */
+}
+
+.spd-root .gradient-bar-filled {
+  background-color: var(
+    --main-color
+  ); /* Gefüllter Teil der Skala im kräftigen SPD Rot */
+}
+
+.spd-root .toggle-button {
+  background-color: var(
+    --main-color
+  ); /* Toggle-Button Hintergrund im kräftigen SPD Rot */
+  color: var(--light-text-color); /* Button-Text in Weiß */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.spd-root .toggle-button:hover {
+  background-color: var(
+    --dark-text-color
+  ); /* Button-Hover in dunklerem Grau für dezenten Effekt */
+  color: var(--light-text-color); /* Button-Text in Weiß beibehalten */
+}
+
+.spd-root .party-highlight-date,
+.spd-root .party-highlight-source,
+.spd-root .party-highlight-hashtags {
+  color: var(--dark-text-color); /* Datum, Quelle, Hashtags in dunklerem Grau */
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.spd-root .hashtag {
+  background-color: var(
+    --accent-color
+  ); /* Hashtag-Hintergrund im hellen Grau/Beige */
+  color: var(--main-color); /* Hashtag-Text im kräftigen SPD Rot */
+  padding: 4px 8px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.spd-root .comment-section h4 {
+  color: var(--main-color); /* Kommentar-Überschrift im kräftigen SPD Rot */
+  border-bottom: 1px solid var(--main-color); /*  Dezente Linie unter Kommentar-Überschrift im gleichen SPD Rot */
+  padding-bottom: 5px;
+}
+
+.spd-root .comment-section textarea {
+  border: 1px solid #cccccc; /* Rahmen um Textarea in hellem Grau */
+}
+
+.spd-root .submit-comment {
+  background-color: var(
+    --main-color
+  ); /* Absenden-Button Hintergrund im kräftigen SPD Rot */
+  color: var(--light-text-color); /* Button-Text in Weiß */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.spd-root .submit-comment:hover {
+  background-color: var(
+    --dark-text-color
+  ); /* Button-Hover in dunklerem Grau für dezenten Effekt */
+  color: var(--light-text-color); /* Button-Text in Weiß beibehalten */
+}
+
+.spd-root .party-members-list .party-member-item a {
+  color: var(--main-color); /* Mitgliedernamen-Links im kräftigen SPD Rot */
+}
+
+.spd-root .party-members-list .party-member-item a:hover {
+  color: var(
+    --dark-text-color
+  ); /* Mitgliedernamen-Link-Hover in dunklerem Grau */
+}
+
+.spd-root .party-footer {
+  background-color: var(--main-color);
+  color: white;
+  border-top: 1px black; /* Footer-Trennlinie im kräftigen GRÜN (klare, natürliche Abgrenzung) */
+}
+
+.spd-root .party-footer a {
+  color: var(--main-color); /* Footer-Links im kräftigen SPD Rot */
+}
+
+.spd-root .party-footer a:hover {
+  color: var(--dark-text-color); /* Footer-Link-Hover in dunklerem Grau */
+}
+
+/* !!!!!!!!!!!!!!! AfD !!!!!!!!!!!!!!! */
+
+.afd-root {
+  --main-color: #009de0; /* Offizielles AfD Blau (helles, klares Blau) */
+  --accent-color: #afafaf; /*  Silbergrau / Hellgrau als Akzentfarbe (dezent, modern) */
+  --background-color: #ffffff; /* Reinweiß als Hintergrund (klar, sauber, betont Seriosität) */
+  --text-color: #000000; /* Tiefschwarz für Haupttext (maximale Lesbarkeit und Seriosität) */
+  --light-text-color: #ffffff; /* Reinweiß für Kontrasttext auf farbigen Hintergründen (Header, Buttons) */
+  --dark-text-color: #444444; /* Dunkleres Anthrazitgrau für subtile Textdetails und Hover */
+  font-family: Arial, sans-serif; /* Schriftart beibehalten (Arial für Seriosität und gute Lesbarkeit) */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.afd-root a {
+  color: var(--main-color); /* Links im hellen, klaren AfD-Blau */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.afd-root a:hover {
+  color: var(
+    --dark-text-color
+  ); /* Link-Hover in dunklerem Anthrazitgrau (dezent, modern) */
+  text-decoration: underline;
+}
+
+.afd-root .party-header {
+  background-color: var(
+    --main-color
+  ); /* Header-Hintergrund im hellen, klaren AfD-Blau */
+  color: var(
+    --light-text-color
+  ); /* Header-Text in Reinweiß für starken Kontrast und Klarheit */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.afd-root .party-section-title {
+  color: var(--main-color); /* Abschnittstitel im hellen, klaren AfD-Blau */
+  border-bottom: 2px solid var(--main-color); /*  Dezente Linie unter Titeln im gleichen hellen AfD-Blau (unterstreicht Seriosität) */
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.afd-root .party-highlight {
+  border: 1px solid var(--main-color); /* Rahmen um Highlight-Boxen im hellen, klaren AfD-Blau (klare Abgrenzung) */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.afd-root .party-highlight-title {
+  color: var(
+    --main-color
+  ); /* Highlight-Titel im hellen, klaren AfD-Blau (direkte Verbindung zu Parteiidentität) */
+  margin-top: 0;
+}
+
+.afd-root .highlight-skandal-scale h4 {
+  color: var(
+    --dark-text-color
+  ); /* Skalenbeschriftung in dunklerem Anthrazitgrau (subtil, zurückhaltend) */
+}
+
+.afd-root .gradient-bar-container {
+  background-color: #e0e0e0; /* Hintergrund der Skala in sehr hellem, neutralem Grau (unaufdringlich) */
+}
+
+.afd-root .gradient-bar-filled {
+  background-color: var(
+    --main-color
+  ); /* Gefüllter Teil der Skala im hellen, klaren AfD-Blau (direkte Farbzuordnung) */
+}
+
+.afd-root .toggle-button {
+  background-color: var(
+    --main-color
+  ); /* Toggle-Button Hintergrund im hellen, klaren AfD-Blau (konsistente Farbgebung) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß (starker Kontrast, moderne Optik) */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.afd-root .toggle-button:hover {
+  background-color: var(
+    --dark-text-color
+  ); /* Button-Hover in dunklerem Anthrazitgrau (dezenter, moderner Hover-Effekt) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß beibehalten (Konsistenz) */
+}
+
+.afd-root .party-highlight-date,
+.afd-root .party-highlight-source,
+.afd-root .party-highlight-hashtags {
+  color: var(
+    --dark-text-color
+  ); /* Datum, Quelle, Hashtags in dunklerem Anthrazitgrau (subtil, weniger aufdringlich) */
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.afd-root .hashtag {
+  background-color: var(
+    --accent-color
+  ); /* Hashtag-Hintergrund im Silbergrau / Hellgrau (dezente Hervorhebung) */
+  color: var(
+    --main-color
+  ); /* Hashtag-Text im hellen, klaren AfD-Blau (direkte Farbverbindung) */
+  padding: 4px 8px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.afd-root .comment-section h4 {
+  color: var(
+    --main-color
+  ); /* Kommentar-Überschrift im hellen, klaren AfD-Blau (direkte Zuordnung) */
+  border-bottom: 1px solid var(--main-color); /*  Dezente Linie unter Kommentar-Überschrift im gleichen AfD-Blau (unterstreicht Struktur) */
+  padding-bottom: 5px;
+}
+
+.afd-root .comment-section textarea {
+  border: 1px solid #cccccc; /* Rahmen um Textarea in hellem Grau (unaufdringlich, modern) */
+}
+
+.afd-root .submit-comment {
+  background-color: var(
+    --main-color
+  ); /* Absenden-Button Hintergrund im hellen, klaren AfD-Blau (klare Handlungsaufforderung) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß (starker Kontrast, betont Wichtigkeit) */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.afd-root .submit-comment:hover {
+  background-color: var(
+    --dark-text-color
+  ); /* Button-Hover in dunklerem Anthrazitgrau (dezenter, moderner Effekt) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß beibehalten (Konsistenz) */
+}
+
+.afd-root .party-members-list .party-member-item a {
+  color: var(
+    --main-color
+  ); /* Mitgliedernamen-Links im hellen, klaren AfD-Blau (direkte Verbindung) */
+}
+
+.afd-root .party-members-list .party-member-item a:hover {
+  color: var(
+    --dark-text-color
+  ); /* Mitgliedernamen-Link-Hover in dunklerem Anthrazitgrau (dezent, modern) */
+}
+
+.afd-root .party-footer {
+  background-color: var(--main-color);
+  color: white;
+  border-top: 1px black; /* Footer-Trennlinie im kräftigen GRÜN (klare, natürliche Abgrenzung) */
+}
+
+.afd-root .party-footer a {
+  color: var(
+    --main-color
+  ); /* Footer-Links im hellen, klaren AfD-Blau (konsistente Farbgebung) */
+}
+
+.afd-root .party-footer a:hover {
+  color: var(
+    --dark-text-color
+  ); /* Footer-Link-Hover in dunklerem Anthrazitgrau (dezent, modern) */
+}
+
+/* !!!!!!!!!!!!!!! CDU !!!!!!!!!!!!!!! */
+
+.cdu-root {
+  --main-color: #000000; /* CDU Schwarz als Hauptfarbe (traditionell, seriös) */
+  --accent-color: #e07a00; /* CDU Orange als Akzentfarbe (markant, lebendig) */
+  --background-color: #ffffff; /* Reinweiß als Hintergrund (sauber, klassisch, betont Seriosität) */
+  --text-color: #000000; /* Tiefschwarz für Haupttext (maximale Lesbarkeit, formell) */
+  --light-text-color: #ffffff; /* Reinweiß für Kontrasttext auf dunklen/farbigen Hintergründen (Header, Buttons) */
+  --dark-text-color: #333333; /* Dunkleres Grau für subtile Textelemente, dezente Hervorhebungen */
+  font-family: Arial, sans-serif; /* Schriftart beibehalten (Arial für Seriosität und gute Lesbarkeit) */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.cdu-root a {
+  color: var(
+    --main-color
+  ); /* Links im klassischen CDU Schwarz (seriös, unaufdringlich) */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cdu-root a:hover {
+  color: var(
+    --accent-color
+  ); /* Link-Hover im lebendigen CDU Orange (Akzent, moderater Effekt) */
+  text-decoration: underline;
+}
+
+.cdu-root .party-header {
+  background-color: var(
+    --main-color
+  ); /* Header-Hintergrund im klassischen CDU Schwarz (dominant, seriös) */
+  color: var(
+    --light-text-color
+  ); /* Header-Text in Reinweiß für maximalen Kontrast und Klarheit */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.cdu-root .party-section-title {
+  color: var(
+    --main-color
+  ); /* Abschnittstitel im klassischen CDU Schwarz (seriös, strukturiert) */
+  border-bottom: 2px solid var(--accent-color); /*  Dezente Linie unter Titeln im lebendigen CDU Orange (Akzent, lenkt Aufmerksamkeit) */
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.cdu-root .party-highlight {
+  border: 1px solid var(--main-color); /* Rahmen um Highlight-Boxen im klassischen CDU Schwarz (seriöse Abgrenzung) */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.cdu-root .party-highlight-title {
+  color: var(
+    --accent-color
+  ); /* Highlight-Titel im lebendigen CDU Orange (markant, hebt hervor) */
+  margin-top: 0;
+}
+
+.cdu-root .highlight-skandal-scale h4 {
+  color: var(
+    --dark-text-color
+  ); /* Skalenbeschriftung in dunklerem Grau (subtil, unaufdringlich) */
+}
+
+.cdu-root .gradient-bar-container {
+  background-color: #e0e0e0; /* Hintergrund der Skala in sehr hellem, neutralem Grau (unaufdringlich) */
+}
+
+.cdu-root .gradient-bar-filled {
+  background-color: var(
+    --accent-color
+  ); /* Gefüllter Teil der Skala im lebendigen CDU Orange (direkter Bezug zur Parteifarbe) */
+}
+
+.cdu-root .toggle-button {
+  background-color: var(
+    --main-color
+  ); /* Toggle-Button Hintergrund im klassischen CDU Schwarz (seriös, formell) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß (starker Kontrast, betont Funktion) */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cdu-root .toggle-button:hover {
+  background-color: var(
+    --accent-color
+  ); /* Button-Hover im lebendigen CDU Orange (moderater, farblicher Akzent) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß beibehalten (Konsistenz, Klarheit) */
+}
+
+.cdu-root .party-highlight-date,
+.cdu-root .party-highlight-source,
+.cdu-root .party-highlight-hashtags {
+  color: var(
+    --dark-text-color
+  ); /* Datum, Quelle, Hashtags in dunklerem Grau (subtil, zurückhaltend) */
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.cdu-root .hashtag {
+  background-color: var(
+    --accent-color
+  ); /* Hashtag-Hintergrund im lebendigen CDU Orange (farblicher Akzent, hebt Hashtags hervor) */
+  color: var(
+    --light-text-color
+  ); /* Hashtag-Text in Reinweiß (starker Kontrast auf orangem Grund) */
+  padding: 4px 8px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.cdu-root .comment-section h4 {
+  color: var(
+    --main-color
+  ); /* Kommentar-Überschrift im klassischen CDU Schwarz (seriös, klare Struktur) */
+  border-bottom: 1px solid var(--main-color); /*  Dezente Linie unter Kommentar-Überschrift im gleichen CDU Schwarz (unterstreicht Formellle) */
+  padding-bottom: 5px;
+}
+
+.cdu-root .comment-section textarea {
+  border: 1px solid #cccccc; /* Rahmen um Textarea in hellem Grau (dezent, modern) */
+}
+
+.cdu-root .submit-comment {
+  background-color: var(
+    --main-color
+  ); /* Absenden-Button Hintergrund im klassischen CDU Schwarz (seriös, klare Handlungsaufforderung) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß (starker Kontrast, betont Wichtigkeit der Interaktion) */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.cdu-root .submit-comment:hover {
+  background-color: var(
+    --accent-color
+  ); /* Button-Hover im lebendigen CDU Orange (moderater, farblicher Hinweis auf Interaktion) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß beibehalten (Konsistenz, Klarheit) */
+}
+
+.cdu-root .party-members-list .party-member-item a {
+  color: var(
+    --accent-color
+  ); /* Mitgliedernamen-Links im lebendigen CDU Orange (markant, hebt Mitglieder hervor) */
+}
+
+.cdu-root .party-members-list .party-member-item a:hover {
+  color: var(
+    --main-color
+  ); /* Mitgliedernamen-Link-Hover im klassischen CDU Schwarz (dezenter, seriöser Hover-Effekt) */
+}
+
+.cdu-root .party-footer {
+  background-color: var(--main-color);
+  color: white;
+  border-top: 1px black; /* Footer-Trennlinie im kräftigen GRÜN (klare, natürliche Abgrenzung) */
+}
+
+.cdu-root .party-footer a {
+  color: var(
+    --main-color
+  ); /* Footer-Links im klassischen CDU Schwarz (konsistente, seröse Farbgebung) */
+}
+
+.cdu-root .party-footer a:hover {
+  color: var(
+    --accent-color
+  ); /* Footer-Link-Hover im lebendigen CDU Orange (moderater, farblicher Hinweis auf Interaktion) */
+}
+
+/* !!!!!!!!!!!!!!! GRÜNE !!!!!!!!!!!!!!! */
+
+.gruene-root {
+  --main-color: #64a30b; /* Offizielles GRÜN (kräftiges, natürliches Grün) */
+  --accent-color: #f0f0f0; /*  Helles Beige/Cremeweiß als Akzentfarbe (natürlich, dezent, freundlich) */
+  --background-color: #ffffff; /* Reinweiß als klarer, reiner Hintergrund (sauber, umweltbewusst) */
+  --text-color: #333333; /* Dunkleres Anthrazitgrau für Haupttext (angenehm lesbar, natürlich-erdig) */
+  --light-text-color: #ffffff; /* Reinweiß für Kontrasttext auf farbigen Hintergründen (Header, Buttons) */
+  --dark-text-color: #555555; /* Mittleres Grau für subtilere Textelemente, Hover-Effekte (dezent, natürlich) */
+  font-family: Arial, sans-serif; /* Schriftart beibehalten (Arial für Klarheit und Lesbarkeit, unaufgeregt) */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.gruene-root a {
+  color: var(--main-color); /* Links im kräftigen GRÜN (natürlich, lebendig) */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.gruene-root a:hover {
+  color: var(
+    --dark-text-color
+  ); /* Link-Hover in mittlerem Grau (dezent, natürlich, subtiler Effekt) */
+  text-decoration: underline;
+}
+
+.gruene-root .party-header {
+  background-color: var(
+    --main-color
+  ); /* Header-Hintergrund im kräftigen GRÜN (natürlich, erfrischend) */
+  color: var(
+    --light-text-color
+  ); /* Header-Text in Reinweiß für maximalen Kontrast und Klarheit */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.gruene-root .party-section-title {
+  color: var(
+    --main-color
+  ); /* Abschnittstitel im kräftigen GRÜN (natürlich, strukturiert) */
+  border-bottom: 2px solid var(--main-color); /*  Dezente Linie unter Titeln im gleichen kräftigen GRÜN (unterstreicht Verbundenheit zur Farbe) */
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.gruene-root .party-highlight {
+  border: 1px solid var(--main-color); /* Rahmen um Highlight-Boxen im kräftigen GRÜN (natürliche Abgrenzung, dezent) */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.gruene-root .party-highlight-title {
+  color: var(
+    --main-color
+  ); /* Highlight-Titel im kräftigen GRÜN (direkte Farbverbindung, hervorhebend) */
+  margin-top: 0;
+}
+
+.gruene-root .highlight-skandal-scale h4 {
+  color: var(
+    --dark-text-color
+  ); /* Skalenbeschriftung in mittlerem Grau (subtil, zurückhaltend) */
+}
+
+.gruene-root .gradient-bar-container {
+  background-color: #e0e0e0; /* Hintergrund der Skala in sehr hellem, neutralem Grau (unaufdringlich) */
+}
+
+.gruene-root .gradient-bar-filled {
+  background-color: var(
+    --main-color
+  ); /* Gefüllter Teil der Skala im kräftigen GRÜN (direkte Farbzuordnung, natürlich) */
+}
+
+.gruene-root .toggle-button {
+  background-color: var(
+    --main-color
+  ); /* Toggle-Button Hintergrund im kräftigen GRÜN (natürlich, erfrischend) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß (starker Kontrast, betont Funktion) */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gruene-root .toggle-button:hover {
+  background-color: var(
+    --dark-text-color
+  ); /* Button-Hover in mittlerem Grau (dezent, natürlicher, subtiler Hover-Effekt) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß beibehalten (Konsistenz, Klarheit) */
+}
+
+.gruene-root .party-highlight-date,
+.gruene-root .party-highlight-source,
+.gruene-root .party-highlight-hashtags {
+  color: var(
+    --dark-text-color
+  ); /* Datum, Quelle, Hashtags in mittlerem Grau (subtil, zurückhaltend, unaufdringlich) */
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.gruene-root .hashtag {
+  background-color: var(
+    --accent-color
+  ); /* Hashtag-Hintergrund im hellen Beige/Cremeweiß (natürlich, dezent, hebt Hashtags hervor) */
+  color: var(
+    --main-color
+  ); /* Hashtag-Text im kräftigen GRÜN (direkte Farbverbindung, natürlich) */
+  padding: 4px 8px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.gruene-root .comment-section h4 {
+  color: var(
+    --main-color
+  ); /* Kommentar-Überschrift im kräftigen GRÜN (natürlich, klare Struktur) */
+  border-bottom: 1px solid var(--main-color); /*  Dezente Linie unter Kommentar-Überschrift im gleichen kräftigen GRÜN (unterstreicht Verbundenheit zur Farbe, natürliche Linie) */
+  padding-bottom: 5px;
+}
+
+.gruene-root .comment-section textarea {
+  border: 1px solid #cccccc; /* Rahmen um Textarea in hellem Grau (dezent, modern, unaufdringlich) */
+}
+
+.gruene-root .submit-comment {
+  background-color: var(
+    --main-color
+  ); /* Absenden-Button Hintergrund im kräftigen GRÜN (natürlich, klare Handlungsaufforderung, erfrischend) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß (starker Kontrast, betont Wichtigkeit der Interaktion) */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.gruene-root .submit-comment:hover {
+  background-color: var(
+    --dark-text-color
+  ); /* Button-Hover in mittlerem Grau (dezent, natürlicher, subtiler Hinweis auf Interaktion) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß beibehalten (Konsistenz, Klarheit beim Hover) */
+}
+
+.gruene-root .party-members-list .party-member-item a {
+  color: var(
+    --main-color
+  ); /* Mitgliedernamen-Links im kräftigen GRÜN (markant, natürlich, hebt Mitglieder hervor) */
+}
+
+.gruene-root .party-members-list .party-member-item a:hover {
+  color: var(
+    --dark-text-color
+  ); /* Mitgliedernamen-Link-Hover in mittlerem Grau (dezenter, natürlicher Hover-Effekt) */
+}
+
+.gruene-root .party-footer {
+  background-color: var(--main-color);
+  color: white;
+  border-top: 1px black; /* Footer-Trennlinie im kräftigen GRÜN (klare, natürliche Abgrenzung) */
+}
+
+.gruene-root .party-footer a {
+  color: var(
+    --main-color
+  ); /* Footer-Links im kräftigen GRÜN (konsistente, natürliche Farbgebung) */
+}
+
+.gruene-root .party-footer a:hover {
+  color: var(
+    --dark-text-color
+  ); /* Footer-Link-Hover in mittlerem Grau (dezenter, natürlicher Hinweis auf Interaktion) */
+}
+
+/* !!!!!!!!!!!!!!! BSW !!!!!!!!!!!!!!! */
+
+.bsw-root {
+  --main-color: #002454; /* Offizielles BSW Dunkelblau */
+  --accent-color: #bf212f; /* Offizielles BSW Rot */
+  --background-color: #ffffff; /* Weiß als Hintergrund */
+  --text-color: #000000; /* Schwarz für Text */
+  --light-text-color: #f1f1f1; /* Hellgrau/Weiß für Kontrasttexte */
+  --dark-text-color: #333; /* Dunkleres Grau für Akzente */
+  font-family: Arial, sans-serif; /* Schriftart beibehalten */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.bsw-root a {
+  color: var(--main-color); /* Links in BSW Dunkelblau */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bsw-root a:hover {
+  color: var(--accent-color); /* Link-Hover in BSW Rot */
+  text-decoration: underline;
+}
+
+.bsw-root .party-header {
+  background-color: var(
+    --main-color
+  ); /* Header-Hintergrund in BSW Dunkelblau */
+  color: var(
+    --light-text-color
+  ); /* Header-Text in Hellgrau/Weiß für Kontrast */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.bsw-root .party-section-title {
+  color: var(--main-color); /* Abschnittstitel in BSW Dunkelblau */
+  border-bottom: 2px solid var(--accent-color); /* Akzentlinie unter Titeln in BSW Rot */
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.bsw-root .party-highlight {
+  border: 1px solid var(--main-color); /* Rahmen um Highlight-Boxen in BSW Dunkelblau */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.bsw-root .party-highlight-title {
+  color: var(--accent-color); /* Highlight-Titel in BSW Rot */
+  margin-top: 0;
+}
+
+.bsw-root .highlight-skandal-scale h4 {
+  color: var(--dark-text-color); /* Skalenbeschriftung in dunklerem Grau */
+}
+
+.bsw-root .gradient-bar-container {
+  background-color: #eee; /* Hintergrund der Skala in sehr hellem Grau */
+}
+
+.bsw-root .gradient-bar-filled {
+  background-color: var(
+    --accent-color
+  ); /* Gefüllter Teil der Skala in BSW Rot */
+}
+
+.bsw-root .toggle-button {
+  background-color: var(
+    --main-color
+  ); /* Toggle-Button Hintergrund in BSW Dunkelblau */
+  color: var(--light-text-color); /* Button-Text in Hellgrau/Weiß */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bsw-root .toggle-button:hover {
+  background-color: var(--accent-color); /* Button-Hover in BSW Rot */
+}
+
+.bsw-root .party-highlight-date,
+.bsw-root .party-highlight-source,
+.bsw-root .party-highlight-hashtags {
+  color: var(--dark-text-color); /* Datum, Quelle, Hashtags in dunklerem Grau */
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.bsw-root .hashtag {
+  background-color: #f0f0f0; /* Hashtag-Hintergrund in sehr hellem Grau */
+  color: var(--main-color); /* Hashtag-Text in BSW Dunkelblau */
+  padding: 4px 8px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.bsw-root .comment-section h4 {
+  color: var(--main-color); /* Kommentar-Überschrift in BSW Dunkelblau */
+  border-bottom: 1px solid var(--accent-color); /* Linie unter Kommentar-Überschrift in BSW Rot */
+  padding-bottom: 5px;
+}
+
+.bsw-root .comment-section textarea {
+  border: 1px solid #ccc; /* Rahmen um Textarea in hellem Grau */
+}
+
+.bsw-root .submit-comment {
+  background-color: var(
+    --accent-color
+  ); /* Absenden-Button Hintergrund in BSW Rot */
+  color: var(--light-text-color); /* Button-Text in Hellgrau/Weiß */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.bsw-root .submit-comment:hover {
+  background-color: var(--main-color); /* Button-Hover in BSW Dunkelblau */
+}
+
+.bsw-root .party-members-list .party-member-item a {
+  color: var(--accent-color); /* Mitgliedernamen-Links in BSW Rot */
+}
+
+.bsw-root .party-members-list .party-member-item a:hover {
+  color: var(--main-color); /* Mitgliedernamen-Link-Hover in BSW Dunkelblau */
+}
+
+.bsw-root .party-footer {
+  background-color: var(--main-color);
+  color: white;
+  border-top: 1px black; /* Footer-Trennlinie im kräftigen GRÜN (klare, natürliche Abgrenzung) */
+}
+
+.bsw-root .party-footer a {
+  color: var(--main-color); /* Footer-Links in BSW Dunkelblau */
+}
+
+.bsw-root .party-footer a:hover {
+  color: var(--accent-color); /* Footer-Link-Hover in BSW Rot */
+}
+
+/* !!!!!!!!!!!!!!! DIE LINKE !!!!!!!!!!!!!!! */
+
+.linke-root {
+  --main-color: #880000; /*  Dunkelrot -  typische Farbe der LINKEN */
+  --accent-color: #dd0000; /*  Etwas helleres Rot als Akzentfarbe */
+  --background-color: #ffffff; /* Weiß als Hintergrund */
+  --text-color: #000000; /* Schwarz für Text - gute Lesbarkeit auf weißem Grund */
+  --light-text-color: #f1f1f1; /* Hellgrau für weniger wichtigen Text (optional) */
+  --dark-text-color: #333; /* Dunkleres Grau für Hervorhebungen (optional) */
+  font-family: Arial, sans-serif; /*  Schriftart beibehalten */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.linke-root a {
+  color: var(--main-color); /* Links in Dunkelrot */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.linke-root a:hover {
+  color: var(--accent-color); /* Link-Hover in hellerem Rot */
+  text-decoration: underline;
+}
+
+.linke-root .party-header {
+  background-color: var(--main-color); /* Header-Hintergrund in Dunkelrot */
+  color: var(
+    --light-text-color
+  ); /* Header-Text in Hellgrau/Weiß für Kontrast */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.linke-root .party-section-title {
+  color: var(--main-color); /* Abschnittstitel in Dunkelrot */
+  border-bottom: 2px solid var(--accent-color); /*  Akzentlinie unter Titeln in hellem Rot */
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.linke-root .party-highlight {
+  border: 1px solid var(--main-color); /* Rahmen um Highlight-Boxen in Dunkelrot */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.linke-root .party-highlight-title {
+  color: var(--accent-color); /* Highlight-Titel in hellerem Rot */
+  margin-top: 0;
+}
+
+.linke-root .highlight-skandal-scale h4 {
+  color: var(--dark-text-color); /* Skalenbeschriftung in dunklerem Grau */
+}
+
+.linke-root .gradient-bar-container {
+  background-color: #eee; /*  Hintergrund der Skala in sehr hellem Grau */
+}
+
+.linke-root .gradient-bar-filled {
+  background-color: var(
+    --accent-color
+  ); /*  Gefüllter Teil der Skala in hellem Rot */
+}
+
+.linke-root .toggle-button {
+  background-color: var(
+    --main-color
+  ); /* Toggle-Button Hintergrund in Dunkelrot */
+  color: var(--light-text-color); /* Button-Text in Hellgrau/Weiß */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.linke-root .toggle-button:hover {
+  background-color: var(--accent-color); /* Button-Hover in hellerem Rot */
+}
+
+.linke-root .party-highlight-date,
+.linke-root .party-highlight-source,
+.linke-root .party-highlight-hashtags {
+  color: var(
+    --dark-text-color
+  ); /*  Datum, Quelle, Hashtags in dunklerem Grau */
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.linke-root .hashtag {
+  background-color: #f0f0f0; /* Hashtag-Hintergrund in sehr hellem Grau */
+  color: var(--main-color); /* Hashtag-Text in Dunkelrot */
+  padding: 4px 8px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.linke-root .comment-section h4 {
+  color: var(--main-color); /* Kommentar-Überschrift in Dunkelrot */
+  border-bottom: 1px solid var(--accent-color); /*  Linie unter Kommentar-Überschrift in hellem Rot */
+  padding-bottom: 5px;
+}
+
+.linke-root .comment-section textarea {
+  border: 1px solid #ccc; /*  Rahmen um Textarea in hellem Grau */
+}
+
+.linke-root .submit-comment {
+  background-color: var(
+    --accent-color
+  ); /* Absenden-Button Hintergrund in hellem Rot */
+  color: var(--light-text-color); /* Button-Text in Hellgrau/Weiß */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.linke-root .submit-comment:hover {
+  background-color: var(--main-color); /* Button-Hover in Dunkelrot */
+}
+
+.linke-root .party-members-list .party-member-item a {
+  color: var(--accent-color); /*  Mitgliedernamen-Links in hellem Rot */
+}
+
+.linke-root .party-members-list .party-member-item a:hover {
+  color: var(--main-color); /*  Mitgliedernamen-Link-Hover in Dunkelrot */
+}
+
+.linke-root .party-footer {
+  background-color: var(--main-color);
+  color: white;
+  border-top: 1px black; /* Footer-Trennlinie im kräftigen GRÜN (klare, natürliche Abgrenzung) */
+}
+
+.linke-root .party-footer a {
+  color: var(--main-color); /* Footer-Links in Dunkelrot */
+}
+
+.linke-root .party-footer a:hover {
+  color: var(--accent-color); /* Footer-Link-Hover in hellem Rot */
+}
+
+/* !!!!!!!!!!!!!!! FDP !!!!!!!!!!!!!!! */
+
+.fdp-root {
+  --main-color: #ffed00; /* Offizielles FDP Gelb (leuchtend, sonnig) */
+  --accent-color: #1a75ff; /* FDP Blau als Akzentfarbe (modern, dynamisch) */
+  --background-color: #ffffff; /* Reinweiß als klarer Hintergrund (frisch, modern) */
+  --text-color: #000000; /* Tiefschwarz für Haupttext (optimale Lesbarkeit, klar) */
+  --light-text-color: #ffffff; /* Reinweiß für Kontrasttext auf farbigen Hintergründen (Header, Buttons) */
+  --dark-text-color: #444444; /* Dunkleres Anthrazitgrau für subtile Textelemente, Hover-Effekte (dezent, modern) */
+  font-family: Arial, sans-serif; /* Schriftart beibehalten (Arial für Klarheit und Lesbarkeit) */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.fdp-root a {
+  color: var(
+    --accent-color
+  ); /* Links im leuchtenden FDP Gelb (auffällig, lebendig) */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.fdp-root a:hover {
+  color: var(
+    --main-color
+  ); /* Link-Hover im dynamischen FDP Blau (moderner, farblicher Akzent) */
+  text-decoration: underline;
+}
+
+.fdp-root .party-header {
+  background-color: var(
+    --main-color
+  ); /* Header-Hintergrund im leuchtenden FDP Gelb (frisch, optimistisch) */
+  color: var(
+    --text-color
+  ); /* Header-Text in Tiefschwarz für maximalen Kontrast und Klarheit */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.fdp-root .party-section-title {
+  color: var(
+    --accent-color
+  ); /* Abschnittstitel im leuchtenden FDP Gelb (auffällig, strukturiert) */
+  border-bottom: 2px solid var(--accent-color); /*  Dezente Linie unter Titeln im dynamischen FDP Blau (moderner, farblicher Akzent) */
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.fdp-root h2 {
+  color: var(
+    --text-color
+  ); /* Set color to the default text color, which is black */
+}
+
+.fdp-root .party-highlight {
+  border: 1px solid var(--main-color); /* Rahmen um Highlight-Boxen im leuchtenden FDP Gelb (klare Abgrenzung, fröhlich) */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.fdp-root .party-highlight-title {
+  color: var(
+    --accent-color
+  ); /* Highlight-Titel im dynamischen FDP Blau (markant, modern, lenkt Aufmerksamkeit) */
+  margin-top: 0;
+}
+
+.fdp-root .highlight-skandal-scale h4 {
+  color: var(
+    --dark-text-color
+  ); /* Skalenbeschriftung in dunklerem Anthrazitgrau (subtil, zurückhaltend) */
+}
+
+.fdp-root .gradient-bar-container {
+  background-color: #e0e0e0; /* Hintergrund der Skala in sehr hellem, neutralem Grau (unaufdringlich) */
+}
+
+.fdp-root .toggle-button {
+  background-color: var(
+    --main-color
+  ); /* Toggle-Button Hintergrund im leuchtenden FDP Gelb (fröhlich, auffällig) */
+  color: var(
+    --text-color
+  ); /* Button-Text in Tiefschwarz (starker Kontrast, betont Funktion) */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fdp-root .toggle-button:hover {
+  background-color: var(
+    --accent-color
+  ); /* Button-Hover im dynamischen FDP Blau (moderner, dezenter Farbwechsel für Interaktion) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß beibehalten (Kontrast beim Hover, Klarheit) */
+}
+
+.fdp-root .party-highlight-date,
+.fdp-root .party-highlight-source,
+.fdp-root .party-highlight-hashtags {
+  color: var(
+    --dark-text-color
+  ); /* Datum, Quelle, Hashtags in dunklerem Anthrazitgrau (subtil, zurückhaltend) */
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.fdp-root .hashtag {
+  background-color: var(
+    --accent-color
+  ); /* Hashtag-Hintergrund im dynamischen FDP Blau (farblicher Akzent, hebt Hashtags hervor) */
+  color: var(
+    --light-text-color
+  ); /* Hashtag-Text in Reinweiß (starker Kontrast auf blauem Grund) */
+  padding: 4px 8px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.fdp-root .comment-section h4 {
+  color: var(
+    --main-color
+  ); /* Kommentar-Überschrift im leuchtenden FDP Gelb (fröhlich, auffällig) */
+  border-bottom: 1px solid var(--accent-color); /*  Dezente Linie unter Kommentar-Überschrift im dynamischen FDP Blau (unterstreicht Struktur, moderner Akzent) */
+  padding-bottom: 5px;
+}
+
+.fdp-root .comment-section textarea {
+  border: 1px solid #cccccc; /* Rahmen um Textarea in hellem Grau (dezent, modern) */
+}
+
+.fdp-root .submit-comment {
+  background-color: var(
+    --main-color
+  ); /* Absenden-Button Hintergrund im leuchtenden FDP Gelb (fröhlich, klare Handlungsaufforderung) */
+  color: var(
+    --text-color
+  ); /* Button-Text in Tiefschwarz (starker Kontrast, betont Wichtigkeit der Interaktion) */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.fdp-root .submit-comment:hover {
+  background-color: var(
+    --accent-color
+  ); /* Button-Hover im dynamischen FDP Blau (moderner, dezenter farblicher Hinweis auf Interaktion) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß beibehalten (Konsistenz, Klarheit beim Hover) */
+}
+
+.fdp-root .party-members-list .party-member-item a {
+  color: var(
+    --accent-color
+  ); /* Mitgliedernamen-Links im dynamischen FDP Blau (markant, modern, hebt Mitglieder hervor) */
+}
+
+.fdp-root .party-members-list .party-member-item a:hover {
+  color: var(
+    --main-color
+  ); /* Mitgliedernamen-Link-Hover im leuchtenden FDP Gelb (lebendiger, auffälliger Hover-Effekt) */
+}
+
+.fdp-root .party-footer {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border-top: 1px black; /* Footer-Trennlinie im kräftigen GRÜN (klare, natürliche Abgrenzung) */
+}
+
+.fdp-root .party-footer a {
+  color: var(--text-color);
+}
+
+.fdp-root .party-footer a:hover {
+  color: var(
+    --accent-color
+  ); /* Footer-Link-Hover im dynamischen FDP Blau (moderner, farblicher Hinweis auf Interaktion) */
+}
+
+/* PARTY-Header */
+.party-header {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 15px 0; /* Vertikales Padding, aber kein horizontales */
+  text-align: center;
+}
+
+.party-header .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Vertikal kleiner, horizontal angenehm */
+  max-width: 1500px; /* Begrenzung für große Screens */
+  margin: 0 auto; /* Sorgt für zentrierte Darstellung */
+}
+
+.party-header .header-link {
+  color: #333; /* Dunkles Grau für Text */
+  font-size: 1.2rem; /* Größere Schrift */
+  font-weight: 500; /* Etwas fetter für mehr Gewicht */
+  text-decoration: none;
+  padding: 10px 20px; /* Etwas Polsterung */
+  border-radius: 5px; /* Abgerundete Ecken */
+  background-color: white; /* Weißer Hintergrund */
+  transition: background-color 0.3s, transform 0.3s ease; /* Sanfte Übergänge */
+  border: 1px solid #ddd; /* Dünner grauer Rand */
+}
+
+.party-header .header-link:hover {
+  background-color: #f0f0f0; /* Helles Grau bei Hover */
+  color: #000; /* Dunkler Text bei Hover */
+  transform: scale(1.05); /* Leicht vergrößern */
+}
+
+.party-header .header-link:focus {
+  outline: none; /* Verhindert den Fokusrahmen */
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); /* Sanfter grauer Schatten für den Fokus */
+}
+
+.party-header .header-title-container {
+  display: flex;
+  flex-direction: column; /* Stellt sicher, dass die Titel untereinander sind */
+  align-items: center; /* Zentriert alles horizontal */
+  justify-content: center; /* Stellt sicher, dass der Inhalt zentriert ist */
+}
+
+.party-header .party-politician-name {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.party-header .party-description {
+  font-size: 1.8rem; /* Kleinere Schriftgröße für die Beschreibung */
+  font-weight: 400; /* Normale Schriftstärke */
+  margin-top: 0.5rem; /* Kleiner Abstand nach dem Parteinamen */
+  text-align: center; /* Text mittig ausrichten */
+}
+
+.party-header .party-politician-portrait {
+  max-width: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+/* Sicherstellen, dass das Bild sichtbar wird */
+.party-header .party-logo {
+  width: auto; /* Festlegung der Breite */
+  height: 110px; /* Festlegung der Höhe */
+  object-fit: contain; /* Verhindert Verzerrungen */
+  margin-top: 10px;
+  background-color: white;
+  border: 3px solid #fff; /* Weißer Rand um das Logo */
+  border-radius: 10px; /* Ecken abrunden */
+}
+
+/* Section Titles */
+.party-section-title {
+  color: var(--main-color);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Steckbrief Section */
+.party-bio {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 20px auto; /* Zentriert die Sektion */
+  width: 90%; /* Sorgt für Anpassung auf kleineren Bildschirmen */
+  box-sizing: border-box; /* Padding wird in die Breite eingerechnet */
+}
+
+.party-bio p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.bio-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px; /* Abstand zwischen Text und Bild */
+}
+
+.bio-text {
+  flex: 1; /* Der Text nimmt den verfügbaren Platz ein */
+}
+
+.bio-image {
+  width: 400px; /* Feste Breite */
+  height: 500px; /* Feste Höhe */
+  object-fit: cover; /* Stellt sicher, dass das Bild immer ausgefüllt wird */
+  border-radius: 12px; /* Optional: Abgerundete Ecken */
+  border: 4px solid var(--main-color); /* Rand in Parteifarbe */
+}
+
+.bio-image::after {
+  content: ""; /* Erzeugt ein leeres Pseudo-Element */
+  position: absolute; /* Positioniert es relativ zum Bild */
+  top: 0;
+  left: 0;
+  width: 100%; /* Deckt das Bild vollständig ab */
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /* Fügt einen halbtransparenten schwarzen Overlay hinzu */
+  border-radius: 12px; /* Passt sich den Bildrundungen an */
+}
+
+.political-background,
+.political-highlights {
+  clear: both; /* Stellt sicher, dass der Text nicht neben dem Bild fließt */
+}
+
+/* Politician Members Section */
+.party-members {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 20px auto; /* Margin auto sorgt für zentrierten Abstand */
+  width: 90%; /* Sorgt dafür, dass die Sektion auch auf kleineren Bildschirmen nicht zu schmal wird */
+  box-sizing: border-box; /* Padding wird in die Breite eingerechnet */
+}
+
+.party-members-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.party-member-item {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+.party-member-item a {
+  color: var(--main-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.party-member-item a:hover {
+  color: #ffdbdb; /* Lichterer Rotton für Hover */
+}
+
+/* Highlights */
+.party-highlights {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 20px auto; /* Zentriert die Sektion */
+  width: 90%; /* Sorgt für Anpassung auf kleineren Bildschirmen */
+  box-sizing: border-box; /* Padding wird in die Breite eingerechnet */
+}
+
+.party-highlight {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Initiales Styling für den Inhalt, der zusammenklappbar ist */
+.collapsible-content {
+  display: none;
+  margin-top: 15px;
+  padding-left: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  border-left: 3px solid #999; /* Neutrale Grau-Akzentfarbe */
+  padding-right: 15px;
+}
+
+/* Styling für die Schaltflächen */
+.toggle-button {
+  background-color: #2c3e50; /* Dunkles Blau für den Button */
+  color: white;
+  border: 1px solid #ccc;
+  padding: 12px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #34495e; /* Dunkleres Blau beim Hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
+}
+
+.toggle-button:focus {
+  outline: none;
+  border-color: #007bff; /* Akzentfarbe, wenn der Button fokussiert ist */
+}
+
+/* Styling für den Pfeil (Arrow) */
+.arrow {
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* Für sanftes Drehen */
+}
+
+.arrow.up {
+  transform: rotate(180deg); /* Dreht den Pfeil um 180 Grad */
+}
+.party-highlight-title {
+  font-size: 1.3rem;
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+
+.party-highlight-description {
+  font-size: 1rem;
+  color: var(--dark-text-color);
+  margin-bottom: 10px;
+}
+
+.party-highlight-date {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  font-style: italic;
+}
+
+.party-highlight-hashtags {
+  display: flex;
+  flex-wrap: wrap; /* Umbrüche auf mehrere Zeilen */
+  gap: 14px 12px; /* Erster Wert = vertikaler Abstand, Zweiter = horizontaler Abstand */
+  margin-top: 10px;
+  justify-content: left; /* Hashtags zentrieren */
+}
+
+.party-highlight-hashtags a,
+.party-highlight-hashtags span {
+  background-color: var(--main-color); /* Farbton der Hashtags */
+  color: #fff; /* Weiße Schrift */
+  padding: 6px 14px;
+  border-radius: 20px; /* Abgerundete Ecken */
+  text-decoration: none; /* Keine Unterstreichung */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* Verhindert, dass ein einzelner Hashtag umbrechen muss */
+  display: inline-block; /* Sorgt für saubere Abstände */
+  margin-bottom: 10px; /* Sorgt für mehr vertikalen Abstand */
+}
+
+.party-highlight-hashtags a {
+  text-decoration: underline; /* Unterstreicht nur die Links */
+}
+
+.party-highlight-hashtags a:hover {
+  background-color: #ffdbdb; /* Lichterer Rotton beim Hover */
+  color: var(--main-color); /* Textfarbe bei Hover */
+  transform: scale(1.05); /* Leichtes Vergrößern bei Hover */
+}
+
+.party-highlight-hashtags span {
+  cursor: default; /* Keine Interaktivität */
+}
+
+/* Skandal-Skala mit Farbverlauf und sichtbar nicht ausgefülltem Teil */
+.highlight-skandal-scale {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.highlight-skandal-scale h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.highlight-description {
+  font-size: 1.2rem; /* Kleinere Schriftgröße */
+  font-weight: 400; /* Normale Schriftstärke */
+  color: var(--neutral-gray); /* Graue Farbe für den Text */
+  margin-top: 0.5rem; /* Etwas Abstand zum vorherigen Element */
+}
+
+.gradient-bar-container {
+  display: flex; /* Flexbox für horizontale Ausrichtung */
+  justify-content: flex-start;
+  width: 100%;
+  background-color: #ddd; /* Hintergrundfarbe für den nicht ausgefüllten Bereich */
+  border-radius: 10px;
+  height: 20px;
+  position: relative;
+  margin: 10px 0;
+}
+
+.gradient-bar-filled {
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    #c8e6c9,
+    #ffeb3b,
+    #f44336
+  ); /* Farbverlauf für den ausgefüllten Bereich */
+  border-radius: 10px 0 0 10px; /* Abgerundete Ecken auf der linken Seite */
+}
+
+.gradient-bar-unfilled {
+  height: 100%;
+  background-color: #ddd; /* Farbe des nicht ausgefüllten Bereichs */
+  border-radius: 0 10px 10px 0; /* Abgerundete Ecken auf der rechten Seite */
+}
+
+.skandal-scale-value {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.2rem;
+  margin-top: 5px; /* Abstand zwischen dem Balken und dem Wert */
+}
+/* Timeline */
+.party-highlight-timeline {
+  margin-top: 20px;
+}
+
+.party-highlight-timeline h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.party-highlight-timeline ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.party-highlight-timeline li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.party-highlight-timeline li strong {
+  font-weight: bold;
+}
+
+/* Kommentare & Diskussion */
+.comment-section {
+  margin-top: 20px;
+  border-top: 2px solid #ddd;
+  border-radius: 8px;
+
+  padding-top: 20px;
+  background-color: #f9f9f9;
+}
+
+.comment-section h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.comment-section textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+/* Skandal-Skala & Timeline optisch abgrenzen */
+.party-highlight-skandal-scale,
+.party-highlight-timeline,
+.comment-section {
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 768px) {
+  /* Base adjustments */
+  html {
+    font-size: 58%; /* Slightly smaller base font for mobile */
+  }
+
+  /* Body padding um den Header herum reduzieren */
+  body {
+    padding-top: 7rem; /* Stelle sicher, dass die Hero-Section nach dem Header sichtbar bleibt */
+  }
+
+  /* Navigation */
+  .nav-container {
+    height: auto;
+  }
+
+  .nav-items {
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    padding-right: 2rem; /* Abstand zum Rand */
+  }
+
+  .nav-link {
+    font-size: 1.4rem;
+    padding: 0.75rem 0;
+    width: 100%;
+  }
+
+  .factico-logo-img {
+    display: flex;
+    align-items: center;
+    margin-left: 0; /* Kein Abstand nach links */
+  }
+
+  .nav-items {
+    display: none; /* Versteckt die Links auf kleinen Bildschirmen */
+  }
+
+  .party-header {
+    padding: 10px 0; /* Noch kompakter für Mobile */
+  }
+
+  .party-header .header-container {
+    padding: 5px 10px; /* Weniger Platzverbrauch */
+    text-align: center;
+  }
+
+  .party-header .factico-logo-img img {
+    height: 40px;
+  }
+
+  .party-header .party-logo {
+    height: 50px;
+  }
+
+  .party-header .party-logo {
+    height: 50px;
+  }
+
+  .party-header .party-politician-name {
+    font-size: 1.8rem; /* Kleinere Schrift */
+    margin: 0.5rem 0;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 4rem 1rem 2rem; /* Weniger Padding auf mobilen Geräten */
+  }
+
+  .hero h1 {
+    font-size: 1.8rem; /* Kleinere Schriftgröße auf mobilen Geräten */
+    max-width: 90%; /* Etwas mehr Platz für den Text */
+  }
+
+  /* So funktioniert's */
+  .about-grid,
+  .step-container {
+    grid-template-columns: 1fr;
+  }
+
+  .step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert den Inhalt */
+    width: 92%; /* Sicherstellen, dass es die volle Breite einnimmt */
+  }
+
+  .content-block {
+    padding: 3rem 2rem; /* Etwas weniger Seitenspaltabstand */
+    margin: 0 auto;
+    max-width: 100%; /* Sicherstellen, dass es nicht breiter wird als der Bildschirm */
+  }
+
+  /* Party Grid */
+  .party-grid {
+    display: flex;
+    overflow-x: auto; /* Ermöglicht horizontales Scrollen */
+    gap: 2rem; /* Abstand zwischen den einzelnen Party Cards */
+    padding: 2rem 0; /* Padding hinzufügen, um Scrollbar sichtbar zu machen */
+    scroll-snap-type: x mandatory; /* Ermöglicht das "snappen" der Elemente beim Scrollen */
+  }
+
+  /* Optional: Fügt visuelle Hinweise zum Scrollen hinzu */
+  .party-grid::-webkit-scrollbar {
+    height: 8px; /* Höhe der horizontalen Scroll-Leiste */
+  }
+
+  .party-grid::-webkit-scrollbar-thumb {
+    background-color: #888; /* Farbe des Scrollbalkens */
+    border-radius: 5px;
+  }
+
+  .party-grid::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Farbe des Scrollbalkens beim Hover */
+  }
+
+  /* Party Card */
+  .party-card {
+    min-width: 140px;
+    max-width: 200px; /* Begrenzung der max. Breite der Karten */
+    height: auto;
+    min-height: 140px;
+    flex-shrink: 0; /* Verhindert, dass die Karten schrumpfen */
+    scroll-snap-align: start; /* Stellt sicher, dass jede Karte beim Scrollen ausgerichtet wird */
+  }
+
+  .party-logo {
+    max-width: 120px;
+    max-height: 80px;
+  }
+
+  /* Bio Section */
+  .bio-container {
+    flex-direction: column;
+  }
+
+  .bio-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .party-highlight-hashtags {
+    justify-content: flex-start; /* Hashtags linksbündig */
+    row-gap: 12px; /* Noch mehr vertikaler Abstand */
+    padding: 5px;
+  }
+
+  .party-highlight-hashtags a,
+  .party-highlight-hashtags span {
+    font-size: 0.9rem; /* Leicht kleinere Schrift */
+    padding: 5px 12px;
+    margin-bottom: 5px; /* Maximale Trennung zwischen den Zeilen */
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr 1fr; /* Nebeneinander für mobile Geräte */
+    gap: 1rem; /* Weniger Abstand zwischen den Sektionen */
+    justify-items: center; /* Zentriert die Blöcke auch auf mobilen Geräten */
+  }
+
+  .party-footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px; /* Noch kompakter auf Mobile */
+  }
+
+  .party-footer .footer-section {
+    padding: 5px 0; /* Weniger Abstand pro Abschnitt */
+  }
+
+  /* Search Container */
+  .search-container {
+    width: 85%; /* Noch flexibler */
+    margin: 1rem auto;
+  }
+
+  #searchInput {
+    padding: 0.9rem 1.25rem; /* Noch kompakter */
+  }
+
+  .search-item {
+    padding: 0.65rem 1.25rem;
+  }
+
+  /* Axis Labels */
+  .party-axis {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .axis-line {
+    height: 6px;
+  }
+}
