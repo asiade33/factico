@@ -70,8 +70,6 @@ const searchResults = document.getElementById("searchResults");
 
 // Zuordnung für benutzerdefinierte Suchen
 const customSearchResults = {
-  olaf_scholz: "Olaf Scholz",
-  scholz: "Olaf Scholz",
   spd: "SPD",
   cdu: "CDU/CSU",
   csu: "CDU/CSU",
@@ -88,10 +86,13 @@ const customSearchResults = {
   buendnis_sahra_wagenknecht: "BSW", // Ergänzung: Langform mit "ue" (realistisch)
   buendnis_wagenknecht: "BSW", // Ergänzung: Verkürzte Langform mit "ue" (realistisch)
   sarah_wagenknecht: "BSW", // Ergänzung:  Name der Parteivorsitzenden (realistisch)
-
   wagenknecht: "BSW", // Ergänzung:  Nachname der Parteivorsitzenden
   linke: "Die Linke",
   die_linke: "Die Linke",
+  olaf_scholz: "Olaf Scholz",
+  scholz: "Olaf Scholz",
+  alice_weidel: "Alice Weidel",
+  weidel: "Alice Weidel",
   katrin_goering_eckardt: "Katrin Göring-Eckardt",
   goering: "Katrin Göring-Eckardt",
   goering_eckardt: "Katrin Göring-Eckardt",
@@ -123,8 +124,6 @@ const customSearchResults = {
 
 // Seiten-Verlinkungen (angepasst, um alle Keys abzudecken)
 const pages = {
-  olaf_scholz: "scholz.html",
-  scholz: "scholz.html",
   spd: "spd.html",
   cdu: "cducsu.html",
   csu: "cducsu.html",
@@ -140,11 +139,14 @@ const pages = {
   buendnis_wagenknecht: "bsw.html", // Ergänzung: Verkürzte Langform mit "ue" (realistisch)
   sahra_wagenknecht: "bsw.html", // Ergänzung: Name der Parteivorsitzenden (realistisch)
   sarah_wagenknecht: "bsw.html", // Ergänzung: Name der Parteivorsitzenden (realistisch)
-
   wagenknecht: "bsw.html", // Ergänzung: Nachname der Parteivorsitzenden
   bsw: "bsw.html",
   linke: "linke.html",
   die_linke: "linke.html",
+  olaf_scholz: "scholz.html",
+  scholz: "scholz.html",
+  alice_weidel: "weidel.html",
+  weidel: "weidel.html",
   wirecard: "wirecard.html",
   katrin_goering_eckardt: "goering-eckardt.html",
   katrin: "goering-eckardt.html",
