@@ -2403,6 +2403,70 @@ body {
   text-decoration: underline;
 }
 
+/* --------------------------------------------------------------
+   Datenschutz-Seite - Grundlegendes Styling
+   -------------------------------------------------------------- */
+
+/* Hauptcontainer für die Datenschutz-Seite */
+.datenschutz-container {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container für den Inhalt (Zentrierung und maximale Breite) */
+.datenschutz-content {
+  background-color: #ffffff;
+  padding: 3rem;
+  width: 100%;
+  max-width: 900px; /* Maximale Breite für größere Displays */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header-Bereich für den Titel */
+.datenschutz-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Titel der Datenschutz-Seite */
+.datenschutz-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Abschnittsüberschriften */
+.datenschutz-section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Textabsätze */
+.datenschutz-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Links in der Datenschutz-Seite */
+.datenschutz-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.datenschutz-text a:hover {
+  text-decoration: underline;
+}
+
 /* ==================== RESPONSIVE DESIGN ==================== */
 
 @media (max-width: 768px) {
@@ -2427,6 +2491,18 @@ body {
 
   .feedback-icon {
     font-size: 3rem;
+  }
+
+  .datenschutz-title {
+    font-size: 2rem;
+  }
+
+  .datenschutz-section-title {
+    font-size: 1.5rem;
+  }
+
+  .datenschutz-text {
+    font-size: 1rem;
   }
 
   .impressum-title {
