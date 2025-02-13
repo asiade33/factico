@@ -2340,133 +2340,74 @@ body {
   text-decoration: underline;
 }
 
-/* --------------------------------------------------------------
-   Impressum-Seite - Optimierte Darstellung mit Abstand und mittiger Ausrichtung
-   -------------------------------------------------------------- */
 
-/* Hauptcontainer für das Impressum */
-.impressum-container {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  background-color: #f8f9fa;
-  display: flex;
-  justify-content: center;
-}
-
-/* Container für den Inhalt (Zentrierung und max. Breite) */
-.impressum-content {
-  background-color: #ffffff;
-  padding: 3rem;
-  width: 100%;
-  max-width: 900px; /* Maximale Breite für größere Displays */
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Header-Bereich für den Titel */
-.impressum-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.impressum-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-/* Abschnittsüberschriften */
-.impressum-section-title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #333;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-/* Textabsätze */
-.impressum-text {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-}
-
-/* Links im Impressum */
-.impressum-text a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.impressum-text a:hover {
-  text-decoration: underline;
-}
 
 /* --------------------------------------------------------------
-   Datenschutz-Seite - Grundlegendes Styling
+   DATENSCHUTZ-Seite (gilt ebenso für IMPRESSUM)- Grundlegendes Styling
    -------------------------------------------------------------- */
 
-/* Hauptcontainer für die Datenschutz-Seite */
 .datenschutz-container {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  background-color: #f8f9fa;
-  display: flex;
-  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Container für den Inhalt (Zentrierung und maximale Breite) */
-.datenschutz-content {
-  background-color: #ffffff;
-  padding: 3rem;
-  width: 100%;
-  max-width: 900px; /* Maximale Breite für größere Displays */
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Header-Bereich für den Titel */
 .datenschutz-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
-/* Titel der Datenschutz-Seite */
+.datenschutz-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .datenschutz-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-/* Abschnittsüberschriften */
-.datenschutz-section-title {
-  font-size: 1.8rem;
+  font-size: 36px; /* Titel-Schriftgröße */
   font-weight: 600;
-  color: #333;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
-/* Textabsätze */
+.datenschutz-section-title {
+  font-size: 22px; /* Überschrift-Größe für Abschnitte */
+  font-weight: 500;
+  margin-top: 30px;
+  color: #2d2d2d;
+}
+
 .datenschutz-text {
-  font-size: 1.1rem;
+  font-size: 16px; /* Normale Textgröße */
+  margin-bottom: 20px;
   color: #555;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
 }
 
-/* Links in der Datenschutz-Seite */
-.datenschutz-text a {
-  color: #007bff;
+.datenschutz-list {
+  margin-left: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.datenschutz-list dt {
+  font-weight: 600;
+  font-size: 17px; /* Etwas größere Schrift für Listen-Kategorien */
+  margin-top: 15px;
+}
+
+.datenschutz-list dd {
+  font-size: 16px; /* Normale Schriftgröße für Listeneinträge */
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #0077cc;
   text-decoration: none;
 }
 
-.datenschutz-text a:hover {
+a:hover {
   text-decoration: underline;
 }
-
 /* ==================== RESPONSIVE DESIGN ==================== */
 
 @media (max-width: 768px) {
@@ -2502,18 +2443,6 @@ body {
   }
 
   .datenschutz-text {
-    font-size: 1rem;
-  }
-
-  .impressum-title {
-    font-size: 2rem;
-  }
-
-  .impressum-section-title {
-    font-size: 1.5rem;
-  }
-
-  .impressum-text {
     font-size: 1rem;
   }
 
