@@ -44,6 +44,11 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   font-size: 1.6rem; /* Base font size (16px equivalent) */
+
+  /* Flexbox für den Body */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Stellt sicher, dass der Body immer mindestens so hoch wie der Viewport ist */
 }
 
 /* ==================== UTILITY CLASSES ==================== */
@@ -559,7 +564,7 @@ body {
   background: var(--text-black);
   color: rgba(255, 255, 255, 0.8);
   padding: 1.5rem 0; /* Weniger Abstand oben und unten */
-  margin-top: 6rem;
+  margin-top: auto; /* Schiebt den Footer zum unteren Rand */
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -2339,8 +2344,6 @@ body {
 .feedback-message a:hover {
   text-decoration: underline;
 }
-
-
 
 /* --------------------------------------------------------------
    DATENSCHUTZ-Seite (gilt ebenso für IMPRESSUM)- Grundlegendes Styling
