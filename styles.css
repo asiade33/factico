@@ -2263,6 +2263,146 @@ body {
   padding-top: 15px;
 }
 
+/* --------------------------------------------------------------
+   Feedback-Seite - Stellt eine moderne, ansprechende Gestaltung sicher
+   -------------------------------------------------------------- */
+
+/* Hauptcontainer für den Feedback-Bereich */
+.feedback-container {
+  padding-top: 6rem; /* Oberer Abstand */
+  padding-bottom: 6rem; /* Unterer Abstand */
+  background-color: #f8f9fa; /* Heller Hintergrund für den Bereich */
+}
+
+.py-large {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* Ausrichtung und Stil des Feedback-Bereichs */
+.feedback-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Die Karte, in der der Inhalt dargestellt wird */
+.feedback-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  overflow: hidden;
+  border: none;
+}
+
+.feedback-card-body {
+  padding: 3rem;
+  text-align: center;
+}
+
+/* Stil für das Feedback-Icon */
+.feedback-icon {
+  font-size: 4rem;
+  color: #007bff; /* Vertrauenswürdiges Blau */
+  margin-bottom: 1.5rem;
+}
+
+/* Haupttitel des Feedback-Bereichs */
+.feedback-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Untertitel für die Seite */
+.feedback-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* Nachricht und Kontaktinformation */
+.feedback-message {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.feedback-message a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.feedback-message a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------
+   Impressum-Seite - Optimierte Darstellung mit Abstand und mittiger Ausrichtung
+   -------------------------------------------------------------- */
+
+/* Hauptcontainer für das Impressum */
+.impressum-container {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container für den Inhalt (Zentrierung und max. Breite) */
+.impressum-content {
+  background-color: #ffffff;
+  padding: 3rem;
+  width: 100%;
+  max-width: 900px; /* Maximale Breite für größere Displays */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header-Bereich für den Titel */
+.impressum-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.impressum-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Abschnittsüberschriften */
+.impressum-section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Textabsätze */
+.impressum-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Links im Impressum */
+.impressum-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.impressum-text a:hover {
+  text-decoration: underline;
+}
+
 /* ==================== RESPONSIVE DESIGN ==================== */
 
 @media (max-width: 768px) {
@@ -2274,6 +2414,31 @@ body {
   /* Body padding um den Header herum reduzieren */
   body {
     padding-top: 7rem; /* Stelle sicher, dass die Hero-Section nach dem Header sichtbar bleibt */
+  }
+
+  .feedback-container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .feedback-title {
+    font-size: 2rem;
+  }
+
+  .feedback-icon {
+    font-size: 3rem;
+  }
+
+  .impressum-title {
+    font-size: 2rem;
+  }
+
+  .impressum-section-title {
+    font-size: 1.5rem;
+  }
+
+  .impressum-text {
+    font-size: 1rem;
   }
 
   /* Navigation */
