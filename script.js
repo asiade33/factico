@@ -149,17 +149,14 @@ const pages = {
   weidel: "weidel.html",
   wirecard: "wirecard.html",
   katrin_goering_eckardt: "goering-eckardt.html",
-  katrin: "goering-eckardt.html",
   goering: "goering-eckardt.html",
   goering_eckardt: "goering-eckardt.html",
   goering_eckhardt: "goering-eckardt.html",
   göring: "goering-eckardt.html",
   robert_habeck: "habeck.html", // Robert Habeck
   habeck: "habeck.html", // Habeck
-  robert: "habeck.html", // Robert
   markus_tessa_ganserer: "ganserer.html", // Tessa Ganserer (früher Markus)
   ganserer: "ganserer.html", // Tessa Ganserer
-  markus: "ganserer.html", // Früherer Name von Tessa Ganserer
   tessa_ganserer: "ganserer.html", // Voller Name Tessa Ganserer
   markus_ganserer: "ganserer.html", // Früherer Name
   emilia_fester: "fester.html", // Emilia Fester
