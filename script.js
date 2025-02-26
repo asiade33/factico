@@ -120,6 +120,9 @@ const customSearchResults = {
   klingbeil: "Lars Klingbeil",
   saskia_esken: "Saskia Esken",
   esken: "Saskia Esken",
+  nancy_faeser: "Nancy Faeser",
+  faeser: "Nancy Faeser",
+  fäser: "Nancy Faeser",
 };
 
 // Seiten-Verlinkungen (angepasst, um alle Keys abzudecken)
@@ -171,6 +174,8 @@ const pages = {
   klingbeil: "klingbeil.html", // Klingbeil
   saskia_esken: "esken.html", // Esken
   esken: "esken.html", // Esken
+  nancy_faeser: "faeser.html", // Esken
+  faeser: "faeser.html", // Esken
 };
 
 // Normalisiert die Eingabe umfassend
