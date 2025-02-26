@@ -195,6 +195,11 @@ body {
   color: var(--accent-blue);
 }
 
+.nav-link:hover {
+  color: var(--accent-blue);
+  text-decoration: none; /* Doppelte Unterstreichung verhindern */
+}
+
 .nav-link::after {
   content: "";
   position: absolute;
@@ -443,15 +448,6 @@ body {
   ); /* Farbverlauf von Blau (links) zu Rot (rechts) */
   border-radius: 50px; /* Runde Ecken für weicheren Look */
   margin: 0 1rem;
-}
-
-/* Optional: Feinerer Stil für den Pfeil */
-.left-symbol::after {
-  content: " ← ";
-}
-
-.right-symbol::after {
-  content: " → ";
 }
 
 .party-card {
