@@ -25,7 +25,7 @@ const parties = [
   {
     name: "Grüne",
     logo: "https://i.imgur.com/xe72gQi.png",
-    link: "gruene.html",
+    link: "/gruene/",
   },
   { name: "BSW", logo: "https://i.imgur.com/jvq96jt.png", link: "bsw.html" },
   { name: "SPD", logo: "https://i.imgur.com/A642CgB.png", link: "spd.html" },
