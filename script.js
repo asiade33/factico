@@ -272,8 +272,8 @@ const handleSearch = debounce((query) => {
 
     if (uniqueResults.length) {
       searchResults.style.display = "block";
-      selectedResultIndex = 0; // Wähle den ersten Eintrag automatisch aus
-      updateSelection(); // Markiere den ersten Eintrag visuell
+      // selectedResultIndex = 0; // Commented out to prevent automatic selection
+      // updateSelection(); // Commented out to prevent visual update
     } else {
       searchResults.style.display = "none";
       selectedResultIndex = -1; // Keine Auswahl
@@ -287,7 +287,7 @@ const handleSearch = debounce((query) => {
 searchInput.addEventListener("input", (e) => {
   handleSearch(e.target.value);
   selectedResultIndex = -1; // Auswahl zurücksetzen bei neuer Eingabe
-  updateSelection(); // Auswahl visuell entfernen
+  // updateSelection(); // Commented out for testing
 });
 
 /*
