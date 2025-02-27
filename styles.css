@@ -303,12 +303,8 @@ body {
 }
 
 /* Hover-Effekt für Maus-Navigation */
-.search-item:hover,
-.search-item.hover {
-  background-color: var(--primary-blue-light); /* Hellere blaue Hover-Farbe */
-  color: var(
-    --text-color-dark
-  ); /* Schriftfarbe beim Hover ist jetzt auch dunkel (SCHWARZ) */
+.search-item:hover {
+  background-color: red !important;
 }
 
 /* Ausgewähltes Suchergebnis (angepasst und vereinfacht) */
