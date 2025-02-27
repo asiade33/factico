@@ -11,6 +11,7 @@
   --warning-orange: #f57c00;
   --success-green: #388e3c;
   --info-blue: #1976d2;
+  --text-color-dark: #161616;
 
   /* Spacing & Sizing */
   --radius-lg: 8px;
@@ -305,23 +306,20 @@ body {
 /* Hover-Effekt für Maus-Navigation */
 .search-item:hover {
   background-color: var(--accent-blue);
+  color: white;
 }
 
 /* Ausgewähltes Suchergebnis (angepasst und vereinfacht) */
 .search-item.selected {
-  background-color: var(
-    --primary-blue
-  ); /* Blaue Hintergrundfarbe beibehalten */
-  color: var(--text-color-dark); /* Textfarbe auf Dark für Auswahl */
+  background-color: #b3e5fc; /* Or var(--info-blue) */
+  color: var(--text-color-dark);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 /* Hover-Effekt für ausgewähltes Element entfernen (optional, für cleanere Optik) (unverändert) */
 .search-item.selected:hover {
-  background-color: var(
-    --accent-blue
-  ); /* Farbe beim Hover über Ausgewähltes beibehalten */
-  color: var(--text-color-dark);
+  background-color: var(--accent-blue);
+  color: white; /* Match the regular hover for consistency */
 }
 
 /* Modern Content Cards */
