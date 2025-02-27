@@ -290,38 +290,37 @@ searchInput.addEventListener("input", (e) => {
   // updateSelection(); // Commented out for testing
 });
 
-/*
 searchInput.addEventListener("keydown", (e) => {
   if (searchResults.style.display === "block") {
     if (e.key === "ArrowDown") {
-      e.preventDefault(); // Verhindert das Scrollen der Seite
+      e.preventDefault(); // Prevents page scrolling
       if (selectedResultIndex < searchResults.children.length - 1) {
         selectedResultIndex++;
       } else {
-        selectedResultIndex = 0; // Zurück zum ersten Element, wenn am Ende
+        selectedResultIndex = 0; // Loops back to the first item
       }
       updateSelection();
     } else if (e.key === "ArrowUp") {
-      e.preventDefault(); // Verhindert das Scrollen der Seite
+      e.preventDefault(); // Prevents page scrolling
       if (selectedResultIndex > 0) {
         selectedResultIndex--;
       } else {
-        selectedResultIndex = searchResults.children.length - 1; // Zum letzten Element, wenn am Anfang
+        selectedResultIndex = searchResults.children.length - 1; // Loops to the last item
       }
       updateSelection();
     } else if (e.key === "Enter") {
-      e.preventDefault(); // Verhindert Formular-Absendung
+      e.preventDefault(); // Prevents form submission
       if (
         selectedResultIndex !== -1 &&
         searchResults.children[selectedResultIndex]
       ) {
-        const link = searchResults.children[selectedResultIndex].getAttribute("data-link");
-        window.location.href = link;
+        const link =
+          searchResults.children[selectedResultIndex].getAttribute("data-link");
+        window.location.href = link; // Navigates to the selected link
       }
     }
   }
 });
-*/
 
 // Funktion zur Formatierung der Namen
 function formatName(name, query) {
@@ -373,29 +372,37 @@ function updateSelection() {
 }
 
 // Mouse hover effects for search items
-searchResults.addEventListener(
-  "mouseover",
-  (e) => {
-    const searchItem = e.target.closest(".search-item");
-    if (searchItem) {
-      searchItem.classList.add("hover");
-      console.log("Hover added to:", searchItem.textContent);
+searchInput.addEventListener("keydown", (e) => {
+  if (searchResults.style.display === "block") {
+    if (e.key === "ArrowDown") {
+      e.preventDefault(); // Prevents page scrolling
+      if (selectedResultIndex < searchResults.children.length - 1) {
+        selectedResultIndex++;
+      } else {
+        selectedResultIndex = 0; // Loops back to the first item
+      }
+      updateSelection();
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault(); // Prevents page scrolling
+      if (selectedResultIndex > 0) {
+        selectedResultIndex--;
+      } else {
+        selectedResultIndex = searchResults.children.length - 1; // Loops to the last item
+      }
+      updateSelection();
+    } else if (e.key === "Enter") {
+      e.preventDefault(); // Prevents form submission
+      if (
+        selectedResultIndex !== -1 &&
+        searchResults.children[selectedResultIndex]
+      ) {
+        const link =
+          searchResults.children[selectedResultIndex].getAttribute("data-link");
+        window.location.href = link; // Navigates to the selected link
+      }
     }
-  },
-  true
-); // Use capture phase to catch events earlier
-
-searchResults.addEventListener(
-  "mouseout",
-  (e) => {
-    const searchItem = e.target.closest(".search-item");
-    if (searchItem) {
-      searchItem.classList.remove("hover");
-      console.log("Hover removed from:", searchItem.textContent);
-    }
-  },
-  true
-);
+  }
+});
 
 // --------------------Funktion zum Umklappen des Textes und Drehen des Pfeils --------------------
 function toggleHighlight(button) {

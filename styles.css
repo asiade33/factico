@@ -304,7 +304,7 @@ body {
 
 /* Hover-Effekt für Maus-Navigation */
 .search-item:hover {
-  background-color: red !important;
+  background-color: var(--accent-blue);
 }
 
 /* Ausgewähltes Suchergebnis (angepasst und vereinfacht) */
@@ -319,7 +319,7 @@ body {
 /* Hover-Effekt für ausgewähltes Element entfernen (optional, für cleanere Optik) (unverändert) */
 .search-item.selected:hover {
   background-color: var(
-    --primary-blue
+    --accent-blue
   ); /* Farbe beim Hover über Ausgewähltes beibehalten */
   color: var(--text-color-dark);
 }
