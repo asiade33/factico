@@ -301,7 +301,9 @@ body {
   background-color: transparent; /* Standard-Hintergrund transparent */
 }
 
-.search-item:hover {
+/* Hover-Effekt für Maus-Navigation */
+.search-item:hover,
+.search-item.hover {
   background-color: var(--primary-blue-light); /* Hellere blaue Hover-Farbe */
   color: var(
     --text-color-dark
