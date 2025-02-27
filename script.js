@@ -372,19 +372,29 @@ function updateSelection() {
 }
 
 // Mouse hover effects for search items
-searchResults.addEventListener("mouseover", (e) => {
-  const searchItem = e.target.closest(".search-item");
-  if (searchItem) {
-    searchItem.classList.add("hover");
-  }
-});
+searchResults.addEventListener(
+  "mouseover",
+  (e) => {
+    const searchItem = e.target.closest(".search-item");
+    if (searchItem) {
+      searchItem.classList.add("hover");
+      console.log("Hover added to:", searchItem.textContent);
+    }
+  },
+  true
+); // Use capture phase to catch events earlier
 
-searchResults.addEventListener("mouseout", (e) => {
-  const searchItem = e.target.closest(".search-item");
-  if (searchItem) {
-    searchItem.classList.remove("hover");
-  }
-});
+searchResults.addEventListener(
+  "mouseout",
+  (e) => {
+    const searchItem = e.target.closest(".search-item");
+    if (searchItem) {
+      searchItem.classList.remove("hover");
+      console.log("Hover removed from:", searchItem.textContent);
+    }
+  },
+  true
+);
 
 // --------------------Funktion zum Umklappen des Textes und Drehen des Pfeils --------------------
 function toggleHighlight(button) {
