@@ -371,6 +371,19 @@ function updateSelection() {
   }
 }
 
+// Mouse hover effects for search items
+searchResults.addEventListener("mouseover", (e) => {
+  if (e.target.classList.contains("search-item")) {
+    e.target.classList.add("hover");
+  }
+});
+
+searchResults.addEventListener("mouseout", (e) => {
+  if (e.target.classList.contains("search-item")) {
+    e.target.classList.remove("hover");
+  }
+});
+
 // --------------------Funktion zum Umklappen des Textes und Drehen des Pfeils --------------------
 function toggleHighlight(button) {
   var content = button.nextElementSibling;
