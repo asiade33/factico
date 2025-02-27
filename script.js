@@ -164,9 +164,14 @@ const pages = {
   die_linke: "/linke/", // Partei Die Linke
   olaf_scholz: "/spd/scholz/", // Politiker Olaf Scholz (SPD)
   scholz: "/spd/scholz/", // Olaf Scholz (SPD)
+  lars_klingbeil: "/spd/klingbeil/", // Lars Klingbeil (SPD)
+  klingbeil: "/spd/klingbeil/", // Lars Klingbeil (SPD)
+  saskia_esken: "/spd/esken/", // Saskia Esken (SPD)
+  esken: "/spd/esken/", // Saskia Esken (SPD)
+  nancy_faeser: "/spd/faeser/", // Nancy Faeser (SPD)
+  faeser: "/spd/faeser/", // Nancy Faeser (SPD)
   alice_weidel: "/afd/weidel/", // Politiker Alice Weidel (AfD)
   weidel: "/afd/weidel/", // Alice Weidel (AfD)
-  wirecard: "/wirecard/", // Wirecard Skandal
   katrin_goering_eckardt: "/gruene/goering-eckardt/", // Politiker Katrin Göring-Eckardt (Grüne)
   goering: "/gruene/goering-eckardt/", // Katrin Göring-Eckardt (Grüne)
   goering_eckardt: "/gruene/goering-eckardt/", // Katrin Göring-Eckardt (Grüne)
@@ -186,12 +191,6 @@ const pages = {
   baerbock: "/gruene/baerbock/", // Annalena Baerbock (Grüne)
   ricarda_lang: "/gruene/lang/", // Ricarda Lang (Grüne)
   lang: "/gruene/lang/", // Ricarda Lang (Grüne)
-  lars_klingbeil: "/spd/klingbeil/", // Lars Klingbeil (SPD)
-  klingbeil: "/spd/klingbeil/", // Lars Klingbeil (SPD)
-  saskia_esken: "/spd/esken/", // Saskia Esken (SPD)
-  esken: "/spd/esken/", // Saskia Esken (SPD)
-  nancy_faeser: "/spd/faeser/", // Nancy Faeser (SPD)
-  faeser: "/spd/faeser/", // Nancy Faeser (SPD)
 };
 
 // Normalisiert die Eingabe umfassend

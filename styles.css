@@ -285,7 +285,7 @@ body {
   box-shadow: var(--shadow);
   margin-top: 0.5rem;
   overflow: hidden;
-  z-index: 100;
+  z-index: 9999;
   box-sizing: border-box;
 }
 
@@ -293,6 +293,7 @@ body {
 .search-item {
   padding: 0.75rem 1.5rem;
   cursor: pointer;
+  pointer-events: auto; /* Sicherstellen, dass Mausinteraktionen erlaubt sind */
   transition: var(--transition);
   color: var(
     --text-color-dark
