@@ -285,9 +285,9 @@ const handleSearch = debounce((query) => {
 }, 300);
 
 searchInput.addEventListener("input", (e) => {
-  handleSearch(e.target.value);
-  selectedResultIndex = -1; // Auswahl zurücksetzen bei neuer Eingabe
-  // updateSelection(); // Commented out for testing
+  handleSearch(e.target.value); // Your search logic
+  selectedResultIndex = -1; // Reset selection
+  updateSelection(); // Clear the selected class
 });
 
 searchInput.addEventListener("keydown", (e) => {
@@ -322,29 +322,50 @@ searchInput.addEventListener("keydown", (e) => {
   }
 });
 
-// Funktion zur Formatierung der Namen
+// Format names
 function formatName(name, query) {
-  const uppercaseNames = ["spd", "cdu/csu", "fdp"]; // Hier kannst du auch andere Akronyme hinzufügen, die immer in Großbuchstaben bleiben sollen
+  const uppercaseNames = ["spd", "cdu/csu", "fdp"];
   if (uppercaseNames.includes(name.toLowerCase())) {
-    return name.toUpperCase(); // Gibt den Namen als Großbuchstaben zurück
+    return name.toUpperCase();
   }
-
-  // Wenn der Name mit einem benutzerdefinierten Begriff übereinstimmt, gibt es das formatierte Ergebnis zurück
   if (customSearchResults[name.toLowerCase()]) {
-    return customSearchResults[name.toLowerCase()]; // Gibt die benutzerdefinierte Formatierung zurück
+    return customSearchResults[name.toLowerCase()];
   }
-
-  return name.charAt(0).toUpperCase() + name.slice(1); // Normalisiert den ersten Buchstaben, wenn es kein Akronym ist
+  return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
-// Handle search result clicks (delegation method)
+// Mouse click handling
 searchResults.addEventListener("click", (e) => {
-  // Überprüfen, ob das angeklickte Element ein "search-item" ist
   if (e.target && e.target.classList.contains("search-item")) {
     const pageLink = e.target.getAttribute("data-link");
-    window.location.href = pageLink; // Weiterleitung zur gefundenen Seite
+    window.location.href = pageLink;
   }
 });
+
+// Mouse hover effects
+searchResults.addEventListener(
+  "mouseover",
+  (e) => {
+    const searchItem = e.target.closest(".search-item");
+    if (searchItem) {
+      searchItem.classList.add("hover");
+      console.log("Hover added to:", searchItem.textContent);
+    }
+  },
+  true
+);
+
+searchResults.addEventListener(
+  "mouseout",
+  (e) => {
+    const searchItem = e.target.closest(".search-item");
+    if (searchItem) {
+      searchItem.classList.remove("hover");
+      console.log("Hover removed from:", searchItem.textContent);
+    }
+  },
+  true
+);
 
 // Debounce function for search
 function debounce(func, timeout = 300) {
@@ -357,52 +378,20 @@ function debounce(func, timeout = 300) {
   };
 }
 
+// Update selection for keyboard navigation
 function updateSelection() {
   const searchItems = searchResults.children;
   for (let i = 0; i < searchItems.length; i++) {
     const item = searchItems[i];
     if (i === selectedResultIndex) {
       item.classList.add("selected");
-      item.setAttribute("aria-selected", "true"); // Für Screenreader-Zugänglichkeit
+      item.setAttribute("aria-selected", "true");
     } else {
       item.classList.remove("selected");
-      item.setAttribute("aria-selected", "false"); // Für Screenreader-Zugänglichkeit
+      item.setAttribute("aria-selected", "false");
     }
   }
 }
-
-// Mouse hover effects for search items
-searchInput.addEventListener("keydown", (e) => {
-  if (searchResults.style.display === "block") {
-    if (e.key === "ArrowDown") {
-      e.preventDefault(); // Prevents page scrolling
-      if (selectedResultIndex < searchResults.children.length - 1) {
-        selectedResultIndex++;
-      } else {
-        selectedResultIndex = 0; // Loops back to the first item
-      }
-      updateSelection();
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault(); // Prevents page scrolling
-      if (selectedResultIndex > 0) {
-        selectedResultIndex--;
-      } else {
-        selectedResultIndex = searchResults.children.length - 1; // Loops to the last item
-      }
-      updateSelection();
-    } else if (e.key === "Enter") {
-      e.preventDefault(); // Prevents form submission
-      if (
-        selectedResultIndex !== -1 &&
-        searchResults.children[selectedResultIndex]
-      ) {
-        const link =
-          searchResults.children[selectedResultIndex].getAttribute("data-link");
-        window.location.href = link; // Navigates to the selected link
-      }
-    }
-  }
-});
 
 // --------------------Funktion zum Umklappen des Textes und Drehen des Pfeils --------------------
 function toggleHighlight(button) {
