@@ -143,55 +143,55 @@ const customSearchResults = {
 
 // Seiten-Verlinkungen (angepasst, um alle Keys abzudecken)
 const pages = {
-  spd: "/spd/",
-  cdu: "/cducsu/",
-  csu: "/cducsu/",
-  cducsu: "/cducsu/", // Schlüssel ohne Schrägstrich
-  fdp: "/fdp/",
-  gruene: "/gruene/",
-  die_gruenen: "/gruene/",
-  buendnis_90_die_gruenen: "/gruene/",
-  afd: "/afd/",
-  bündnis_sahra_wagenknecht: "/bsw/", // Ergänzung: Langform mit Unterstrichen (realistisch)
-  bündnis_wagenknecht: "/bsw/", // Ergänzung: Verkürzte Langform (realistisch)
-  buendnis_sahra_wagenknecht: "/bsw/", // Ergänzung: Langform mit "ue" (realistisch)
-  buendnis_wagenknecht: "/bsw/", // Ergänzung: Verkürzte Langform mit "ue" (realistisch)
-  sahra_wagenknecht: "/bsw/", // Ergänzung: Name der Parteivorsitzenden (realistisch)
-  sarah_wagenknecht: "/bsw/", // Ergänzung: Name der Parteivorsitzenden (realistisch)
-  wagenknecht: "/bsw/", // Ergänzung: Nachname der Parteivorsitzenden
-  bsw: "/bsw/",
-  linke: "/linke/",
-  die_linke: "/linke/",
-  olaf_scholz: "/scholz/",
-  scholz: "/scholz/",
-  alice_weidel: "/weidel/",
-  weidel: "/weidel/",
-  wirecard: "/wirecard/",
-  katrin_goering_eckardt: "/goering-eckardt/",
-  goering: "/goering-eckardt/",
-  goering_eckardt: "/goering-eckardt/",
-  goering_eckhardt: "/goering-eckardt/",
-  göring: "/goering-eckardt/",
-  robert_habeck: "/habeck/", // Robert Habeck
-  habeck: "/habeck/", // Habeck
-  markus_tessa_ganserer: "/ganserer/", // Tessa Ganserer (früher Markus)
-  ganserer: "/ganserer/", // Tessa Ganserer
-  tessa_ganserer: "/ganserer/", // Voller Name Tessa Ganserer
-  markus_ganserer: "/ganserer/", // Früherer Name
-  emilia_fester: "/fester/", // Emilia Fester
-  fester: "/fester/", // Emilia Fester
-  neubauer: "/neubauer/", // Luisa Neubauer
-  luisa_neubauer: "/neubauer/", // Luisa Neubauer
-  annalena_baerbock: "/baerbock/", // Baerbock
-  baerbock: "/baerbock/", // Baerbock
-  ricarda_lang: "/lang/", // Lang
-  lang: "/lang/", // Lang
-  lars_klingbeil: "/klingbeil/", // Klingbeil
-  klingbeil: "/klingbeil/", // Klingbeil
-  saskia_esken: "/esken/", // Esken
-  esken: "/esken/", // Esken
-  nancy_faeser: "/faeser/", // Faeser
-  faeser: "/faeser/", // Faeser
+  spd: "/spd/", // Partei SPD
+  cdu: "/cducsu/", // Partei CDU
+  csu: "/cducsu/", // Partei CSU
+  cducsu: "/cducsu/", // Partei CDU/CSU
+  fdp: "/fdp/", // Partei FDP
+  gruene: "/gruene/", // Partei Grüne
+  die_gruenen: "/gruene/", // Partei Grüne (alternative Bezeichnung)
+  buendnis_90_die_gruenen: "/gruene/", // Partei Grüne (alternative Bezeichnung)
+  afd: "/afd/", // Partei AfD
+  bündnis_sahra_wagenknecht: "/bsw/", // Partei BSW (z.B. Sahra Wagenknecht)
+  bündnis_wagenknecht: "/bsw/", // Partei BSW (verkürzte Langform)
+  buendnis_sahra_wagenknecht: "/bsw/", // Partei BSW (Langform mit "ue")
+  buendnis_wagenknecht: "/bsw/", // Partei BSW (verkürzte Langform mit "ue")
+  sahra_wagenknecht: "/bsw/", // Sahra Wagenknecht (BSW)
+  sarah_wagenknecht: "/bsw/", // Sahra Wagenknecht (BSW)
+  wagenknecht: "/bsw/", // Nachname der Parteivorsitzenden Wagenknecht
+  bsw: "/bsw/", // Partei BSW
+  linke: "/linke/", // Partei Die Linke
+  die_linke: "/linke/", // Partei Die Linke
+  olaf_scholz: "/spd/scholz/", // Politiker Olaf Scholz (SPD)
+  scholz: "/spd/scholz/", // Olaf Scholz (SPD)
+  alice_weidel: "/afd/weidel/", // Politiker Alice Weidel (AfD)
+  weidel: "/afd/weidel/", // Alice Weidel (AfD)
+  wirecard: "/wirecard/", // Wirecard Skandal
+  katrin_goering_eckardt: "/gruene/goering-eckardt/", // Politiker Katrin Göring-Eckardt (Grüne)
+  goering: "/gruene/goering-eckardt/", // Katrin Göring-Eckardt (Grüne)
+  goering_eckardt: "/gruene/goering-eckardt/", // Katrin Göring-Eckardt (Grüne)
+  goering_eckhardt: "/gruene/goering-eckardt/", // Alternative Schreibweise für Katrin Göring-Eckardt
+  göring: "/gruene/goering-eckardt/", // Katrin Göring-Eckardt (Grüne)
+  robert_habeck: "/gruene/habeck/", // Robert Habeck (Grüne)
+  habeck: "/gruene/habeck/", // Robert Habeck (Grüne)
+  markus_tessa_ganserer: "/gruene/ganserer/", // Tessa Ganserer (Grüne, früher Markus)
+  ganserer: "/gruene/ganserer/", // Tessa Ganserer (Grüne)
+  tessa_ganserer: "/gruene/ganserer/", // Tessa Ganserer (Grüne)
+  markus_ganserer: "/gruene/ganserer/", // Früherer Name von Tessa Ganserer
+  emilia_fester: "/gruene/fester/", // Emilia Fester (Grüne)
+  fester: "/gruene/fester/", // Emilia Fester (Grüne)
+  neubauer: "/gruene/neubauer/", // Luisa Neubauer (Grüne)
+  luisa_neubauer: "/gruene/neubauer/", // Luisa Neubauer (Grüne)
+  annalena_baerbock: "/gruene/baerbock/", // Annalena Baerbock (Grüne)
+  baerbock: "/gruene/baerbock/", // Annalena Baerbock (Grüne)
+  ricarda_lang: "/gruene/lang/", // Ricarda Lang (Grüne)
+  lang: "/gruene/lang/", // Ricarda Lang (Grüne)
+  lars_klingbeil: "/spd/klingbeil/", // Lars Klingbeil (SPD)
+  klingbeil: "/spd/klingbeil/", // Lars Klingbeil (SPD)
+  saskia_esken: "/spd/esken/", // Saskia Esken (SPD)
+  esken: "/spd/esken/", // Saskia Esken (SPD)
+  nancy_faeser: "/spd/faeser/", // Nancy Faeser (SPD)
+  faeser: "/spd/faeser/", // Nancy Faeser (SPD)
 };
 
 // Normalisiert die Eingabe umfassend
