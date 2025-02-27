@@ -373,14 +373,16 @@ function updateSelection() {
 
 // Mouse hover effects for search items
 searchResults.addEventListener("mouseover", (e) => {
-  if (e.target.classList.contains("search-item")) {
-    e.target.classList.add("hover");
+  const searchItem = e.target.closest(".search-item");
+  if (searchItem) {
+    searchItem.classList.add("hover");
   }
 });
 
 searchResults.addEventListener("mouseout", (e) => {
-  if (e.target.classList.contains("search-item")) {
-    e.target.classList.remove("hover");
+  const searchItem = e.target.closest(".search-item");
+  if (searchItem) {
+    searchItem.classList.remove("hover");
   }
 });
 
