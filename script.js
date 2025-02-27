@@ -143,55 +143,55 @@ const customSearchResults = {
 
 // Seiten-Verlinkungen (angepasst, um alle Keys abzudecken)
 const pages = {
-  spd: "spd.html",
-  cdu: "cducsu.html",
-  csu: "cducsu.html",
-  cducsu: "cducsu.html", // Schlüssel ohne Schrägstrich
-  fdp: "fdp.html",
-  gruene: "gruene.html",
-  die_gruenen: "gruene.html",
-  buendnis_90_die_gruenen: "gruene.html",
-  afd: "afd.html",
-  bündnis_sahra_wagenknecht: "bsw.html", // Ergänzung: Langform mit Unterstrichen (realistisch)
-  bündnis_wagenknecht: "bsw.html", // Ergänzung: Verkürzte Langform (realistisch)
-  buendnis_sahra_wagenknecht: "bsw.html", // Ergänzung: Langform mit "ue" (realistisch)
-  buendnis_wagenknecht: "bsw.html", // Ergänzung: Verkürzte Langform mit "ue" (realistisch)
-  sahra_wagenknecht: "bsw.html", // Ergänzung: Name der Parteivorsitzenden (realistisch)
-  sarah_wagenknecht: "bsw.html", // Ergänzung: Name der Parteivorsitzenden (realistisch)
-  wagenknecht: "bsw.html", // Ergänzung: Nachname der Parteivorsitzenden
-  bsw: "bsw.html",
-  linke: "linke.html",
-  die_linke: "linke.html",
-  olaf_scholz: "scholz.html",
-  scholz: "scholz.html",
-  alice_weidel: "weidel.html",
-  weidel: "weidel.html",
-  wirecard: "wirecard.html",
-  katrin_goering_eckardt: "goering-eckardt.html",
-  goering: "goering-eckardt.html",
-  goering_eckardt: "goering-eckardt.html",
-  goering_eckhardt: "goering-eckardt.html",
-  göring: "goering-eckardt.html",
-  robert_habeck: "habeck.html", // Robert Habeck
-  habeck: "habeck.html", // Habeck
-  markus_tessa_ganserer: "ganserer.html", // Tessa Ganserer (früher Markus)
-  ganserer: "ganserer.html", // Tessa Ganserer
-  tessa_ganserer: "ganserer.html", // Voller Name Tessa Ganserer
-  markus_ganserer: "ganserer.html", // Früherer Name
-  emilia_fester: "fester.html", // Emilia Fester
-  fester: "fester.html", // Emilia Fester
-  neubauer: "neubauer.html", // Luisa Neubauer
-  luisa_neubauer: "neubauer.html", // Luisa Neubauer
-  annalena_baerbock: "baerbock.html", // Baerbock
-  baerbock: "baerbock.html", // Baerbock
-  ricarda_lang: "lang.html", // Lang
-  lang: "lang.html", // Lang
-  lars_klingbeil: "klingbeil.html", // Klingbeil
-  klingbeil: "klingbeil.html", // Klingbeil
-  saskia_esken: "esken.html", // Esken
-  esken: "esken.html", // Esken
-  nancy_faeser: "faeser.html", // Esken
-  faeser: "faeser.html", // Esken
+  spd: "/spd/",
+  cdu: "/cducsu/",
+  csu: "/cducsu/",
+  cducsu: "/cducsu/", // Schlüssel ohne Schrägstrich
+  fdp: "/fdp/",
+  gruene: "/gruene/",
+  die_gruenen: "/gruene/",
+  buendnis_90_die_gruenen: "/gruene/",
+  afd: "/afd/",
+  bündnis_sahra_wagenknecht: "/bsw/", // Ergänzung: Langform mit Unterstrichen (realistisch)
+  bündnis_wagenknecht: "/bsw/", // Ergänzung: Verkürzte Langform (realistisch)
+  buendnis_sahra_wagenknecht: "/bsw/", // Ergänzung: Langform mit "ue" (realistisch)
+  buendnis_wagenknecht: "/bsw/", // Ergänzung: Verkürzte Langform mit "ue" (realistisch)
+  sahra_wagenknecht: "/bsw/", // Ergänzung: Name der Parteivorsitzenden (realistisch)
+  sarah_wagenknecht: "/bsw/", // Ergänzung: Name der Parteivorsitzenden (realistisch)
+  wagenknecht: "/bsw/", // Ergänzung: Nachname der Parteivorsitzenden
+  bsw: "/bsw/",
+  linke: "/linke/",
+  die_linke: "/linke/",
+  olaf_scholz: "/scholz/",
+  scholz: "/scholz/",
+  alice_weidel: "/weidel/",
+  weidel: "/weidel/",
+  wirecard: "/wirecard/",
+  katrin_goering_eckardt: "/goering-eckardt/",
+  goering: "/goering-eckardt/",
+  goering_eckardt: "/goering-eckardt/",
+  goering_eckhardt: "/goering-eckardt/",
+  göring: "/goering-eckardt/",
+  robert_habeck: "/habeck/", // Robert Habeck
+  habeck: "/habeck/", // Habeck
+  markus_tessa_ganserer: "/ganserer/", // Tessa Ganserer (früher Markus)
+  ganserer: "/ganserer/", // Tessa Ganserer
+  tessa_ganserer: "/ganserer/", // Voller Name Tessa Ganserer
+  markus_ganserer: "/ganserer/", // Früherer Name
+  emilia_fester: "/fester/", // Emilia Fester
+  fester: "/fester/", // Emilia Fester
+  neubauer: "/neubauer/", // Luisa Neubauer
+  luisa_neubauer: "/neubauer/", // Luisa Neubauer
+  annalena_baerbock: "/baerbock/", // Baerbock
+  baerbock: "/baerbock/", // Baerbock
+  ricarda_lang: "/lang/", // Lang
+  lang: "/lang/", // Lang
+  lars_klingbeil: "/klingbeil/", // Klingbeil
+  klingbeil: "/klingbeil/", // Klingbeil
+  saskia_esken: "/esken/", // Esken
+  esken: "/esken/", // Esken
+  nancy_faeser: "/faeser/", // Faeser
+  faeser: "/faeser/", // Faeser
 };
 
 // Normalisiert die Eingabe umfassend
