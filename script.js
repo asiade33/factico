@@ -20,22 +20,38 @@ const parties = [
   {
     name: "Linke",
     logo: "https://i.imgur.com/zI3vFFd.png",
-    link: "linke.html",
+    link: "/linke/",
   },
   {
     name: "Grüne",
     logo: "https://i.imgur.com/xe72gQi.png",
     link: "/gruene/",
   },
-  { name: "BSW", logo: "https://i.imgur.com/jvq96jt.png", link: "bsw.html" },
-  { name: "SPD", logo: "https://i.imgur.com/A642CgB.png", link: "spd.html" },
+  {
+    name: "BSW",
+    logo: "https://i.imgur.com/jvq96jt.png",
+    link: "/bsw/",
+  },
+  {
+    name: "SPD",
+    logo: "https://i.imgur.com/A642CgB.png",
+    link: "/spd/",
+  },
   {
     name: "CDU/CSU",
     logo: "https://i.imgur.com/pWjyouE.png",
-    link: "cducsu.html",
+    link: "/cducsu/",
   },
-  { name: "FDP", logo: "https://i.imgur.com/R3MTehN.png", link: "fdp.html" },
-  { name: "AfD", logo: "https://i.imgur.com/av3Eoww.png", link: "afd.html" },
+  {
+    name: "FDP",
+    logo: "https://i.imgur.com/R3MTehN.png",
+    link: "/fdp/",
+  },
+  {
+    name: "AfD",
+    logo: "https://i.imgur.com/av3Eoww.png",
+    link: "/afd/",
+  },
 ];
 
 // Initialize party grid
