@@ -1,150 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Startseite -->
   <url>
     <loc>https://factico.eu/</loc>
     <lastmod>2025-02-26</lastmod>
     <priority>1.0</priority>
   </url>
 
+  <!-- Parteien -->
   <url>
-    <loc>https://factico.eu/spd.html</loc>
+    <loc>https://factico.eu/spd/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/cducsu/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/fdp/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/gruene/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/afd/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/bsw/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/linke/</loc>
     <lastmod>2025-02-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Politiker nach Partei -->
   <url>
-    <loc>https://factico.eu/cducsu.html</loc>
+    <loc>https://factico.eu/spd/scholz/</loc>
     <lastmod>2025-02-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/spd/faeser/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/spd/esken/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/spd/klingbeil/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://factico.eu/fdp.html</loc>
+    <loc>https://factico.eu/gruene/baerbock/</loc>
     <lastmod>2025-02-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/gruene/lang/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/gruene/fester/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/gruene/neubauer/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/gruene/habeck/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/gruene/goering-eckardt/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://factico.eu/gruene/ganserer/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://factico.eu/gruene.html</loc>
+    <loc>https://factico.eu/afd/weidel/</loc>
     <lastmod>2025-02-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
+  <!-- Spezialthemen -->
   <url>
-    <loc>https://factico.eu/afd.html</loc>
+    <loc>https://factico.eu/wirecard/</loc>
     <lastmod>2025-02-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
 
+  <!-- Rechtliches -->
   <url>
-    <loc>https://factico.eu/bsw.html</loc>
+    <loc>https://factico.eu/impressum/</loc>
     <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
-
   <url>
-    <loc>https://factico.eu/linke.html</loc>
+    <loc>https://factico.eu/datenschutz/</loc>
     <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
-
   <url>
-    <loc>https://factico.eu/scholz.html</loc>
+    <loc>https://factico.eu/feedback/</loc>
     <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://factico.eu/weidel.html</loc>
-    <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://factico.eu/wirecard.html</loc>
-    <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://factico.eu/goering-eckardt.html</loc>
-    <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://factico.eu/habeck.html</loc>
-    <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://factico.eu/ganserer.html</loc>
-    <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://factico.eu/fester.html</loc>
-    <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://factico.eu/neubauer.html</loc>
-    <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://factico.eu/baerbock.html</loc>
-    <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://factico.eu/lang.html</loc>
-    <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://factico.eu/klingbeil.html</loc>
-    <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://factico.eu/esken.html</loc>
-    <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://factico.eu/faeser.html</loc>
-    <lastmod>2025-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
 </urlset>
