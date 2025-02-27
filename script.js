@@ -290,6 +290,7 @@ searchInput.addEventListener("input", (e) => {
   updateSelection(); // Auswahl visuell entfernen
 });
 
+/*
 searchInput.addEventListener("keydown", (e) => {
   if (searchResults.style.display === "block") {
     if (e.key === "ArrowDown") {
@@ -314,13 +315,13 @@ searchInput.addEventListener("keydown", (e) => {
         selectedResultIndex !== -1 &&
         searchResults.children[selectedResultIndex]
       ) {
-        const link =
-          searchResults.children[selectedResultIndex].getAttribute("data-link");
+        const link = searchResults.children[selectedResultIndex].getAttribute("data-link");
         window.location.href = link;
       }
     }
   }
 });
+*/
 
 // Funktion zur Formatierung der Namen
 function formatName(name, query) {
