@@ -276,6 +276,7 @@ body {
 
 /* Suchergebnis-Container  */
 .search-results {
+  pointer-events: auto; /* Ensure the container accepts mouse events */
   position: absolute;
   top: 100%;
   left: 0;
