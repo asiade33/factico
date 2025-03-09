@@ -331,9 +331,9 @@ body {
 
 /* --------------- NEWS-FEED-SECTION (Desktop) ------------------ */
 .news-feed {
-  margin: calc(var(--base-spacing) * 2) auto;
+  margin: calc(var(--base-spacing) * 3) auto calc(var(--base-spacing) * 2) auto; /* 48px oben, 32px unten, zentriert */
   padding: calc(var(--base-spacing) * 1.5);
-  max-width: 88%; /* Dein Wunsch */
+  max-width: 82%; /* Dein Wunsch */
   background: linear-gradient(
     135deg,
     var(--background-white) 0%,
@@ -367,7 +367,7 @@ body {
   display: flex;
   align-items: center;
   padding: calc(var(--base-spacing) * 0.75) calc(var(--base-spacing) * 0.75);
-  font-size: 0.7em; /* Angepasst, einheitlich */
+  font-size: 0.8em; /* Angepasst, einheitlich */
   color: var(--text-color-dark);
   border-bottom: 1px solid rgba(var(--neutral-gray), 0.1);
   transition: var(--transition);
@@ -388,7 +388,7 @@ body {
   font-weight: 600;
   margin-right: calc(var(--base-spacing) * 0.75);
   min-width: 110px;
-  font-size: 0.8em; /* Gleich wie li */
+  font-size: 0.9em; /* Gleich wie li */
 }
 
 .news-list a {
