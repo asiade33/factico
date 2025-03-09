@@ -331,19 +331,19 @@ body {
 
 /* --------------- NEWS-FEED-SECTION ------------------ */
 .news-feed {
-  margin: 20px 0; /* Vertikaler Abstand */
-  padding: 15px; /* Innenabstand */
-  background: rgba(255, 255, 255, 0.1); /* Leicht transparenter Hintergrund */
-  border-radius: 10px; /* Abgerundete Ecken */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Schatten für Tiefe */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtiler Rahmen */
+  margin: calc(var(--base-spacing) * 1.25) 0; /* 20px bei 1rem = 16px */
+  padding: var(--base-spacing); /* 1rem = 16px */
+  background: var(--background-white); /* Solider weißer Hintergrund */
+  border-radius: var(--radius-lg); /* 8px */
+  box-shadow: var(--shadow); /* 0 4px 8px rgba(0, 0, 0, 0.15) */
+  border: 1px solid var(--neutral-gray); /* Subtiler grauer Rahmen */
 }
 
 /* Überschrift */
 .news-feed h2 {
-  font-size: 1.5em; /* Etwas größer als Standard */
-  margin: 0 0 10px 0; /* Abstand nur unten */
-  color: #fff; /* Weiß für Kontrast, anpassbar */
+  font-size: 1.5em; /* Beibehalten */
+  margin: 0 0 calc(var(--base-spacing) * 0.625) 0; /* 10px bei 1rem = 16px */
+  color: var(--text-black); /* Dunkler Text für Kontrast */
   text-transform: uppercase; /* Großbuchstaben für Betonung */
 }
 
@@ -356,10 +356,10 @@ body {
 
 /* Listenelemente */
 .news-list li {
-  padding: 10px 0; /* Vertikaler Abstand zwischen Einträgen */
+  padding: calc(var(--base-spacing) * 0.625) 0; /* 10px bei 1rem = 16px */
   font-size: 1.1em; /* Leicht größer für Lesbarkeit */
-  color: #ddd; /* Helles Grau für Text, anpassbar */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Trennlinie */
+  color: var(--text-color-dark); /* #161616 für gute Lesbarkeit */
+  border-bottom: 1px solid var(--neutral-gray); /* Graue Trennlinie */
 }
 
 /* Letztes Element ohne Trennlinie */
@@ -369,21 +369,21 @@ body {
 
 /* Datum (strong) */
 .news-list strong {
-  color: #fff; /* Weiß für Hervorhebung */
+  color: var(--accent-blue); /* #005799 für Hervorhebung */
   font-weight: bold; /* Fett für Betonung */
 }
 
 /* Links */
 .news-list a {
-  color: #007bff; /* Blauer Link, typisch für Websites */
+  color: var(--info-blue); /* #1976d2 als auffälliger Blauton */
   text-decoration: none; /* Keine Unterstreichung standardmäßig */
-  margin-left: 5px; /* Kleiner Abstand zum Text */
-  transition: color 0.3s ease; /* Sanfter Farbwechsel */
+  margin-left: calc(var(--base-spacing) * 0.3125); /* 5px bei 1rem = 16px */
+  transition: var(--transition); /* Sanfter Übergang */
 }
 
 /* Hover-Effekt für Links */
 .news-list a:hover {
-  color: #0056b3; /* Dunkleres Blau beim Hover */
+  color: var(--accent-blue); /* #005799, dunkleres Blau beim Hover */
   text-decoration: underline; /* Unterstreichung beim Hover */
 }
 
