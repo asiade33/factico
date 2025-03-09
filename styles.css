@@ -526,6 +526,7 @@ body {
   align-items: flex-start; /* Sorgt dafür, dass der Inhalt links bleibt */
   width: 100%;
   max-width: 650px;
+  gap: 30px; /* Optional: Kleiner Abstand zwischen den Videos */
   margin: 20px 0; /* Kein 'auto', damit es links bleibt */
   border-radius: 15px; /* Abgerundete Ecken */
   overflow: hidden; /* Damit das Video nicht übersteht */
