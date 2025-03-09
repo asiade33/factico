@@ -141,7 +141,7 @@ const customSearchResults = {
   fäser: "Nancy Faeser",
   merz: "Friedrich Merz",
   friedrich_merz: "Friedrich Merz",
-  fotzen-fritz: "Friedrich Merz",
+  fotzen_fritz: "Friedrich Merz",
   fotzenfritz: "Friedrich Merz",
 };
 
@@ -197,8 +197,8 @@ const pages = {
   lang: "/gruene/lang/", // Ricarda Lang (Grüne)
   merz: "/cducsu/merz/",
   friedrich_merz: "/cducsu/merz/",
-  fotzen-fritz: "/cducsu/merz/",
   fotzenfritz: "/cducsu/merz/",
+  fotzen_fritz: "/cducsu/merz/",
 };
 
 // Normalisiert die Eingabe umfassend
