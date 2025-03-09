@@ -554,6 +554,31 @@ width: 650px; /* Feste Breite, wie beim einzelnen Video */
     rgba(0, 0, 0, 1) 90%,
     rgba(0, 0, 0, 0) 100%
   );
+
+  /* Wrapper für jedes einzelne Video */
+.video-wrapper {
+  width: 650px; /* Feste Breite wie vorher */
+  border-radius: 15px; /* Abgerundete Ecken */
+  overflow: hidden; /* Damit das Video nicht übersteht */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Schatten für Tiefe */
+  background: rgba(255, 255, 255, 0.15); /* Leicht transparenter Hintergrund */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover-Effekt nur auf den individuellen Wrapper */
+.video-wrapper:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Verstärkter Schatten beim Hover */
+  transform: scale(1.02); /* Leichte Vergrößerung */
+}
+
+/* Styling für die iframes */
+.video-wrapper iframe {
+  width: 100%; /* Füllt den Wrapper komplett aus */
+  height: 366px; /* 16:9 Verhältnis für 650px Breite */
+}
+
+  
 }
 /* Großer Video-Container (links ausgerichtet) */
 .video-container {
