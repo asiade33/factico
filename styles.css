@@ -347,7 +347,7 @@ body {
 
 /* Überschrift */
 .news-feed h2 {
-  font-size: 1.4em; /* Reduziert von 1.75em für Eleganz */
+  font-size: 1.1em;
   margin: 0 0 calc(var(--base-spacing) * 1) 0; /* 16px Abstand unten */
   color: var(--text-black); /* Dunkler Text */
   text-transform: uppercase;
@@ -370,7 +370,7 @@ body {
   display: flex;
   align-items: center;
   padding: calc(var(--base-spacing) * 0.75) calc(var(--base-spacing) * 0.75); /* 12px rundum */
-  font-size: 1em; /* Reduziert von 1.15em für Kompaktheit */
+  font-size: 0.85em;
   color: var(--text-color-dark);
   border-bottom: 1px solid rgba(var(--neutral-gray), 0.1); /* Noch subtiler */
   transition: var(--transition);
@@ -394,7 +394,7 @@ body {
   font-weight: 600;
   margin-right: calc(var(--base-spacing) * 0.75); /* 12px Abstand */
   min-width: 110px; /* Etwas schmaler für Balance */
-  font-size: 0.95em; /* Leicht kleiner */
+  font-size: 0.75em;
 }
 
 /* Links */
@@ -404,7 +404,7 @@ body {
   font-weight: 500;
   margin-left: calc(var(--base-spacing) * 0.5); /* 8px Abstand */
   transition: var(--transition);
-  font-size: 0.95em; /* Leicht kleiner */
+  font-size: 0.75em;
 }
 
 /* Hover-Effekt für Links */
@@ -2633,7 +2633,7 @@ a:hover {
   }
 
   .news-feed h2 {
-    font-size: 1.2em;
+    font-size: 1em;
     margin: 0 0 calc(var(--base-spacing) * 0.75) 0;
     padding-bottom: calc(var(--base-spacing) * 0.2);
     letter-spacing: 1px;
@@ -2643,7 +2643,7 @@ a:hover {
     flex-direction: column;
     align-items: flex-start;
     padding: calc(var(--base-spacing) * 0.5) calc(var(--base-spacing) * 0.75);
-    font-size: 0.9em;
+    font-size: 0.7em;
     transition: none;
   }
 
@@ -2657,12 +2657,12 @@ a:hover {
     margin-right: 0;
     margin-bottom: calc(var(--base-spacing) * 0.25);
     min-width: 0;
-    font-size: 0.9em;
+    font-size: 0.65em;
   }
 
   .news-list a {
     margin-left: 0;
-    font-size: 0.9em;
+    font-size: 0.65em;
   }
 
   .news-list a:hover {
