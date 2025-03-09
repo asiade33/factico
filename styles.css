@@ -329,89 +329,81 @@ body {
   padding: 3rem 2rem; /* Weniger seitlicher Abstand, um mehr Platz zu lassen */
 }
 
-/* --------------- NEWS-FEED-SECTION ------------------ */
+/* --------------- NEWS-FEED-SECTION (Desktop) ------------------ */
 .news-feed {
-  margin: calc(var(--base-spacing) * 2) auto; /* 32px oben/unten, zentriert */
-  padding: calc(var(--base-spacing) * 1.5); /* 24px Innenabstand */
-  max-width: 88%; /* 88% Breite für volle Nutzung */
+  margin: calc(var(--base-spacing) * 2) auto;
+  padding: calc(var(--base-spacing) * 1.5);
+  max-width: 88%; /* Dein Wunsch */
   background: linear-gradient(
     135deg,
     var(--background-white) 0%,
     var(--primary-blue) 100%
-  ); /* Subtiler Gradient */
-  border-radius: var(--radius-lg); /* 8px */
-  box-shadow: var(--shadow); /* Sanfter Schatten */
-  border: 1px solid rgba(var(--neutral-gray), 0.2); /* Subtiler Rahmen */
+  );
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(var(--neutral-gray), 0.2);
   position: relative;
 }
 
-/* Überschrift */
 .news-feed h2 {
-  font-size: 1.1em;
-  margin: 0 0 calc(var(--base-spacing) * 1) 0; /* 16px Abstand unten */
-  color: var(--text-black); /* Dunkler Text */
+  font-size: 1.1em; /* Beibehalten */
+  margin: 0 0 calc(var(--base-spacing) * 1) 0;
+  color: var(--text-black);
   text-transform: uppercase;
-  letter-spacing: 1.2px; /* Etwas mehr Abstand */
+  letter-spacing: 1.2px;
   font-weight: 700;
-  border-bottom: 2px solid var(--accent-blue); /* Blaue Linie */
-  padding-bottom: calc(var(--base-spacing) * 0.25); /* 4px */
-  font-family: "Arial", sans-serif; /* Schmalere Schrift, anpassbar */
+  border-bottom: 2px solid var(--accent-blue);
+  padding-bottom: calc(var(--base-spacing) * 0.25);
+  font-family: "Arial", sans-serif;
 }
 
-/* Liste */
 .news-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Listenelemente */
 .news-list li {
   display: flex;
   align-items: center;
-  padding: calc(var(--base-spacing) * 0.75) calc(var(--base-spacing) * 0.75); /* 12px rundum */
-  font-size: 0.85em;
+  padding: calc(var(--base-spacing) * 0.75) calc(var(--base-spacing) * 0.75);
+  font-size: 0.8em; /* Angepasst, einheitlich */
   color: var(--text-color-dark);
-  border-bottom: 1px solid rgba(var(--neutral-gray), 0.1); /* Noch subtiler */
+  border-bottom: 1px solid rgba(var(--neutral-gray), 0.1);
   transition: var(--transition);
 }
 
-/* Letztes Element ohne Trennlinie */
 .news-list li:last-child {
   border-bottom: none;
 }
 
-/* Hover-Effekt für Listenelemente */
 .news-list li:hover {
-  background: rgba(var(--accent-blue), 0.05); /* Leicht bläulich beim Hover */
-  transform: translateX(3px); /* Subtilere Verschiebung */
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05); /* Leichter Innen-Schatten */
+  background: rgba(var(--accent-blue), 0.05);
+  transform: translateX(3px);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
 }
 
-/* Datum (strong) */
 .news-list strong {
   color: var(--accent-blue);
   font-weight: 600;
-  margin-right: calc(var(--base-spacing) * 0.75); /* 12px Abstand */
-  min-width: 110px; /* Etwas schmaler für Balance */
-  font-size: 0.75em;
+  margin-right: calc(var(--base-spacing) * 0.75);
+  min-width: 110px;
+  font-size: 0.8em; /* Gleich wie li */
 }
 
-/* Links */
 .news-list a {
   color: var(--info-blue);
   text-decoration: none;
   font-weight: 500;
-  margin-left: calc(var(--base-spacing) * 0.5); /* 8px Abstand */
+  margin-left: calc(var(--base-spacing) * 0.5);
   transition: var(--transition);
-  font-size: 0.75em;
+  font-size: 0.8em; /* Gleich wie li */
 }
 
-/* Hover-Effekt für Links */
 .news-list a:hover {
   color: var(--accent-blue);
   text-decoration: underline;
-  transform: scale(1.03); /* Noch subtiler */
+  transform: scale(1.03);
 }
 
 .about-grid {
