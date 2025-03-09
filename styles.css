@@ -2629,7 +2629,6 @@ a:hover {
   .news-feed {
     margin: calc(var(--base-spacing) * 1) 2%; /* 16px oben/unten, 2% Seitenrand */
     padding: calc(var(--base-spacing) * 1);
-    max-width: 96%; /* Fast volle Breite */
     border-radius: var(--radius-sm);
   }
 
