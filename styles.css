@@ -367,7 +367,7 @@ body {
   display: flex;
   align-items: center;
   padding: calc(var(--base-spacing) * 0.75) calc(var(--base-spacing) * 0.75);
-  font-size: 0.8em; /* Angepasst, einheitlich */
+  font-size: 0.7em; /* Angepasst, einheitlich */
   color: var(--text-color-dark);
   border-bottom: 1px solid rgba(var(--neutral-gray), 0.1);
   transition: var(--transition);
