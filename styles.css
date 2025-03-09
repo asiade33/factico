@@ -331,35 +331,44 @@ body {
 
 /* --------------- NEWS-FEED-SECTION ------------------ */
 .news-feed {
-  margin: calc(var(--base-spacing) * 1.25) 0; /* 20px bei 1rem = 16px */
-  padding: var(--base-spacing); /* 1rem = 16px */
-  background: var(--background-white); /* Solider weißer Hintergrund */
+  margin: calc(var(--base-spacing) * 2) auto; /* 32px oben/unten, zentriert */
+  padding: calc(var(--base-spacing) * 1.5); /* 24px Innenabstand */
+  max-width: 900px; /* Begrenzte Breite für Eleganz */
+  background: var(--background-white); /* Solider Hintergrund */
   border-radius: var(--radius-lg); /* 8px */
-  box-shadow: var(--shadow); /* 0 4px 8px rgba(0, 0, 0, 0.15) */
-  border: 1px solid var(--neutral-gray); /* Subtiler grauer Rahmen */
+  box-shadow: var(--shadow); /* Sanfter Schatten */
+  border: 1px solid rgba(var(--neutral-gray), 0.2); /* Subtiler Rahmen */
+  position: relative; /* Für spätere visuelle Details */
 }
 
 /* Überschrift */
 .news-feed h2 {
-  font-size: 1.5em; /* Beibehalten */
-  margin: 0 0 calc(var(--base-spacing) * 0.625) 0; /* 10px bei 1rem = 16px */
-  color: var(--text-black); /* Dunkler Text für Kontrast */
-  text-transform: uppercase; /* Großbuchstaben für Betonung */
+  font-size: 1.75em; /* Größer für Präsenz */
+  margin: 0 0 calc(var(--base-spacing) * 1) 0; /* 16px Abstand unten */
+  color: var(--text-black); /* Dunkler Text */
+  text-transform: uppercase; /* Großbuchstaben */
+  letter-spacing: 1px; /* Leichter Buchstabenabstand */
+  font-weight: 700; /* Fett für Autorität */
+  border-bottom: 2px solid var(--accent-blue); /* Unterstreichung in Blau */
+  padding-bottom: calc(var(--base-spacing) * 0.25); /* 4px */
 }
 
 /* Liste */
 .news-list {
-  list-style: none; /* Keine Standard-Punkte */
-  padding: 0; /* Kein Innenabstand */
-  margin: 0; /* Kein Außenabstand */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Listenelemente */
 .news-list li {
-  padding: calc(var(--base-spacing) * 0.625) 0; /* 10px bei 1rem = 16px */
-  font-size: 1.1em; /* Leicht größer für Lesbarkeit */
-  color: var(--text-color-dark); /* #161616 für gute Lesbarkeit */
-  border-bottom: 1px solid var(--neutral-gray); /* Graue Trennlinie */
+  display: flex; /* Flex für bessere Ausrichtung */
+  align-items: center; /* Vertikale Zentrierung */
+  padding: calc(var(--base-spacing) * 0.75) calc(var(--base-spacing) * 0.5); /* 12px vertikal, 8px horizontal */
+  font-size: 1.15em; /* Etwas größer */
+  color: var(--text-color-dark); /* Dunkler Text */
+  border-bottom: 1px solid rgba(var(--neutral-gray), 0.15); /* Subtile Trennlinie */
+  transition: var(--transition); /* Sanfte Übergänge */
 }
 
 /* Letztes Element ohne Trennlinie */
@@ -367,24 +376,34 @@ body {
   border-bottom: none;
 }
 
+/* Hover-Effekt für Listenelemente */
+.news-list li:hover {
+  background: var(--primary-blue); /* Leichtes Blau beim Hover */
+  transform: translateX(5px); /* Leichte Verschiebung */
+}
+
 /* Datum (strong) */
 .news-list strong {
-  color: var(--accent-blue); /* #005799 für Hervorhebung */
-  font-weight: bold; /* Fett für Betonung */
+  color: var(--accent-blue); /* Hervorhebung in Blau */
+  font-weight: 600; /* Etwas leichter als bold */
+  margin-right: calc(var(--base-spacing) * 0.5); /* 8px Abstand rechts */
+  min-width: 120px; /* Feste Breite für Ausrichtung */
 }
 
 /* Links */
 .news-list a {
-  color: var(--info-blue); /* #1976d2 als auffälliger Blauton */
-  text-decoration: none; /* Keine Unterstreichung standardmäßig */
-  margin-left: calc(var(--base-spacing) * 0.3125); /* 5px bei 1rem = 16px */
-  transition: var(--transition); /* Sanfter Übergang */
+  color: var(--info-blue); /* Blauer Link */
+  text-decoration: none;
+  font-weight: 500; /* Mittelstark für Eleganz */
+  margin-left: calc(var(--base-spacing) * 0.5); /* 8px Abstand */
+  transition: var(--transition);
 }
 
 /* Hover-Effekt für Links */
 .news-list a:hover {
-  color: var(--accent-blue); /* #005799, dunkleres Blau beim Hover */
-  text-decoration: underline; /* Unterstreichung beim Hover */
+  color: var(--accent-blue); /* Dunkleres Blau */
+  text-decoration: underline;
+  transform: scale(1.02); /* Leichte Vergrößerung */
 }
 
 .about-grid {
