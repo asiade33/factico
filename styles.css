@@ -329,6 +329,64 @@ body {
   padding: 3rem 2rem; /* Weniger seitlicher Abstand, um mehr Platz zu lassen */
 }
 
+/* --------------- NEWS-FEED-SECTION ------------------ */
+.news-feed {
+  margin: 20px 0; /* Vertikaler Abstand */
+  padding: 15px; /* Innenabstand */
+  background: rgba(255, 255, 255, 0.1); /* Leicht transparenter Hintergrund */
+  border-radius: 10px; /* Abgerundete Ecken */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Schatten für Tiefe */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtiler Rahmen */
+}
+
+/* Überschrift */
+.news-feed h2 {
+  font-size: 1.5em; /* Etwas größer als Standard */
+  margin: 0 0 10px 0; /* Abstand nur unten */
+  color: #fff; /* Weiß für Kontrast, anpassbar */
+  text-transform: uppercase; /* Großbuchstaben für Betonung */
+}
+
+/* Liste */
+.news-list {
+  list-style: none; /* Keine Standard-Punkte */
+  padding: 0; /* Kein Innenabstand */
+  margin: 0; /* Kein Außenabstand */
+}
+
+/* Listenelemente */
+.news-list li {
+  padding: 10px 0; /* Vertikaler Abstand zwischen Einträgen */
+  font-size: 1.1em; /* Leicht größer für Lesbarkeit */
+  color: #ddd; /* Helles Grau für Text, anpassbar */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Trennlinie */
+}
+
+/* Letztes Element ohne Trennlinie */
+.news-list li:last-child {
+  border-bottom: none;
+}
+
+/* Datum (strong) */
+.news-list strong {
+  color: #fff; /* Weiß für Hervorhebung */
+  font-weight: bold; /* Fett für Betonung */
+}
+
+/* Links */
+.news-list a {
+  color: #007bff; /* Blauer Link, typisch für Websites */
+  text-decoration: none; /* Keine Unterstreichung standardmäßig */
+  margin-left: 5px; /* Kleiner Abstand zum Text */
+  transition: color 0.3s ease; /* Sanfter Farbwechsel */
+}
+
+/* Hover-Effekt für Links */
+.news-list a:hover {
+  color: #0056b3; /* Dunkleres Blau beim Hover */
+  text-decoration: underline; /* Unterstreichung beim Hover */
+}
+
 .about-grid {
   display: grid;
   gap: 2rem;
