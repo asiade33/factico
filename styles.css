@@ -522,11 +522,11 @@ body {
 
 /* Kleiner Video-Container (links ausgerichtet) */
 .smallvideo-container {
-  display: flex;
+display: flex;
   align-items: flex-start; /* Sorgt dafür, dass der Inhalt links bleibt */
   width: 100%;
-  max-width: 650px;
-  gap: 30px; /* Optional: Kleiner Abstand zwischen den Videos */
+  max-width: 1350px; /* 2 x 650px + 30px gap = 1330px, etwas Puffer für Rahmen */
+  gap: 30px; /* Abstand zwischen den Videos */
   margin: 20px 0; /* Kein 'auto', damit es links bleibt */
   border-radius: 15px; /* Abgerundete Ecken */
   overflow: hidden; /* Damit das Video nicht übersteht */
@@ -544,8 +544,8 @@ body {
 
 /* Video-Element */
 .smallvideo-container iframe {
-  width: 100%;
-  height: 100%;
+width: 650px; /* Feste Breite, wie beim einzelnen Video */
+  height: 366px; /* Höhe basierend auf 16:9 Verhältnis für 650px Breite */
   aspect-ratio: 16 / 9; /* Automatische Anpassung des Seitenverhältnisses */
 
   border-radius: 15px;
