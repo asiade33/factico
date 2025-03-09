@@ -520,40 +520,19 @@ body {
   border: 0;
 }
 
-/* Kleiner Video-Container (links ausgerichtet) */
+/* Kleiner Video-Container (nur Layout) */
 .smallvideo-container {
-display: flex;
-  align-items: flex-start; /* Sorgt dafür, dass der Inhalt links bleibt */
+  display: flex;
+  align-items: flex-start; /* Sorgt dafür, dass der Inhalt oben links bleibt */
   width: 100%;
-  max-width: 1350px; /* 2 x 650px + 30px gap = 1330px, etwas Puffer für Rahmen */
-  gap: 30px; /* Abstand zwischen den Videos */
-  margin: 20px 0; /* Kein 'auto', damit es links bleibt */
-  border-radius: 15px; /* Abgerundete Ecken */
-  overflow: hidden; /* Damit das Video nicht übersteht */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Schatten für Tiefe */
-  background: rgba(255, 255, 255, 0.15); /* Leicht transparenter Hintergrund */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease-in-out;
+  max-width: 1350px; /* Für zwei Videos: 2 x 650px + 30px gap */
+  gap: 30px; /* Abstand zwischen Videos */
+  margin: 20px 0; /* Vertikaler Abstand */
 }
 
-/* Hover-Effekt */
-.smallvideo-container:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Spezifische Anpassung für Container mit zwei Videos */
-.smallvideo-container.two-videos {
-  max-width: 1350px; /* 2 x 650px + 30px gap */
-  box-shadow: none; /* Kein Schatten auf Container-Ebene */
-  background: none; /* Kein Hintergrund auf Container-Ebene */
-  border: none; /* Kein Rahmen auf Container-Ebene */
-  transition: none; /* Kein Hover-Effekt auf Container */
-}
-
-/* Wrapper für jedes einzelne Video (nur bei zwei Videos) */
-.smallvideo-container.two-videos .video-wrapper {
-  width: 650px; /* Feste Breite wie vorher */
+/* Wrapper für jedes einzelne Video (für ein oder zwei Videos) */
+.video-wrapper {
+  width: 650px; /* Feste Breite für jedes Video */
   border-radius: 15px; /* Abgerundete Ecken */
   overflow: hidden; /* Damit das Video nicht übersteht */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Schatten für Tiefe */
@@ -563,32 +542,25 @@ display: flex;
 }
 
 /* Hover-Effekt nur auf den individuellen Wrapper */
-.smallvideo-container.two-videos .video-wrapper:hover {
+.video-wrapper:hover {
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Verstärkter Schatten beim Hover */
   transform: scale(1.02); /* Leichte Vergrößerung */
 }
 
-/* Video-Element */
-.smallvideo-container iframe {
-width: 650px; /* Feste Breite, wie beim einzelnen Video */
-  height: 366px; /* Höhe basierend auf 16:9 Verhältnis für 650px Breite */
+/* Styling für iframes innerhalb des Wrappers */
+.video-wrapper iframe {
+  width: 100%; /* Füllt den Wrapper komplett aus (650px) */
+  height: 366px; /* 16:9 Verhältnis */
   aspect-ratio: 16 / 9; /* Automatische Anpassung des Seitenverhältnisses */
-
-  border-radius: 15px;
+  border-radius: 15px; /* Abgerundete Ecken */
   mask-image: radial-gradient(
     circle,
     rgba(0, 0, 0, 1) 90%,
     rgba(0, 0, 0, 0) 100%
-  );
+  ); /* Optionaler Maskeneffekt */
 }
 
-/* iframes innerhalb von video-wrapper */
-.smallvideo-container.two-videos .video-wrapper iframe {
-  width: 100%; /* Füllt den Wrapper komplett aus */
-  height: 366px; /* 16:9 Verhältnis */
-}
-
-/* Großer Video-Container (links ausgerichtet) */
+/* -----> Großer Video-Container (links ausgerichtet) <---- */
 .video-container {
   display: flex;
   align-items: flex-start; /* Sorgt dafür, dass der Inhalt links bleibt */
