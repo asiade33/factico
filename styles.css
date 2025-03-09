@@ -338,11 +338,11 @@ body {
 
 .about h2 {
   text-align: center;
-  color: var(--accent-blue);
   font-size: 2.2rem;
 }
 
 .about h3 {
+  color: var(--accent-blue);
   font-size: 1.6rem;
 }
 
