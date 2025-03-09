@@ -2625,6 +2625,52 @@ a:hover {
     margin: 0.5rem 0;
   }
 
+  .news-feed {
+    margin: calc(var(--base-spacing) * 1) auto; /* 16px oben/unten */
+    padding: calc(var(--base-spacing) * 1); /* 16px Innenabstand */
+    max-width: 96%; /* Beibehalten */
+    border-radius: var(--radius-sm); /* 4px für kompaktere Optik */
+  }
+
+  .news-feed h2 {
+    font-size: 1.2em; /* Kleiner für Mobile */
+    margin: 0 0 calc(var(--base-spacing) * 0.75) 0; /* 12px Abstand */
+    padding-bottom: calc(var(--base-spacing) * 0.2); /* 3.2px */
+    letter-spacing: 1px; /* Etwas weniger */
+  }
+
+  .news-list li {
+    flex-direction: column; /* Datum und Text untereinander */
+    align-items: flex-start; /* Links ausgerichtet */
+    padding: calc(var(--base-spacing) * 0.5) calc(var(--base-spacing) * 0.75); /* 8px vertikal, 12px horizontal */
+    font-size: 0.9em; /* Noch kleiner */
+    transition: none; /* Keine Hover-Animation auf Mobile */
+  }
+
+  .news-list li:hover {
+    background: none; /* Kein Hover-Effekt */
+    transform: none; /* Keine Verschiebung */
+    box-shadow: none; /* Kein Schatten */
+  }
+
+  .news-list strong {
+    margin-right: 0; /* Kein rechter Abstand */
+    margin-bottom: calc(
+      var(--base-spacing) * 0.25
+    ); /* 4px Abstand nach unten */
+    min-width: 0; /* Keine feste Breite */
+    font-size: 0.9em; /* Angepasst */
+  }
+
+  .news-list a {
+    margin-left: 0; /* Kein linker Abstand */
+    font-size: 0.9em; /* Angepasst */
+  }
+
+  .news-list a:hover {
+    transform: none; /* Kein Scale-Effekt auf Mobile */
+  }
+
   /* Hero Section */
   .hero {
     padding: 4rem 1rem 2rem; /* Weniger Padding auf mobilen Geräten */
