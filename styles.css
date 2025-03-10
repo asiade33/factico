@@ -424,7 +424,11 @@ body {
 
 .about-item {
   padding: 2rem;
-  background: var(--background-white);
+    background: linear-gradient(
+    135deg,
+    var(--background-white) 0%,
+    var(--primary-blue) 100%
+  );
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   transition: var(--transition);
@@ -459,7 +463,11 @@ body {
 .step {
   text-align: center;
   padding: 2rem;
-  background: var(--background-white);
+    background: linear-gradient(
+    135deg,
+    var(--background-white) 0%,
+    var(--primary-blue) 100%
+  );
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   position: relative;
