@@ -629,38 +629,6 @@ body {
   color: var(--accent-blue); /* #005799 für Ländernamen, passend zu Factico */
 }
 
-/* Header */
-.party-header {
-  padding: var(--base-spacing);
-  background: var(--background-white);
-  border-bottom: 1px solid var(--neutral-gray);
-}
-
-.header-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.factico-logo .logo-img {
-  width: 40px;
-  height: auto;
-}
-
-.party-politician-name {
-  font-size: 1.75em;
-  color: var(--accent-blue);
-  font-weight: 700;
-}
-
-.party-logo {
-  width: 60px;
-  height: auto;
-  border-radius: var(--radius-sm);
-}
-
 /* Personalities */
 .personalities {
   padding: calc(var(--base-spacing) * 2);
