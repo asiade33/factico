@@ -424,7 +424,7 @@ body {
 
 .about-item {
   padding: 2rem;
-    background: linear-gradient(
+  background: linear-gradient(
     135deg,
     var(--background-white) 0%,
     var(--primary-blue) 100%
@@ -463,7 +463,7 @@ body {
 .step {
   text-align: center;
   padding: 2rem;
-    background: linear-gradient(
+  background: linear-gradient(
     135deg,
     var(--background-white) 0%,
     var(--primary-blue) 100%
@@ -1995,10 +1995,10 @@ body {
   --main-color: #1b263b; /* Tiefes Nachtblau (SpaceX/Tesla-Vibe, futuristisch und seriös) */
   --accent-color: #ff4444; /* Kräftiges Rot als Akzent (Tesla-Rot, dynamisch und auffällig) */
   --background-color: #f5f6f5; /* Sehr helles Grau-Weiß (modern, clean, tech-orientiert) */
-  --text-color: #0d1b2a; /* Dunkelblau-Schwarz für Haupttext (stark, klar, lesbar) */
-  --light-text-color: #ffffff; /* Reinweiß für Kontrasttext (Header, Buttons, futuristischer Look) */
-  --dark-text-color: #778da9; /* Mittelgrau-Blau für subtile Details (weich, modern, techy) */
-  font-family: 'Roboto', Arial, sans-serif; /* Roboto für einen modernen, tech-orientierten Look, Fallback Arial */
+  --text-color: #000000; /* Tiefschwarz für Haupttext (maximale Lesbarkeit, formell) */
+  --light-text-color: #ffffff; /* Reinweiß für Kontrasttext auf dunklen/farbigen Hintergründen (Header, Buttons) */
+  --dark-text-color: #333333; /* Dunkleres Grau für subtile Textelemente, dezente Hervorhebungen */
+  font-family: "Roboto", Arial, sans-serif; /* Roboto für einen modernen, tech-orientierten Look, Fallback Arial */
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
@@ -2007,25 +2007,35 @@ body {
 }
 
 .elon-root a {
-  color: var(--main-color); /* Links im tiefen Nachtblau (verbindet zu SpaceX/Tesla) */
+  color: var(
+    --main-color
+  ); /* Links im tiefen Nachtblau (verbindet zu SpaceX/Tesla) */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .elon-root a:hover {
-  color: var(--accent-color); /* Link-Hover in kräftigem Tesla-Rot (dynamisch, auffällig) */
+  color: var(
+    --accent-color
+  ); /* Link-Hover in kräftigem Tesla-Rot (dynamisch, auffällig) */
   text-decoration: underline;
 }
 
 .elon-root .party-header {
-  background-color: var(--main-color); /* Header in tiefem Nachtblau (futuristisch, SpaceX-Vibe) */
-  color: var(--light-text-color); /* Header-Text in Reinweiß (starker Kontrast, klar) */
+  background-color: var(
+    --main-color
+  ); /* Header in tiefem Nachtblau (futuristisch, SpaceX-Vibe) */
+  color: var(
+    --light-text-color
+  ); /* Header-Text in Reinweiß (starker Kontrast, klar) */
   padding: 20px 0;
   text-align: center;
 }
 
 .elon-root .party-section-title {
-  color: var(--main-color); /* Abschnittstitel in Nachtblau (verbindet zur Identität) */
+  color: var(
+    --main-color
+  ); /* Abschnittstitel in Nachtblau (verbindet zur Identität) */
   border-bottom: 2px solid var(--accent-color); /* Linie in Tesla-Rot (dynamisch, markant) */
   padding-bottom: 5px;
   margin-top: 30px;
@@ -2039,12 +2049,16 @@ body {
 }
 
 .elon-root .party-highlight-title {
-  color: var(--main-color); /* Highlight-Titel in Nachtblau (futuristische Verbindung) */
+  color: var(
+    --main-color
+  ); /* Highlight-Titel in Nachtblau (futuristische Verbindung) */
   margin-top: 0;
 }
 
 .elon-root .highlight-skandal-scale h4 {
-  color: var(--dark-text-color); /* Skalenbeschriftung in Mittelgrau-Blau (subtil, modern) */
+  color: var(
+    --dark-text-color
+  ); /* Skalenbeschriftung in Mittelgrau-Blau (subtil, modern) */
 }
 
 .elon-root .gradient-bar-container {
@@ -2052,12 +2066,18 @@ body {
 }
 
 .elon-root .gradient-bar-filled {
-  background-color: var(--accent-color); /* Gefüllter Teil in Tesla-Rot (markant, energetisch) */
+  background-color: var(
+    --accent-color
+  ); /* Gefüllter Teil in Tesla-Rot (markant, energetisch) */
 }
 
 .elon-root .toggle-button {
-  background-color: var(--main-color); /* Button in Nachtblau (futuristisch, seriös) */
-  color: var(--light-text-color); /* Button-Text in Reinweiß (klarer Kontrast) */
+  background-color: var(
+    --main-color
+  ); /* Button in Nachtblau (futuristisch, seriös) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß (klarer Kontrast) */
   border: none;
   padding: 8px 15px;
   border-radius: 5px;
@@ -2066,29 +2086,37 @@ body {
 }
 
 .elon-root .toggle-button:hover {
-  background-color: var(--accent-color); /* Button-Hover in Tesla-Rot (dynamisch, auffällig) */
+  background-color: var(
+    --accent-color
+  ); /* Button-Hover in Tesla-Rot (dynamisch, auffällig) */
   color: var(--light-text-color); /* Text bleibt Reinweiß (Konsistenz) */
 }
 
 .elon-root .party-highlight-date,
 .elon-root .party-highlight-source,
 .elon-root .party-highlight-hashtags {
-  color: var(--dark-text-color); /* Datum, Quelle, Hashtags in Mittelgrau-Blau (subtil, techy) */
+  color: var(
+    --dark-text-color
+  ); /* Datum, Quelle, Hashtags in Mittelgrau-Blau (subtil, techy) */
   font-size: 0.9em;
   margin-top: 10px;
 }
 
 .elon-root .hashtag {
-  background-color: var(--dark-text-color); /* Hashtag-Hintergrund in Mittelgrau-Blau (modern, dezent) */
-  color: var(--light-text-color); /* Hashtag-Text in Reinweiß (starker Kontrast) */
+  background-color: var(
+    --accent-color
+  ); /* Hashtag-Hintergrund (farblicher Akzent, hebt Hashtags hervor) */
+  color: var(
+    --light-text-color
+  ); /* Hashtag-Text in Reinweiß (starker Kontrast) */
   padding: 4px 8px;
   border-radius: 3px;
   margin-right: 5px;
 }
 
 .elon-root .comment-section h4 {
-  color: var(--main-color); /* Kommentar-Überschrift in Nachtblau (futuristische Zuordnung) */
-  border-bottom: 1px solid var(--accent-color); /* Linie in Tesla-Rot (markant, dynamisch) */
+  color: var(--main-color); /* Kommentar-Überschrift (seriös, klare Struktur) */
+  border-bottom: 1px solid var(--main-color); /*  Dezente Linie unter Kommentar-Überschrift im gleichen Ton (unterstreicht Formellle) */
   padding-bottom: 5px;
 }
 
@@ -2097,8 +2125,12 @@ body {
 }
 
 .elon-root .submit-comment {
-  background-color: var(--main-color); /* Absenden-Button in Nachtblau (seriös, techy) */
-  color: var(--light-text-color); /* Button-Text in Reinweiß (klarer Kontrast) */
+  background-color: var(
+    --main-color
+  ); /* Absenden-Button in Nachtblau (seriös, techy) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß (klarer Kontrast) */
   border: none;
   padding: 8px 15px;
   border-radius: 5px;
@@ -2108,12 +2140,16 @@ body {
 }
 
 .elon-root .submit-comment:hover {
-  background-color: var(--accent-color); /* Button-Hover in Tesla-Rot (energetisch, auffällig) */
+  background-color: var(
+    --accent-color
+  ); /* Button-Hover in Tesla-Rot (energetisch, auffällig) */
   color: var(--light-text-color); /* Text bleibt Reinweiß (Konsistenz) */
 }
 
 .elon-root .party-members-list .party-member-item a {
-  color: var(--main-color); /* Mitgliedernamen-Links in Nachtblau (futuristische Verbindung) */
+  color: var(
+    --main-color
+  ); /* Mitgliedernamen-Links in Nachtblau (futuristische Verbindung) */
 }
 
 .elon-root .party-members-list .party-member-item a:hover {
@@ -2121,17 +2157,25 @@ body {
 }
 
 .elon-root .party-footer {
-  background-color: var(--main-color); /* Footer in Nachtblau (futuristisch, einheitlich) */
-  color: var(--light-text-color); /* Footer-Text in Reinweiß (klarer Kontrast) */
+  background-color: var(
+    --main-color
+  ); /* Footer in Nachtblau (futuristisch, einheitlich) */
+  color: var(
+    --light-text-color
+  ); /* Footer-Text in Reinweiß (klarer Kontrast) */
   border-top: 1px solid var(--accent-color); /* Trennlinie in Tesla-Rot (markant, dynamisch) */
 }
 
 .elon-root .party-footer a {
-  color: var(--light-text-color); /* Footer-Links in Reinweiß (Konsistenz mit Footer) */
+  color: var(
+    --light-text-color
+  ); /* Footer-Links in Reinweiß (Konsistenz mit Footer) */
 }
 
 .elon-root .party-footer a:hover {
-  color: var(--accent-color); /* Footer-Link-Hover in Tesla-Rot (dynamisch, auffällig) */
+  color: var(
+    --accent-color
+  ); /* Footer-Link-Hover in Tesla-Rot (dynamisch, auffällig) */
 }
 
 /* PARTY-Header */
