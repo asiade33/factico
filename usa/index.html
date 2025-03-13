@@ -3,81 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>USA</title>
-    <!-- Favicon hinzufügen -->
+    <title>USA | factico.</title>
     <link rel="icon" type="image/png" href="https://i.imgur.com/6Fyu7WL.png" />
     <link rel="stylesheet" href="../../styles.css" />
   </head>
-  <body class="usa-root">
+  <body>
     <header class="party-header">
       <div class="header-container">
-        <!-- Link zurück zur Startseite mit dem factico.-Logo -->
-        <a href="../../" class="factico-logo-img">
+        <a href="../../" class="factico-logo">
           <img
             src="https://i.imgur.com/6Fyu7WL.png"
             alt="factico. Logo"
-            class="factico-logo-img"
+            class="logo-img"
           />
         </a>
-
         <div class="header-title-container">
           <h1 class="party-politician-name">USA</h1>
         </div>
-
-        <!-- Optional: Logo von Tesla / SpaceX usw.-->
         <img
           src="https://i.imgur.com/Qz5B6mW.jpg"
-          alt="USA Flag"
+          alt="USA Flagge"
           class="party-logo"
         />
       </div>
     </header>
 
-    <!-- USA Personalities Page -->
     <section class="personalities">
-      <div class="personalities-inner">
-        <h2 class="section-heading">
-          <span class="heading-flag"></span>
-          Visionäre der Vereinigten Staaten
-        </h2>
-
-        <div class="personality-grid">
-          <article class="personality-card">
-            <a href="https://factico.eu/usa/musk/" class="card-link">
-              <div class="card-media">
-                <img
-                  src="https://i.imgur.com/XQQ3xtT.jpg"
-                  alt="Elon Musk"
-                  class="card-image"
-                  loading="lazy"
-                />
-                <div class="media-overlay"></div>
+      <h2>Visionäre der Vereinigten Staaten</h2>
+      <div class="personality-grid">
+        <article class="personality-card">
+          <a href="https://factico.eu/usa/musk/" class="card-link">
+            <div class="card-media">
+              <img
+                src="https://i.imgur.com/XQQ3xtT.jpg"
+                alt="Elon Musk"
+                class="card-image"
+                loading="lazy"
+              />
+              <div class="media-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="nationality">
+                <svg class="flag-icon" viewBox="0 0 16 12" aria-hidden="true">
+                  <path fill="#B31942" d="M0 0h16v12H0z" />
+                  <path
+                    fill="#fff"
+                    d="M0 0h16v1.5H0zm0 3h16v1.5H0zm0 3h16v1.5H0zm0 3h16v1.5H0zm0 3h16v1.5H0z"
+                  />
+                  <path fill="#3C3B6E" d="M0 0h6.4v7H0z" />
+                  <!-- Vereinfachte Sterne -->
+                  <path
+                    fill="#fff"
+                    d="M1 1h.5v.5H1zm1.5 0h.5v.5h-.5zm1.5 0h.5v.5h-.5zm1.5 0h.5v.5h-.5zM1 2.5h.5v.5H1zm1.5 0h.5v.5h-.5zm1.5 0h.5v.5h-.5zm1.5 0h.5v.5h-.5z"
+                  />
+                </svg>
+                <span class="sr-only">Vereinigte Staaten</span>
               </div>
-
-              <div class="card-content">
-                <div class="nationality">
-                  <svg class="flag-icon" viewBox="0 0 16 12" aria-hidden="true">
-                    <path fill="#B31942" d="M0 0h16v12H0z" />
-                    <path fill="#fff" d="M0 0h16v8H0z" />
-                    <path fill="#3C3B6E" d="M0 0h6.4v8H0z" />
-                  </svg>
-                  <span class="sr-only">Vereinigte Staaten</span>
-                </div>
-                <h3 class="card-title">Elon Musk</h3>
-                <p class="card-subtitle">Tech-Pionier & CEO von SpaceX</p>
-                <div class="card-cta">
-                  <span class="cta-text">Profil erkunden</span>
-                  <svg class="cta-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
-                    />
-                  </svg>
-                </div>
+              <h3 class="card-title">Elon Musk</h3>
+              <p class="card-subtitle">Tech-Pionier & CEO von SpaceX</p>
+              <div class="card-cta" aria-label="Elon Musks Profil ansehen">
+                <span class="cta-text">Profil erkunden</span>
+                <svg class="cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                  />
+                </svg>
               </div>
-            </a>
-          </article>
-          <!-- Weitere Cards -->
-        </div>
+            </div>
+          </a>
+        </article>
       </div>
     </section>
 
