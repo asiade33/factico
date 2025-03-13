@@ -629,82 +629,63 @@ body {
   color: var(--accent-blue); /* #005799 für Ländernamen, passend zu Factico */
 }
 
-/* ========== PERSONALITIES SECTION ========== */
+/* ----------- PERSONALITIES ---------- */
 .personalities {
-  padding: 6rem 0;
-  background: linear-gradient(
-    175deg,
-    var(--background-white) 85%,
-    rgba(179, 25, 66, 0.03) 100%
-  );
-  position: relative;
-  overflow: hidden;
-}
-
-.personalities-inner {
-  max-width: 1440px;
+  padding: calc(var(--base-spacing) * 2);
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  background-color: var(--background-white);
 }
 
-.section-heading {
-  font-size: 2.5rem;
+.personalities h2 {
+  color: var(--accent-blue);
+  font-size: 2em;
   font-weight: 700;
+  margin-bottom: calc(var(--base-spacing) * 2);
+  padding-bottom: calc(var(--base-spacing) * 0.75);
   text-align: center;
-  color: var(--text-black);
-  margin-bottom: 4rem;
-  position: relative;
-  padding-bottom: 1.5rem;
-}
-
-.heading-flag {
-  display: block;
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    var(--accent-red) 33%,
-    var(--neutral-gray) 33% 66%,
-    var(--accent-blue) 66%
-  );
-  margin: 0 auto 1.5rem;
-  border-radius: 2px;
+  border-bottom: 3px solid var(--accent-blue);
 }
 
 .personality-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 0 1rem;
+  gap: calc(var(--base-spacing) * 2);
+  padding: calc(var(--base-spacing) * 2) var(--base-spacing);
 }
 
 .personality-card {
   background: var(--background-white);
-  border-radius: 1rem;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
-    box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  border: 1px solid var(--neutral-gray);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05); /* Sanfterer Schatten */
+  transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1),
+    box-shadow 0.5s cubic-bezier(0.33, 1, 0.68, 1); /* Sanfter, länger */
   overflow: hidden;
   position: relative;
-  border: 1px solid rgba(179, 25, 66, 0.08);
 }
 
 .personality-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px); /* Subtiler Hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Sanfter Anstieg */
 }
 
 .card-media {
   position: relative;
-  height: 280px;
+  height: 200px; /* Reduziert für Balance */
   overflow: hidden;
 }
 
 .card-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  object-fit: cover; /* Zuschneiden für Konsistenz */
+  image-rendering: -webkit-optimize-contrast; /* Schärfere Darstellung */
+  transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.personality-card:hover .card-image {
+  transform: scale(1.05); /* Sanftes Zoomen */
 }
 
 .media-overlay {
@@ -713,25 +694,25 @@ body {
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 60%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
+    var(--neutral-gray) 100%
+  ); /* Mit :root */
 }
 
 .card-content {
-  padding: 1.5rem;
+  padding: var(--base-spacing);
   position: relative;
 }
 
 .nationality {
   position: absolute;
-  top: -1.2rem;
-  right: 1.5rem;
+  top: -1rem;
+  right: var(--base-spacing);
   display: flex;
   align-items: center;
   gap: 0.5rem;
   background: var(--background-white);
   padding: 0.5rem 1rem;
-  border-radius: 1rem;
+  border-radius: var(--radius-sm);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -742,16 +723,16 @@ body {
 
 .card-title {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-black);
-  margin-bottom: 0.5rem;
+  margin-bottom: calc(var(--base-spacing) * 0.5);
 }
 
 .card-subtitle {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--neutral-gray);
   line-height: 1.5;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--base-spacing);
 }
 
 .card-cta {
@@ -769,21 +750,8 @@ body {
   transition: transform 0.3s ease;
 }
 
-.card-link:hover .cta-icon {
+.card-cta:hover .cta-icon {
   transform: translateX(4px);
-}
-
-/* Accessibility */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 .skip-link:focus {
