@@ -580,6 +580,52 @@ body {
   text-transform: uppercase; /* Optional: Namen in Großbuchstaben */
 }
 
+.international-personalities .content-block {
+  padding: var(--base-spacing); /* 1rem aus :root */
+}
+
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--base-spacing); /* 1rem Abstand */
+  margin-top: var(--base-spacing);
+}
+
+.country-card {
+  background-color: var(
+    --background-white
+  ); /* #fcfcfc für einen cleanen Look */
+  border: 1px solid var(--neutral-gray); /* #3a3a3a für dezente Abgrenzung */
+  border-radius: var(--radius-lg); /* 8px für abgerundete Ecken */
+  padding: calc(var(--base-spacing) * 0.75); /* 0.75rem für kompaktes Padding */
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-black); /* #161616 für Haupttext */
+  transition: var(--transition); /* Sanfte Animation aus :root */
+  box-shadow: var(--shadow); /* 0 4px 8px rgba(0, 0, 0, 0.15) für Tiefe */
+}
+
+.country-card:hover {
+  transform: translateY(-4px); /* Leichtes Anheben bei Hover */
+  border-color: var(--accent-blue); /* #005799 bei Hover für Factico-Stil */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten bei Hover */
+}
+
+.country-flag {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: calc(
+    var(--base-spacing) * 0.5
+  ); /* 0.5rem Abstand unter Flagge */
+  border-radius: var(--radius-sm); /* 4px für leicht abgerundete Flaggen */
+}
+
+.country-card h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: var(--accent-blue); /* #005799 für Ländernamen, passend zu Factico */
+}
+
 /* skip link */
 .skip-link {
   position: absolute;
