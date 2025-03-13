@@ -34,19 +34,65 @@
     </header>
 
     <!-- USA Personalities Page -->
-    <section class="personalities">
-      <h2>Persönlichkeiten aus den USA</h2>
-      <div class="personality-grid">
-        <a href="https://factico.eu/usa/musk/" class="personality-card">
-          <img
-            src="https://i.imgur.com/XQQ3xtT.jpg"
-            alt="Elon Musk"
-            class="personality-img"
-          />
-          <h3>Elon Musk</h3>
-          <p>Unternehmer & Innovator</p>
-        </a>
-        <!-- Platz für weitere US-Persönlichkeiten, z. B. Jeff Bezos -->
+    <section class="personalities-section">
+      <div class="personalities-container">
+        <header class="section-header">
+          <h2 class="section-title">
+            <span class="title-decorator">//</span> Visionäre der Nation
+            <div class="flag-element">
+              <span class="red-bar"></span>
+              <span class="white-bar"></span>
+              <span class="blue-bar"></span>
+            </div>
+          </h2>
+          <p class="section-subtitle">
+            Prägende Persönlichkeiten der Vereinigten Staaten
+          </p>
+        </header>
+
+        <div class="personalities-masonry">
+          <article class="personality-card">
+            <a href="https://factico.eu/usa/musk/" class="card-link">
+              <div class="image-container">
+                <img
+                  src="https://i.imgur.com/XQQ3xtT.jpg"
+                  alt="Elon Musk"
+                  class="personality-portrait"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="nationality-badge">
+                  <svg class="flag-icon" viewBox="0 0 16 12">
+                    <path fill="#B31942" d="M0 0h16v12H0z" />
+                    <path fill="#fff" d="M0 0h16v8H0z" />
+                    <path fill="#3C3B6E" d="M0 0h6.4v8H0z" />
+                    <path
+                      fill="#fff"
+                      d="m3.2 4 1.067-1.6L3.2.8l1.067 1.6L5.333.8 4.267 2.4 5.333 4 4.267 2.4 3.2 4z"
+                    />
+                  </svg>
+                  <span>United States</span>
+                </div>
+                <h3 class="person-name">Elon Musk</h3>
+                <p class="person-title">Tech-Pionier & CEO von SpaceX</p>
+                <div class="card-footer">
+                  <span class="cta-link">
+                    Zur Biografie
+                    <svg class="arrow-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <!-- Weitere Cards hier einfügen -->
+        </div>
       </div>
     </section>
 
