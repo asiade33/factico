@@ -629,164 +629,110 @@ body {
   color: var(--accent-blue); /* #005799 für Ländernamen, passend zu Factico */
 }
 
-/* ----------- ULTRA-PREMIUM PERSONALITIES SECTION ---------- */
-.personalities-section {
-  padding: 8rem 0;
+/* ========== PERSONALITIES SECTION ========== */
+.personalities {
+  padding: 6rem 0;
   background: linear-gradient(
-    172deg,
+    175deg,
     var(--background-white) 85%,
-    rgba(179, 25, 66, 0.08) 95%
+    rgba(179, 25, 66, 0.03) 100%
   );
   position: relative;
+  overflow: hidden;
 }
 
-.personalities-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0.4rem;
-  background: linear-gradient(
-    90deg,
-    var(--accent-red) 33%,
-    var(--neutral-gray) 33%,
-    var(--neutral-gray) 66%,
-    var(--accent-blue) 66%
-  );
-}
-
-.personalities-container {
+.personalities-inner {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 6rem;
-  position: relative;
-}
-
-.section-title {
-  font-size: 3.2rem;
+.section-heading {
+  font-size: 2.5rem;
   font-weight: 700;
+  text-align: center;
   color: var(--text-black);
-  letter-spacing: -0.03em;
-  margin-bottom: 1.2rem;
+  margin-bottom: 4rem;
   position: relative;
-  display: inline-block;
+  padding-bottom: 1.5rem;
 }
 
-.title-decorator {
-  color: var(--accent-blue);
-  margin-right: 1rem;
-  opacity: 0.8;
+.heading-flag {
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-red) 33%,
+    var(--neutral-gray) 33% 66%,
+    var(--accent-blue) 66%
+  );
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
 }
 
-.flag-element {
-  display: flex;
-  position: absolute;
-  bottom: -2.4rem;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 0.4rem;
-  width: 12rem;
-}
-
-.flag-element span {
-  flex: 1;
-}
-
-.red-bar {
-  background: var(--accent-red);
-}
-.white-bar {
-  background: var(--background-white);
-  border: 1px solid var(--neutral-gray);
-}
-.blue-bar {
-  background: var(--accent-blue);
-}
-
-.section-subtitle {
-  font-size: 1.1rem;
-  color: var(--neutral-gray);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-top: 2.4rem;
-}
-
-.personalities-masonry {
+.personality-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  grid-auto-rows: masonry;
-  gap: 4rem;
-  padding: 0 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .personality-card {
   background: var(--background-white);
-  border-radius: 1.6rem;
-  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
-    box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  position: relative;
+  border-radius: 1rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   overflow: hidden;
+  position: relative;
   border: 1px solid rgba(179, 25, 66, 0.08);
 }
 
 .personality-card:hover {
-  transform: translateY(-0.8rem);
-  box-shadow: 0 32px 64px -16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
 }
 
-.image-container {
+.card-media {
   position: relative;
-  height: 380px;
+  height: 280px;
   overflow: hidden;
-  border-bottom: 4px solid var(--accent-red);
 }
 
-.personality-portrait {
+.card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.image-overlay {
+.media-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 60%,
-    rgba(0, 0, 0, 0.6) 100%
+    rgba(0, 0, 0, 0.4) 100%
   );
 }
 
 .card-content {
-  padding: 2.4rem;
+  padding: 1.5rem;
   position: relative;
 }
 
-.nationality-badge {
+.nationality {
   position: absolute;
-  top: -2.4rem;
-  right: 2.4rem;
-  background: var(--background-white);
-  padding: 0.8rem 1.6rem;
-  border-radius: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  top: -1.2rem;
+  right: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-black);
+  gap: 0.5rem;
+  background: var(--background-white);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .flag-icon {
@@ -794,51 +740,50 @@ body {
   height: 0.9rem;
 }
 
-.person-name {
-  font-size: 2rem;
+.card-title {
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-black);
-  margin-bottom: 0.8rem;
-  line-height: 1.3;
+  margin-bottom: 0.5rem;
 }
 
-.person-title {
-  font-size: 1.1rem;
+.card-subtitle {
+  font-size: 0.95rem;
   color: var(--neutral-gray);
-  line-height: 1.6;
-  margin-bottom: 2.4rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
-.cta-link {
+.card-cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   color: var(--accent-blue);
   font-weight: 600;
   text-decoration: none;
-  transition: gap 0.3s ease;
 }
 
-.arrow-icon {
-  width: 1.2rem;
-  height: 1.2rem;
-  fill: currentColor;
+.cta-icon {
+  width: 1rem;
+  height: 1rem;
   transition: transform 0.3s ease;
 }
 
-.card-link:hover .arrow-icon {
+.card-link:hover .cta-icon {
   transform: translateX(4px);
 }
 
-.card-link:hover .cta-link {
-  gap: 1rem;
-}
-
-/* Micro-Interactions */
-@media (hover: hover) {
-  .personality-card:hover .personality-portrait {
-    transform: scale(1.05);
-  }
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .skip-link:focus {
