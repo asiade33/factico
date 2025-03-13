@@ -629,66 +629,77 @@ body {
   color: var(--accent-blue); /* #005799 für Ländernamen, passend zu Factico */
 }
 
+/* ----------- PERSONALITIES ---------- */
 .personalities {
-  padding: var(--base-spacing); /* 1rem Abstand rundum */
+  padding: var(--base-spacing); /* 1rem rundum */
+  max-width: 1200px; /* Begrenzung für breite Bildschirme */
+  margin: 0 auto; /* Zentriert den Bereich */
 }
 
 .personalities h2 {
-  color: var(--accent-blue); /* #005799 für den Titel, Factico-typisch */
+  color: #003087; /* US-Flaggen-Blau für Titel */
   font-size: 1.75em;
-  margin-bottom: var(--base-spacing); /* 1rem Abstand unter Titel */
-  border-bottom: 2px solid var(--accent-blue); /* Unterstrich in Accent Blue */
+  margin-bottom: calc(
+    var(--base-spacing) * 1.5
+  ); /* 1.5rem Abstand unter Titel */
+  border-bottom: 2px solid #b22234; /* US-Flaggen-Rot für Unterstrich */
   padding-bottom: calc(var(--base-spacing) * 0.5); /* 0.5rem Padding unten */
+  text-align: center; /* Zentrierter Titel für Professionalität */
 }
 
 .personality-grid {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(220px, 1fr)
-  ); /* Flexibles Grid, mind. 220px pro Karte */
-  gap: var(--base-spacing); /* 1rem Abstand zwischen Karten */
+    minmax(250px, 1fr)
+  ); /* Etwas breitere Karten */
+  gap: calc(var(--base-spacing) * 1.5); /* 1.5rem Abstand für Luftigkeit */
 }
 
 .personality-card {
-  background-color: var(
-    --background-white
-  ); /* #fcfcfc für cleanen Hintergrund */
-  border: 1px solid var(--neutral-gray); /* #3a3a3a für dezenten Rahmen */
+  background-color: #fcfcfc; /* Factico-Weiß für Cleanliness */
+  border: 1px solid #003087; /* US-Flaggen-Blau für Rahmen */
   border-radius: var(--radius-lg); /* 8px für abgerundete Ecken */
   padding: var(--base-spacing); /* 1rem Padding innen */
   text-align: center;
   text-decoration: none;
-  color: var(--text-black); /* #161616 für Haupttext */
-  transition: var(--transition); /* Sanfte Animation aus :root */
-  box-shadow: var(--shadow); /* 0 4px 8px rgba(0, 0, 0, 0.15) für Tiefe */
+  color: #161616; /* Factico-Textschwarz */
+  transition: var(--transition); /* Sanfte Animation */
+  box-shadow: var(--shadow); /* Subtiler Schatten */
+  display: flex;
+  flex-direction: column; /* Vertikale Ausrichtung für Konsistenz */
+  justify-content: space-between; /* Gleichmäßiger Inhalt */
+  max-width: 300px; /* Begrenzung der Kartenbreite */
+  margin: 0 auto; /* Zentriert die Karte in ihrer Grid-Zelle */
 }
 
 .personality-card:hover {
-  transform: translateY(-4px); /* Leichtes Anheben bei Hover */
-  border-color: var(--accent-blue); /* #005799 bei Hover, Factico-Stil */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten bei Hover */
+  transform: translateY(-4px); /* Leichtes Anheben */
+  border-color: #b22234; /* US-Flaggen-Rot bei Hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten */
 }
 
 .personality-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radius-sm); /* 4px für leicht abgerundete Bilder */
-  margin-bottom: calc(
-    var(--base-spacing) * 0.75
-  ); /* 0.75rem Abstand unter Bild */
+  width: 120px; /* Feste Breite für Bilder */
+  height: 120px; /* Feste Höhe für einheitliche Darstellung */
+  object-fit: cover; /* Bild wird zugeschnitten, nicht verzerrt */
+  border-radius: 50%; /* Kreisform für moderne, freundliche Optik */
+  margin: 0 auto calc(var(--base-spacing) * 0.75); /* 0.75rem Abstand unten */
+  display: block; /* Zentriert das Bild */
 }
 
 .personality-card h3 {
   margin: 0;
-  font-size: 1.3em;
-  color: var(--accent-blue); /* #005799 für Namen, Factico-typisch */
+  font-size: 1.2em; /* Etwas kleiner für Kompaktheit */
+  color: #003087; /* US-Flaggen-Blau für Namen */
+  font-weight: 600; /* Etwas dicker für Professionalität */
 }
 
 .personality-card p {
   margin: 5px 0 0;
   font-size: 0.9em;
-  color: var(--neutral-gray); /* #3a3a3a für Beschreibung, dezenter Kontrast */
+  color: #4a4a4a; /* Subtiles Dunkelgrau für Beschreibung */
+  line-height: 1.4; /* Bessere Lesbarkeit */
 }
 
 /* skip link */
@@ -2098,6 +2109,195 @@ body {
   color: var(
     --accent-color
   ); /* Footer-Link-Hover im dynamischen FDP Blau (moderner, farblicher Hinweis auf Interaktion) */
+}
+
+/* !!!!!!!!!!!!!!! Elon Musk !!!!!!!!!!!!!!! */
+
+.usa-root {
+  --main-color: #003087; /* US-Flaggen-Blau */
+  --accent-color: #b22234; /* US-Flaggen-Rot */
+  --background-color: #f5f6f5; /* Sehr helles Grau-Weiß (modern, clean, tech-orientiert) */
+  --text-color: #000000; /* Tiefschwarz für Haupttext (maximale Lesbarkeit, formell) */
+  --light-text-color: #ffffff; /* Reinweiß für Kontrasttext auf dunklen/farbigen Hintergründen (Header, Buttons) */
+  --dark-text-color: #333333; /* Dunkleres Grau für subtile Textelemente, dezente Hervorhebungen */
+  font-family: "Roboto", Arial, sans-serif; /* Roboto für einen modernen, tech-orientierten Look, Fallback Arial */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.usa-root a {
+  color: var(
+    --main-color
+  ); /* Links im tiefen Nachtblau (verbindet zu SpaceX/Tesla) */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.usa-root a:hover {
+  color: var(
+    --accent-color
+  ); /* Link-Hover in kräftigem Tesla-Rot (dynamisch, auffällig) */
+  text-decoration: underline;
+}
+
+.usa-root .party-header {
+  background-color: var(
+    --main-color
+  ); /* Header in tiefem Nachtblau (futuristisch, SpaceX-Vibe) */
+  color: var(
+    --light-text-color
+  ); /* Header-Text in Reinweiß (starker Kontrast, klar) */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.usa-root .party-section-title {
+  color: var(
+    --main-color
+  ); /* Abschnittstitel in Nachtblau (verbindet zur Identität) */
+  border-bottom: 2px solid var(--accent-color); /* Linie in Tesla-Rot (dynamisch, markant) */
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.usa-root .party-highlight {
+  border: 1px solid var(--main-color); /* Rahmen in Nachtblau (klare Struktur, techy) */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.usa-root .party-highlight-title {
+  color: var(
+    --main-color
+  ); /* Highlight-Titel in Nachtblau (futuristische Verbindung) */
+  margin-top: 0;
+}
+
+.usa-root .highlight-skandal-scale h4 {
+  color: var(
+    --dark-text-color
+  ); /* Skalenbeschriftung in Mittelgrau-Blau (subtil, modern) */
+}
+
+.usa-root .gradient-bar-container {
+  background-color: #e0e0e0; /* Hintergrund der Skala in hellem Grau (neutral, clean) */
+}
+
+.usa-root .gradient-bar-filled {
+  background-color: var(
+    --accent-color
+  ); /* Gefüllter Teil in Tesla-Rot (markant, energetisch) */
+}
+
+.usa-root .toggle-button {
+  background-color: var(
+    --main-color
+  ); /* Button in Nachtblau (futuristisch, seriös) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß (klarer Kontrast) */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.usa-root .toggle-button:hover {
+  background-color: var(
+    --accent-color
+  ); /* Button-Hover in Tesla-Rot (dynamisch, auffällig) */
+  color: var(--light-text-color); /* Text bleibt Reinweiß (Konsistenz) */
+}
+
+.usa-root .party-highlight-date,
+.usa-root .party-highlight-source,
+.usa-root .party-highlight-hashtags {
+  color: var(
+    --dark-text-color
+  ); /* Datum, Quelle, Hashtags in Mittelgrau-Blau (subtil, techy) */
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.usa-root .hashtag {
+  background-color: var(
+    --accent-color
+  ); /* Hashtag-Hintergrund (farblicher Akzent, hebt Hashtags hervor) */
+  color: var(
+    --light-text-color
+  ); /* Hashtag-Text in Reinweiß (starker Kontrast) */
+  padding: 4px 8px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.usa-root .comment-section h4 {
+  color: var(--main-color); /* Kommentar-Überschrift (seriös, klare Struktur) */
+  border-bottom: 1px solid var(--main-color); /*  Dezente Linie unter Kommentar-Überschrift im gleichen Ton (unterstreicht Formellle) */
+  padding-bottom: 5px;
+}
+
+.usa-root .comment-section textarea {
+  border: 1px solid #cccccc; /* Rahmen um Textarea in hellem Grau (neutral, modern) */
+}
+
+.usa-root .submit-comment {
+  background-color: var(
+    --main-color
+  ); /* Absenden-Button in Nachtblau (seriös, techy) */
+  color: var(
+    --light-text-color
+  ); /* Button-Text in Reinweiß (klarer Kontrast) */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.usa-root .submit-comment:hover {
+  background-color: var(
+    --accent-color
+  ); /* Button-Hover in Tesla-Rot (energetisch, auffällig) */
+  color: var(--light-text-color); /* Text bleibt Reinweiß (Konsistenz) */
+}
+
+.usa-root .party-members-list .party-member-item a {
+  color: var(
+    --main-color
+  ); /* Mitgliedernamen-Links in Nachtblau (futuristische Verbindung) */
+}
+
+.usa-root .party-members-list .party-member-item a:hover {
+  color: var(--accent-color); /* Link-Hover in Tesla-Rot (dynamisch, modern) */
+}
+
+.usa-root .party-footer {
+  background-color: var(
+    --main-color
+  ); /* Footer in Nachtblau (futuristisch, einheitlich) */
+  color: var(
+    --light-text-color
+  ); /* Footer-Text in Reinweiß (klarer Kontrast) */
+  border-top: 1px solid var(--accent-color); /* Trennlinie in Tesla-Rot (markant, dynamisch) */
+}
+
+.usa-root .party-footer a {
+  color: var(
+    --light-text-color
+  ); /* Footer-Links in Reinweiß (Konsistenz mit Footer) */
+}
+
+.usa-root .party-footer a:hover {
+  color: var(
+    --accent-color
+  ); /* Footer-Link-Hover in Tesla-Rot (dynamisch, auffällig) */
 }
 
 /* !!!!!!!!!!!!!!! Elon Musk !!!!!!!!!!!!!!! */
