@@ -631,84 +631,82 @@ body {
 
 /* ----------- PERSONALITIES ---------- */
 .personalities {
-  padding: calc(var(--base-spacing) * 2); /* 2rem für mehr Luft rundum */
-  max-width: 1280px; /* Etwas breiter für moderne Optik */
-  margin: 0 auto; /* Zentriert */
-  background-color: var(--background-white); /* Subtiler Hintergrund */
+  padding: calc(var(--base-spacing) * 2); /* 2rem für Luft */
+  max-width: 88%; /* Breite für moderne Optik */
+  margin: 0 auto;
+  background-color: var(--background-white);
 }
 
 .personalities h2 {
-  color: var(--accent-blue); /* Factico-Blau für Titel */
-  font-size: 2em; /* Größer für Präsenz */
-  font-weight: 700; /* Fett für Autorität */
-  margin-bottom: calc(var(--base-spacing) * 2); /* 2rem Abstand unten */
-  border-bottom: 3px solid var(--accent-blue); /* Dickerer Unterstrich */
-  padding-bottom: calc(var(--base-spacing) * 0.75); /* 0.75rem Padding */
-  text-align: center; /* Zentriert */
-  letter-spacing: 0.5px; /* Leichtes Spacing für Eleganz */
+  color: var(--accent-blue);
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: calc(var(--base-spacing) * 2);
+  border-bottom: 3px solid var(--accent-blue);
+  padding-bottom: calc(var(--base-spacing) * 0.75);
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
 .personality-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(280px, 1fr)
-  ); /* Breitere, hochwertige Karten */
-  gap: calc(var(--base-spacing) * 2); /* 2rem für großzügigen Abstand */
-  padding-bottom: calc(var(--base-spacing) * 2); /* Extra Abstand zum Footer */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: calc(var(--base-spacing) * 2);
+  padding-bottom: calc(var(--base-spacing) * 2);
 }
 
 .personality-card {
-  background-color: var(--background-white); /* Clean und hell */
-  border: 1px solid var(--neutral-gray); /* Dezenter Rahmen */
-  border-radius: var(--radius-lg); /* 8px für Eleganz */
-  padding: calc(var(--base-spacing) * 1.5); /* 1.5rem für großzügiges Padding */
+  background-color: var(--background-white);
+  border: 1px solid var(--neutral-gray);
+  border-radius: var(--radius-lg);
+  padding: calc(var(--base-spacing) * 1.5);
   text-align: center;
   text-decoration: none;
-  color: var(--text-black); /* Haupttext in Factico-Schwarz */
-  transition: var(--transition); /* Sanfte Animation */
-  box-shadow: var(--shadow); /* Subtiler Schatten für Tiefe */
+  color: var(--text-black);
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  align-items: center; /* Zentrierte Inhalte */
-  min-height: 320px; /* Mindesthöhe für Konsistenz */
-  overflow: hidden; /* Verhindert Überlaufen */
+  align-items: center;
+  min-height: 340px; /* Etwas höher für bessere Proportionen */
+  overflow: hidden;
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out,
+    border-color 0.4s ease-out; /* Sanfter Übergang */
 }
 
 .personality-card:hover {
-  transform: translateY(-6px); /* Etwas stärkeres Anheben */
-  border-color: var(--accent-blue); /* Factico-Blau bei Hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Stärkerer Schatten für Premium-Look */
+  transform: translateY(-4px); /* Reduziert auf -4px für Subtilität */
+  border-color: var(--accent-blue);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sanfter, hochwertiger Schatten */
 }
 
 .personality-img {
-  width: 140px; /* Etwas größer, aber kontrolliert */
-  height: 140px; /* Einheitliche Größe */
-  object-fit: cover; /* Zugeschnitten für Sauberkeit */
-  border-radius: var(--radius-lg); /* 8px statt Kreis für edlere Optik */
-  margin-bottom: calc(var(--base-spacing) * 1.25); /* 1.25rem Abstand unten */
-  border: 2px solid var(--neutral-gray); /* Subtiler Rahmen um Bild */
-  transition: border-color var(--transition); /* Sanfter Übergang */
+  width: 160px; /* Größer für bessere Qualität */
+  height: 160px; /* Einheitlich */
+  object-fit: contain; /* Originalverhältnis statt Zuschneiden */
+  border-radius: var(--radius-lg); /* 8px für Eleganz */
+  margin-bottom: calc(var(--base-spacing) * 1.25);
+  border: 2px solid var(--neutral-gray);
+  transition: border-color 0.4s ease-out; /* Sanfter Übergang */
 }
 
 .personality-card:hover .personality-img {
-  border-color: var(--accent-blue); /* Hover-Effekt auf Bildrahmen */
+  border-color: var(--accent-blue);
 }
 
 .personality-card h3 {
   margin: 0;
-  font-size: 1.4em; /* Etwas größer für Präsenz */
-  color: var(--accent-blue); /* Factico-Blau für Namen */
-  font-weight: 600; /* Fett, aber nicht zu schwer */
-  letter-spacing: 0.2px; /* Subtiles Spacing */
+  font-size: 1.4em;
+  color: var(--accent-blue);
+  font-weight: 600;
+  letter-spacing: 0.2px;
 }
 
 .personality-card p {
-  margin: calc(var(--base-spacing) * 0.5) 0 0; /* 0.5rem Abstand oben */
-  font-size: 1em; /* Etwas größer für Lesbarkeit */
-  color: var(--neutral-gray); /* Subtile Grau-Farbe */
-  line-height: 1.5; /* Bessere Lesbarkeit */
-  font-weight: 400; /* Normal für Leichtigkeit */
+  margin: calc(var(--base-spacing) * 0.5) 0 0;
+  font-size: 1em;
+  color: var(--neutral-gray);
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 /* skip link */
