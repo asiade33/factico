@@ -143,6 +143,8 @@ const customSearchResults = {
   friedrich_merz: "Friedrich Merz",
   fotzen_fritz: "Friedrich Merz",
   fotzenfritz: "Friedrich Merz",
+  musk: "Elon Musk",
+  elon_musk: "Elon Musk",
 };
 
 // Seiten-Verlinkungen (angepasst, um alle Keys abzudecken)
@@ -199,6 +201,8 @@ const pages = {
   friedrich_merz: "/cducsu/merz/",
   fotzenfritz: "/cducsu/merz/",
   fotzen_fritz: "/cducsu/merz/",
+  musk: "/usa/musk/",
+  elon_musk: "/usa/musk/",
 };
 
 // Normalisiert die Eingabe umfassend
