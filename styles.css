@@ -3352,6 +3352,43 @@ a:hover {
     mask-image: none; /* Maskeneffekt entfernt für bessere Performance */
   }
 
+  /* Kleiner Video-Container für Mobil mit zwei Videos */
+  .smallvideo-container.two-videos {
+    display: flex;
+    flex-direction: column; /* Videos untereinander */
+    align-items: center; /* Zentriert die Videos */
+    width: 100%;
+    max-width: 100%; /* Nutzt die volle Breite */
+    gap: 15px; /* Abstand zwischen den Videos */
+    margin: 10px 0; /* Weniger vertikaler Abstand */
+  }
+
+  /* Wrapper für jedes Video auf Mobil */
+  .video-wrapper {
+    width: 100%; /* Volle Breite des Containers */
+    max-width: 100%; /* Begrenzt auf Bildschirmbreite */
+    border-radius: 10px; /* Abgerundete Ecken */
+    overflow: hidden;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); /* Leichterer Schatten */
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Hover-Effekt deaktivieren auf Mobil */
+  .video-wrapper:hover {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); /* Keine Änderung */
+    transform: none; /* Keine Skalierung */
+  }
+
+  /* Styling für iframes auf Mobil */
+  .video-wrapper iframe {
+    width: 100%; /* Volle Breite des Wrappers */
+    height: auto; /* Automatische Höhe für 16:9 */
+    aspect-ratio: 16 / 9; /* Erzwingt 16:9 Verhältnis */
+    border-radius: 10px; /* Abgerundete Ecken */
+  }
+
   /* Footer */
   .footer-content {
     grid-template-columns: 1fr 1fr; /* Nebeneinander für mobile Geräte */
