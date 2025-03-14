@@ -664,8 +664,8 @@ body {
     box-shadow 0.5s cubic-bezier(0.33, 1, 0.68, 1);
   overflow: hidden;
   position: relative;
-  max-width: 400px; /* Maximale Breite der Karte */
-  margin: 0 auto; /* Zentriert die Karte im Grid */
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .personality-card:hover {
@@ -759,13 +759,13 @@ body {
   gap: 0.5rem;
   color: var(--accent-blue);
   font-weight: 600;
-  text-decoration: none; /* Sicherstellung: Keine Unterstreichung im Normalzustand */
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .card-cta:hover {
   color: var(--accent-blue-dark);
-  text-decoration: underline; /* Optional: Nur "Zum Profil" wird unterstrichen */
+  text-decoration: underline; /* Nur "Zum Profil" wird unterstrichen */
 }
 
 .cta-icon {
