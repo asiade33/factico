@@ -4,6 +4,7 @@
   /* Color System */
   --primary-blue: #e3f2fd;
   --accent-blue: #005799;
+  --accent-blue-dark: #003f6b; /* Dunklere Variante von #005799 */
   --neutral-gray: #3a3a3a;
   --text-black: #161616;
   --background-white: #fcfcfc;
@@ -663,6 +664,8 @@ body {
     box-shadow 0.5s cubic-bezier(0.33, 1, 0.68, 1);
   overflow: hidden;
   position: relative;
+  max-width: 400px; /* Maximale Breite der Karte */
+  margin: 0 auto; /* Zentriert die Karte im Grid */
 }
 
 .personality-card:hover {
@@ -676,19 +679,25 @@ body {
   display: block;
 }
 
+.card-link:hover {
+  text-decoration: none; /* Entfernt die Unterstreichung beim Hover für die gesamte Karte */
+}
+
 .card-media {
   position: relative;
-  height: 240px; /* Erhöht für mehr vertikalen Raum */
+  height: auto; /* Dynamische Höhe für hochkantige Bilder */
+  max-height: 300px; /* Maximale Höhe, um zu große Bilder zu begrenzen */
   overflow: hidden;
-  display: flex; /* Flex für bessere Bildausrichtung */
-  align-items: center; /* Zentriert das Bild vertikal */
-  justify-content: center; /* Zentriert das Bild horizontal */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Besser für feste Höhe */
+  height: auto; /* Automatische Höhe für das Originalverhältnis */
+  max-height: 300px; /* Passt zu .card-media */
+  object-fit: contain; /* Zeigt das gesamte Bild ohne Abschneiden */
   image-rendering: optimizeQuality;
   transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 }
@@ -750,12 +759,13 @@ body {
   gap: 0.5rem;
   color: var(--accent-blue);
   font-weight: 600;
-  text-decoration: none;
+  text-decoration: none; /* Sicherstellung: Keine Unterstreichung im Normalzustand */
   transition: color 0.3s ease;
 }
 
 .card-cta:hover {
-  color: var(--accent-blue-dark); /* Falls definiert */
+  color: var(--accent-blue-dark);
+  text-decoration: underline; /* Optional: Nur "Zum Profil" wird unterstrichen */
 }
 
 .cta-icon {
