@@ -670,6 +670,12 @@ body {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .card-media {
   position: relative;
   height: 240px; /* Erhöht für mehr vertikalen Raum */
@@ -681,10 +687,9 @@ body {
 
 .card-image {
   width: 100%;
-  height: auto; /* Automatische Höhe für Originalverhältnis */
-  max-height: 240px; /* Begrenzt die Höhe, aber respektiert das Verhältnis */
-  object-fit: contain; /* Zeigt das gesamte Bild ohne Zuschneiden */
-  image-rendering: optimizeQuality; /* Bessere Bildqualität */
+  height: 100%;
+  object-fit: cover; /* Besser für feste Höhe */
+  image-rendering: optimizeQuality;
   transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
@@ -746,6 +751,11 @@ body {
   color: var(--accent-blue);
   font-weight: 600;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card-cta:hover {
+  color: var(--accent-blue-dark); /* Falls definiert */
 }
 
 .cta-icon {
