@@ -2052,7 +2052,6 @@ mark.linke {
 }
 
 /* !!!!!!!!!!!!!!! FDP !!!!!!!!!!!!!!! */
-
 .fdp-root {
   --main-color: #ffed00; /* Offizielles FDP Gelb (leuchtend, sonnig) */
   --accent-color: #1a75ff; /* FDP Blau als Akzentfarbe (modern, dynamisch) */
@@ -2060,12 +2059,21 @@ mark.linke {
   --text-color: #000000; /* Tiefschwarz für Haupttext (optimale Lesbarkeit, klar) */
   --light-text-color: #ffffff; /* Reinweiß für Kontrasttext auf farbigen Hintergründen (Header, Buttons) */
   --dark-text-color: #444444; /* Dunkleres Anthrazitgrau für subtile Textelemente, Hover-Effekte (dezent, modern) */
+  --fdp-mark-color: #fff176; /* Helles Gelb für mark.fdp */
   font-family: Arial, sans-serif; /* Schriftart beibehalten (Arial für Klarheit und Lesbarkeit) */
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+/* FDP-spezifische Hervorhebung mit mark */
+mark.fdp {
+  background-color: var(--fdp-mark-color); /* Helles Gelb für FDP */
+  color: var(--text-color); /* Schwarzer Text */
+  padding: 2px 4px; /* Kleiner Innenabstand für bessere Lesbarkeit */
+  border-radius: 2px; /* Optional: leichte Abrundung */
 }
 
 .fdp-root a {
