@@ -956,21 +956,30 @@ body {
   opacity: 0.8; /* Wenig mehr Sichtbarkeit */
   margin: 0;
 }
-/* !!!!!!!!!!!!!!! SPD !!!!!!!!!!!!!!! */
 
+/* !!!!!!!!!!!!!!! SPD !!!!!!!!!!!!!!! */
 .spd-root {
   --main-color: #e0001a; /* Offizielles SPD Rot (kräftiges Rot) */
-  --accent-color: #f2f2f2; /*  Helles Grau/Beige als Akzentfarbe (für Hintergründe, subtile Hervorhebungen) */
+  --accent-color: #f2f2f2; /* Helles Grau/Beige als Akzentfarbe (für Hintergründe, subtile Hervorhebungen) */
   --background-color: #ffffff; /* Weiß als klarer, sauberer Hintergrund */
   --text-color: #000000; /* Schwarz für Haupttext (optimale Lesbarkeit) */
   --light-text-color: #ffffff; /* Weiß für Text auf farbigem Hintergrund (z.B. im Header) */
   --dark-text-color: #333333; /* Dunkleres Grau für subtile Textelemente */
+  --spd-mark-color: #ff4d4d; /* Helles Rot für mark.spd */
   font-family: Arial, sans-serif; /* Schriftart beibehalten (Arial oder generische serifenlose Schrift) */
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+/* SPD-spezifische Hervorhebung mit mark */
+mark.spd {
+  background-color: var(--spd-mark-color); /* Helles Rot für SPD */
+  color: var(--text-color); /* Schwarzer Text */
+  padding: 2px 4px; /* Kleiner Innenabstand für bessere Lesbarkeit */
+  border-radius: 2px; /* Optional: leichte Abrundung */
 }
 
 .spd-root a {
@@ -1328,12 +1337,21 @@ mark.afd {
   --text-color: #000000; /* Tiefschwarz für Haupttext (maximale Lesbarkeit, formell) */
   --light-text-color: #ffffff; /* Reinweiß für Kontrasttext auf dunklen/farbigen Hintergründen (Header, Buttons) */
   --dark-text-color: #333333; /* Dunkleres Grau für subtile Textelemente, dezente Hervorhebungen */
+  --cdu-mark-color: #e07a00; /* CDU-Orange für mark.cdu */
   font-family: Arial, sans-serif; /* Schriftart beibehalten (Arial für Seriosität und gute Lesbarkeit) */
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+/* CDU-spezifische Hervorhebung mit mark */
+mark.cdu {
+  background-color: var(--cdu-mark-color); /* CDU-Orange als Hintergrund */
+  color: var(--text-color); /* Schwarzer Text */
+  padding: 2px 4px; /* Kleiner Innenabstand für bessere Lesbarkeit */
+  border-radius: 2px; /* Optional: leichte Abrundung */
 }
 
 .cdu-root a {
@@ -1513,20 +1531,28 @@ mark.afd {
 }
 
 /* !!!!!!!!!!!!!!! GRÜNE !!!!!!!!!!!!!!! */
-
 .gruene-root {
   --main-color: #64a30b; /* Offizielles GRÜN (kräftiges, natürliches Grün) */
-  --accent-color: #f0f0f0; /*  Helles Beige/Cremeweiß als Akzentfarbe (natürlich, dezent, freundlich) */
+  --accent-color: #f0f0f0; /* Helles Beige/Cremeweiß als Akzentfarbe (natürlich, dezent, freundlich) */
   --background-color: #ffffff; /* Reinweiß als klarer, reiner Hintergrund (sauber, umweltbewusst) */
   --text-color: #333333; /* Dunkleres Anthrazitgrau für Haupttext (angenehm lesbar, natürlich-erdig) */
   --light-text-color: #ffffff; /* Reinweiß für Kontrasttext auf farbigen Hintergründen (Header, Buttons) */
   --dark-text-color: #555555; /* Mittleres Grau für subtilere Textelemente, Hover-Effekte (dezent, natürlich) */
+  --gruene-mark-color: #8cc63f; /* Helles Grün für mark.gruene */
   font-family: Arial, sans-serif; /* Schriftart beibehalten (Arial für Klarheit und Lesbarkeit, unaufgeregt) */
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+/* GRÜNE-spezifische Hervorhebung mit mark */
+mark.gruene {
+  background-color: var(--gruene-mark-color); /* Helles Grün für GRÜNE */
+  color: var(--text-color); /* Dunkleres Anthrazitgrau als Textfarbe */
+  padding: 2px 4px; /* Kleiner Innenabstand für bessere Lesbarkeit */
+  border-radius: 2px; /* Optional: leichte Abrundung */
 }
 
 .gruene-root a {
@@ -1704,7 +1730,6 @@ mark.afd {
 }
 
 /* !!!!!!!!!!!!!!! BSW !!!!!!!!!!!!!!! */
-
 .bsw-root {
   --main-color: #002454; /* Offizielles BSW Dunkelblau */
   --accent-color: #bf212f; /* Offizielles BSW Rot */
@@ -1712,12 +1737,21 @@ mark.afd {
   --text-color: #000000; /* Schwarz für Text */
   --light-text-color: #f1f1f1; /* Hellgrau/Weiß für Kontrasttexte */
   --dark-text-color: #333; /* Dunkleres Grau für Akzente */
+  --bsw-mark-color: #3366cc; /* Helles Blau für mark.bsw */
   font-family: Arial, sans-serif; /* Schriftart beibehalten */
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+/* BSW-spezifische Hervorhebung mit mark */
+mark.bsw {
+  background-color: var(--bsw-mark-color); /* Helles Blau für BSW */
+  color: var(--text-color); /* Schwarzer Text */
+  padding: 2px 4px; /* Kleiner Innenabstand für bessere Lesbarkeit */
+  border-radius: 2px; /* Optional: leichte Abrundung */
 }
 
 .bsw-root a {
@@ -1871,6 +1905,14 @@ mark.afd {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+/* LINKE-spezifische Hervorhebung mit mark */
+mark.linke {
+  background-color: var(--linke-mark-color); /* Helles Rot für DIE LINKE */
+  color: var(--text-color); /* Schwarzer Text */
+  padding: 2px 4px; /* Kleiner Innenabstand für bessere Lesbarkeit */
+  border-radius: 2px; /* Optional: leichte Abrundung */
 }
 
 .linke-root a {
