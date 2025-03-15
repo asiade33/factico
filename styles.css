@@ -1555,6 +1555,12 @@ mark.gruene {
   border-radius: 2px; /* Optional: leichte Abrundung */
 }
 
+/* GRÜNE-spezifische Hervorhebung für <b>-Tags */
+.b.gruene {
+  color: var(--gruene-mark-color); /* Helles Grün für <b> */
+  font-weight: bold; /* Sicherstellen, dass es fett bleibt */
+}
+
 .gruene-root a {
   color: var(--main-color); /* Links im kräftigen GRÜN (natürlich, lebendig) */
   text-decoration: none;
