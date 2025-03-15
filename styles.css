@@ -1130,12 +1130,21 @@ body {
   --text-color: #000000; /* Tiefschwarz für Haupttext (maximale Lesbarkeit und Seriosität) */
   --light-text-color: #ffffff; /* Reinweiß für Kontrasttext auf farbigen Hintergründen (Header, Buttons) */
   --dark-text-color: #444444; /* Dunkleres Anthrazitgrau für subtile Textdetails und Hover */
+  --afd-mark-color: #00b7eb; /* Neues, helleres Blau für mark.afd */
   font-family: Arial, sans-serif; /* Schriftart beibehalten (Arial für Seriosität und gute Lesbarkeit) */
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+/* AfD-spezifische Hervorhebung mit mark */
+mark.afd {
+  background-color: var(--afd-mark-color); /* Helles Blau für AfD */
+  color: var(--text-color); /* Schwarzer Text statt Weiß */
+  padding: 2px 4px; /* Kleiner Innenabstand für bessere Lesbarkeit */
+  border-radius: 2px; /* Optional: leichte Abrundung */
 }
 
 .afd-root a {
