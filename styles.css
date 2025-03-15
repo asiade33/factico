@@ -1743,7 +1743,7 @@ mark.gruene {
   --text-color: #000000; /* Schwarz für Text */
   --light-text-color: #f1f1f1; /* Hellgrau/Weiß für Kontrasttexte */
   --dark-text-color: #333; /* Dunkleres Grau für Akzente */
-  --bsw-mark-color: #3366cc; /* Helles Blau für mark.bsw */
+  --bsw-mark-color: #66aaff; /* Helleres Blau für mark.bsw */
   font-family: Arial, sans-serif; /* Schriftart beibehalten */
   background-color: var(--background-color);
   color: var(--text-color);
