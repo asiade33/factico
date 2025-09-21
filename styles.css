@@ -2314,6 +2314,169 @@ mark.fdp {
   ); /* Footer-Link-Hover im dynamischen FDP Blau (moderner, farblicher Hinweis auf Interaktion) */
 }
 
+/* !!!!!!!!!!!!!!! ÖRR !!!!!!!!!!!!!!! */
+.oerr-root {
+  --main-color: #1f4e79; /* Dunkles Blau für Seriosität und Vertrauen */
+  --accent-color: #f2f2f2; /* Helles Grau als Akzentfarbe */
+  --background-color: #ffffff; /* Weiß als klarer, sauberer Hintergrund */
+  --text-color: #000000; /* Schwarz für Haupttext */
+  --light-text-color: #ffffff; /* Weiß für Text auf farbigem Hintergrund */
+  --dark-text-color: #333333; /* Dunkleres Grau für subtile Textelemente */
+  --oerr-mark-color: #ff6b6b; /* Kritisches Rot für mark.oerr */
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ÖRR-spezifische Hervorhebung für <b>-Tags */
+b.oerr {
+  color: var(--main-color); /* Dunkles Blau für fettgedruckte Text */
+  font-weight: bold;
+}
+
+/* ÖRR-spezifische Hervorhebung mit mark */
+mark.oerr {
+  background-color: var(
+    --oerr-mark-color
+  ); /* Kritisches Rot für problematische Inhalte */
+  color: var(--text-color); /* Schwarzer Text */
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.oerr-root a {
+  color: var(--main-color); /* Links im dunklen Blau */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.oerr-root a:hover {
+  color: var(--dark-text-color); /* Link-Hover in dunklerem Grau */
+  text-decoration: underline;
+}
+
+.oerr-root .party-header {
+  background-color: var(--main-color); /* Header-Hintergrund im dunklen Blau */
+  color: var(--light-text-color); /* Header-Text in Weiß */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.oerr-root .party-section-title {
+  color: var(--main-color); /* Abschnittstitel im dunklen Blau */
+  border-bottom: 2px solid var(--main-color);
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.oerr-root .party-highlight {
+  border: 1px solid var(--main-color); /* Rahmen um Highlight-Boxen */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.oerr-root .party-highlight-title {
+  color: var(--main-color); /* Highlight-Titel im dunklen Blau */
+  margin-top: 0;
+}
+
+.oerr-root .highlight-skandal-scale h4 {
+  color: var(--dark-text-color);
+}
+
+.oerr-root .gradient-bar-container {
+  background-color: #eeeeee;
+}
+
+.oerr-root .gradient-bar-filled {
+  background-color: var(
+    --oerr-mark-color
+  ); /* Gefüllter Teil in kritischem Rot */
+}
+
+.oerr-root .toggle-button {
+  background-color: var(--main-color); /* Toggle-Button im dunklen Blau */
+  color: var(--light-text-color);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.oerr-root .toggle-button:hover {
+  background-color: var(--dark-text-color);
+  color: var(--light-text-color);
+}
+
+.oerr-root .party-highlight-date,
+.oerr-root .party-highlight-source,
+.oerr-root .party-highlight-hashtags {
+  color: var(--dark-text-color);
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.oerr-root .hashtag {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  padding: 4px 8px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.oerr-root .comment-section h4 {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  padding-bottom: 5px;
+}
+
+.oerr-root .comment-section textarea {
+  border: 1px solid #cccccc;
+}
+
+.oerr-root .submit-comment {
+  background-color: var(--main-color);
+  color: var(--light-text-color);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.oerr-root .submit-comment:hover {
+  background-color: var(--dark-text-color);
+  color: var(--light-text-color);
+}
+
+.oerr-root .party-members-list .party-member-item a {
+  color: var(--main-color);
+}
+
+.oerr-root .party-members-list .party-member-item a:hover {
+  color: var(--dark-text-color);
+}
+
+.oerr-root .party-footer {
+  background-color: var(--main-color);
+  color: white;
+  border-top: 1px solid var(--main-color);
+}
+
+.oerr-root .party-footer a {
+  color: var(--light-text-color);
+}
+
+.oerr-root .party-footer a:hover {
+  color: var(--accent-color);
+}
+
 /* !!!!!!!!!!!!!!! Elon Musk !!!!!!!!!!!!!!! */
 
 .usa-root {
