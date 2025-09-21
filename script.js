@@ -58,17 +58,17 @@ const parties = [
 const institutions = [
   {
     name: "ÖRR",
-    logo: "https://i.imgur.com/[ÖRR-LOGO].png", // Logo URL einfügen
+    logo: "https://i.imgur.com/moOJRDv.png", // Logo URL einfügen
     link: "/oerr/",
   },
   {
     name: "Amadeu Antonio Stiftung",
-    logo: "https://i.imgur.com/[AAS-LOGO].png", // Logo URL einfügen
+    logo: "https://i.imgur.com/AG3dJrm.png", // Logo URL einfügen
     link: "/amadeu-antonio/",
   },
   {
     name: "Verfassungsschutz",
-    logo: "https://i.imgur.com/[VS-LOGO].png", // Logo URL einfügen
+    logo: "https://i.imgur.com/AMTfatq.png", // Logo URL einfügen
     link: "/verfassungsschutz/",
   },
 ];
