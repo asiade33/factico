@@ -535,7 +535,11 @@ body {
 }
 
 .party-card {
-  background: var(--background-white);
+  background: linear-gradient(
+    135deg,
+    var(--background-white) 0%,
+    var(--primary-blue) 100%
+  ); /* Statt: background: var(--background-white); */
   border-radius: var(--radius-lg);
   flex: 1 1 auto; /* Karten passen sich der verfügbaren Breite an */
   position: relative;
@@ -615,8 +619,13 @@ body {
 }
 
 .country-card {
-  background-color: var(--background-white); /* #fcfcfc für cleanen Look */
-  border: 1px solid var(--neutral-gray); /* #3a3a3a für dezente Abgrenzung */
+  .country-card {
+    background: linear-gradient(
+      135deg,
+      var(--background-white) 0%,
+      var(--primary-blue) 100%
+    );
+    border: 1px solid var(--neutral-gray); /* #3a3a3a für dezente Abgrenzung */
   border-radius: var(--radius-lg); /* 8px für abgerundete Ecken */
   padding: calc(var(--base-spacing) * 0.75); /* 0.75rem für kompaktes Padding */
   text-align: center;
