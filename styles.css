@@ -1899,6 +1899,7 @@ mark.bsw {
 /* !!!!!!!!!!!!!!! DIE LINKE !!!!!!!!!!!!!!! */
 
 .linke-root {
+  --linke-mark-color: #ffebee; /* Helles Rot */
   --main-color: #880000; /*  Dunkelrot -  typische Farbe der LINKEN */
   --accent-color: #dd0000; /*  Etwas helleres Rot als Akzentfarbe */
   --background-color: #ffffff; /* Weiß als Hintergrund */
@@ -1911,6 +1912,12 @@ mark.bsw {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+/* LINKE-spezifische Hervorhebung für b und mark */
+b.linke {
+  color: var(--main-color); /* Dunkelrot für fettgedruckte Text */
+  font-weight: bold;
 }
 
 /* LINKE-spezifische Hervorhebung mit mark */
