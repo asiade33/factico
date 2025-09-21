@@ -571,7 +571,8 @@ body {
   max-height: 120px; /* Maximale Höhe des Logos */
   margin-bottom: 1rem; /* Abstand zwischen Logo und Name */
   object-fit: contain; /* Stellt sicher, dass das Bild das Seitenverhältnis beibehält und vollständig sichtbar ist */
-  flex-grow: 1; /* Verhindert, dass das Logo den verfügbaren Raum füllt */
+  flex-grow: 0; /* Geändert von 1 auf 0 */
+  align-self: center; /* Zentriert das Logo horizontal */
 }
 
 .party-name {
