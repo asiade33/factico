@@ -54,6 +54,25 @@ const parties = [
   },
 ];
 
+// STARTSEITE: KARTEN DER INSTITUTIONEN MIT LINKS
+const institutions = [
+  {
+    name: "ÖRR",
+    logo: "https://i.imgur.com/[ÖRR-LOGO].png", // Logo URL einfügen
+    link: "/oerr/",
+  },
+  {
+    name: "Amadeu Antonio Stiftung",
+    logo: "https://i.imgur.com/[AAS-LOGO].png", // Logo URL einfügen
+    link: "/amadeu-antonio/",
+  },
+  {
+    name: "Verfassungsschutz",
+    logo: "https://i.imgur.com/[VS-LOGO].png", // Logo URL einfügen
+    link: "/verfassungsschutz/",
+  },
+];
+
 // Initialize party grid
 const partyGrid = document.getElementById("partyGrid");
 parties.forEach((party) => {
@@ -78,6 +97,32 @@ parties.forEach((party) => {
 
   // Füge die Karte zum Grid hinzu
   partyGrid.appendChild(card);
+});
+
+// Initialize institution grid
+const institutionGrid = document.getElementById("institutionGrid");
+institutions.forEach((institution) => {
+  const card = document.createElement("div");
+  card.className = "institution-card";
+
+  // Erstelle den Link innerhalb der Karte
+  const link = document.createElement("a");
+  link.href = institution.link; // Der Link zur jeweiligen Institution-Seite
+  link.className = "institution-link";
+
+  // Wenn ein Logo vorhanden ist, füge das Logo ein
+  const institutionLogo = `<img src="${institution.logo}" alt="${institution.name} Logo" class="institution-logo"/>`;
+
+  link.innerHTML = `
+    ${institutionLogo}
+    <div class="institution-name">${institution.name}</div>
+  `;
+
+  // Füge den Link in die Karte ein
+  card.appendChild(link);
+
+  // Füge die Karte zum Grid hinzu
+  institutionGrid.appendChild(card);
 });
 
 // -------------------- SUCHE AUF DER STARTSEITE --------------------
