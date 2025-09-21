@@ -64,12 +64,12 @@ const institutions = [
   {
     name: "Amadeu Antonio Stiftung",
     logo: "https://i.imgur.com/AG3dJrm.png",
-    link: "/amadeu-antonio/",
+    link: "/aas/",
   },
   {
     name: "Verfassungsschutz",
     logo: "https://i.imgur.com/AMTfatq.png",
-    link: "/verfassungsschutz/",
+    link: "/vs/",
   },
 ];
 
