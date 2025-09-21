@@ -974,6 +974,12 @@ body {
   min-height: 100vh;
 }
 
+/* SPD-spezifische Hervorhebung für <b>-Tags */
+b.spd {
+  color: var(--main-color); /* Kräftiges SPD-Rot für fettgedruckte Text */
+  font-weight: bold; /* Sicherstellen, dass es fett bleibt */
+}
+
 /* SPD-spezifische Hervorhebung mit mark */
 mark.spd {
   background-color: var(--spd-mark-color); /* Helles Rot für SPD */
@@ -1146,6 +1152,12 @@ mark.spd {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+/* AfD-spezifische Hervorhebung für <b>-Tags */
+b.afd {
+  color: var(--main-color); /* AfD-Blau für fettgedruckte Text */
+  font-weight: bold; /* Sicherstellen, dass es fett bleibt */
 }
 
 /* AfD-spezifische Hervorhebung mit mark */
@@ -1344,6 +1356,12 @@ mark.afd {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+/* CDU-spezifische Hervorhebung für <b>-Tags */
+b.cdu {
+  color: var(--main-color); /* CDU-Schwarz für fettgedruckte Text */
+  font-weight: bold; /* Sicherstellen, dass es fett bleibt */
 }
 
 /* CDU-spezifische Hervorhebung mit mark */
@@ -1754,6 +1772,12 @@ mark.gruene {
   min-height: 100vh;
 }
 
+/* BSW-spezifische Hervorhebung für <b>-Tags */
+b.bsw {
+  color: var(--main-color); /* BSW-Dunkelblau für fettgedruckte Text */
+  font-weight: bold; /* Sicherstellen, dass es fett bleibt */
+}
+
 /* BSW-spezifische Hervorhebung mit mark */
 mark.bsw {
   background-color: var(--bsw-mark-color); /* Helles Blau für BSW */
@@ -2085,6 +2109,12 @@ mark.linke {
   min-height: 100vh;
 }
 
+/* FDP-spezifische Hervorhebung für <b>-Tags */
+b.fdp {
+  color: var(--main-color); /* FDP-Gelb für fettgedruckte Text */
+  font-weight: bold; /* Sicherstellen, dass es fett bleibt */
+}
+
 /* FDP-spezifische Hervorhebung mit mark */
 mark.fdp {
   background-color: var(--fdp-mark-color); /* Helles Gelb für FDP */
@@ -2282,6 +2312,22 @@ mark.fdp {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+/* USA/Elon Musk-spezifische Hervorhebung für <b>-Tags */
+b.usa {
+  color: var(--main-color); /* US-Flaggen-Blau für fettgedruckte Text */
+  font-weight: bold; /* Sicherstellen, dass es fett bleibt */
+}
+
+/* USA/Elon Musk-spezifische Hervorhebung mit mark */
+mark.usa {
+  background-color: var(
+    --usa-mark-color
+  ); /* Helles US-Blau für markierten Text */
+  color: var(--text-color); /* Schwarzer Text */
+  padding: 2px 4px; /* Kleiner Innenabstand für bessere Lesbarkeit */
+  border-radius: 2px; /* Optional: leichte Abrundung */
 }
 
 .usa-root a {
