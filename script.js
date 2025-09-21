@@ -145,6 +145,8 @@ const customSearchResults = {
   fotzenfritz: "Friedrich Merz",
   musk: "Elon Musk",
   elon_musk: "Elon Musk",
+  heidi_reichinnek: "Heidi Reichinnek",
+  reichinnek: "Heidi Reichinnek",
 };
 
 // Seiten-Verlinkungen (angepasst, um alle Keys abzudecken)
@@ -201,6 +203,8 @@ const pages = {
   friedrich_merz: "/cducsu/merz/",
   fotzenfritz: "/cducsu/merz/",
   fotzen_fritz: "/cducsu/merz/",
+  heidi_reichinnek: "/linke/reichinnek/", // Ricarda Lang (Grüne)
+  reichinnek: "/linke/reichinnek/", // Ricarda Lang (Grüne)
   musk: "/usa/musk/",
   elon_musk: "/usa/musk/",
 };
