@@ -619,13 +619,12 @@ body {
 }
 
 .country-card {
-  .country-card {
-    background: linear-gradient(
-      135deg,
-      var(--background-white) 0%,
-      var(--primary-blue) 100%
-    );
-    border: 1px solid var(--neutral-gray); /* #3a3a3a für dezente Abgrenzung */
+  background: linear-gradient(
+    135deg,
+    var(--background-white) 0%,
+    var(--primary-blue) 100%
+  );
+  border: 1px solid var(--neutral-gray); /* #3a3a3a für dezente Abgrenzung */
   border-radius: var(--radius-lg); /* 8px für abgerundete Ecken */
   padding: calc(var(--base-spacing) * 0.75); /* 0.75rem für kompaktes Padding */
   text-align: center;
