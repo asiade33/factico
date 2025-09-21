@@ -582,6 +582,22 @@ body {
   text-transform: uppercase; /* Optional: Namen in Großbuchstaben */
 }
 
+/* Institutions nutzen die volle Breite */
+#institutions .party-grid {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Größere min-width */
+  grid-auto-flow: row; /* Zeilen statt Spalten */
+  overflow-x: visible; /* Kein horizontales Scrollen */
+}
+
+/* Optional: Größere Karten für Institutionen */
+#institutions .party-card {
+  max-width: 300px; /* Begrenze maximale Breite */
+  margin: 0 auto; /* Zentriere die Karten */
+}
+
 .international-personalities .content-block {
   padding: var(--base-spacing); /* 1rem aus :root */
 }
