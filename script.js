@@ -58,17 +58,17 @@ const parties = [
 const institutions = [
   {
     name: "ÖRR",
-    logo: "https://i.imgur.com/moOJRDv.png", // Logo URL einfügen
+    logo: "https://i.imgur.com/[ÖRR-LOGO].png", // Logo URL einfügen
     link: "/oerr/",
   },
   {
     name: "Amadeu Antonio Stiftung",
-    logo: "https://i.imgur.com/AG3dJrm.png", // Logo URL einfügen
+    logo: "https://i.imgur.com/[AAS-LOGO].png", // Logo URL einfügen
     link: "/amadeu-antonio/",
   },
   {
     name: "Verfassungsschutz",
-    logo: "https://i.imgur.com/AMTfatq.png", // Logo URL einfügen
+    logo: "https://i.imgur.com/[VS-LOGO].png", // Logo URL einfügen
     link: "/verfassungsschutz/",
   },
 ];
@@ -79,12 +79,10 @@ parties.forEach((party) => {
   const card = document.createElement("div");
   card.className = "party-card";
 
-  // Erstelle den Link innerhalb der Karte
   const link = document.createElement("a");
-  link.href = party.link; // Der Link zur jeweiligen Partei-Seite
+  link.href = party.link;
   link.className = "party-link";
 
-  // Wenn ein Logo vorhanden ist, füge das Logo ein
   const partyLogo = `<img src="${party.logo}" alt="${party.name} Logo" class="party-logo"/>`;
 
   link.innerHTML = `
@@ -92,10 +90,7 @@ parties.forEach((party) => {
     <div class="party-name">${party.name}</div>
   `;
 
-  // Füge den Link in die Karte ein
   card.appendChild(link);
-
-  // Füge die Karte zum Grid hinzu
   partyGrid.appendChild(card);
 });
 
@@ -103,25 +98,20 @@ parties.forEach((party) => {
 const institutionGrid = document.getElementById("institutionGrid");
 institutions.forEach((institution) => {
   const card = document.createElement("div");
-  card.className = "institution-card";
+  card.className = "party-card"; // Verwendet die gleichen CSS-Klassen wie Parteien
 
-  // Erstelle den Link innerhalb der Karte
   const link = document.createElement("a");
-  link.href = institution.link; // Der Link zur jeweiligen Institution-Seite
-  link.className = "institution-link";
+  link.href = institution.link;
+  link.className = "party-link"; // Verwendet die gleichen CSS-Klassen wie Parteien
 
-  // Wenn ein Logo vorhanden ist, füge das Logo ein
-  const institutionLogo = `<img src="${institution.logo}" alt="${institution.name} Logo" class="institution-logo"/>`;
+  const institutionLogo = `<img src="${institution.logo}" alt="${institution.name} Logo" class="party-logo"/>`;
 
   link.innerHTML = `
     ${institutionLogo}
-    <div class="institution-name">${institution.name}</div>
+    <div class="party-name">${institution.name}</div>
   `;
 
-  // Füge den Link in die Karte ein
   card.appendChild(link);
-
-  // Füge die Karte zum Grid hinzu
   institutionGrid.appendChild(card);
 });
 
