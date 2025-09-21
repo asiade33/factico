@@ -1548,17 +1548,19 @@ mark.cdu {
 }
 
 /* GRÜNE-spezifische Hervorhebung mit mark */
-mark.gruene {
-  background-color: var(--gruene-mark-color); /* Helles Grün für GRÜNE */
-  color: var(--text-color); /* Dunkleres Anthrazitgrau als Textfarbe */
-  padding: 2px 4px; /* Kleiner Innenabstand für bessere Lesbarkeit */
-  border-radius: 2px; /* Optional: leichte Abrundung */
+b.gruene {
+  color: var(--main-color); /* Kräftiges Grün für fettgedruckte Text */
+  font-weight: bold; /* Sicherstellen, dass es fett bleibt */
 }
 
-/* GRÜNE-spezifische Hervorhebung für <b>-Tags */
-.b.gruene {
-  color: var(--gruene-mark-color); /* Helles Grün für <b> */
-  font-weight: bold; /* Sicherstellen, dass es fett bleibt */
+/* GRÜNE-spezifische Hervorhebung mit mark */
+mark.gruene {
+  background-color: var(
+    --gruene-mark-color
+  ); /* Helles Grün für markierten Text */
+  color: var(--text-color); /* Dunkleres Anthrazitgrau als Textfarbe */
+  padding: 2px 4px;
+  border-radius: 2px;
 }
 
 .gruene-root a {
@@ -1922,10 +1924,12 @@ b.linke {
 
 /* LINKE-spezifische Hervorhebung mit mark */
 mark.linke {
-  background-color: var(--linke-mark-color); /* Helles Rot für DIE LINKE */
+  background-color: var(
+    --linke-mark-color
+  ); /* Helles Rot für markierten Text */
   color: var(--text-color); /* Schwarzer Text */
-  padding: 2px 4px; /* Kleiner Innenabstand für bessere Lesbarkeit */
-  border-radius: 2px; /* Optional: leichte Abrundung */
+  padding: 2px 4px;
+  border-radius: 2px;
 }
 
 .linke-root a {
