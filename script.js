@@ -192,9 +192,9 @@ const customSearchResults = {
   elon_musk: "Elon Musk",
   heidi_reichinnek: "Heidi Reichinnek",
   reichinnek: "Heidi Reichinnek",
-  bas:  "Bärbel Bas",
-  bärbel bas: "Bärbel Bas",
-  baerbel bas: "Bärbel Bas",
+  bas: "Bärbel Bas",
+  bärbel_bas: "Bärbel Bas",
+  baerbel_bas: "Bärbel Bas",
 };
 
 // Seiten-Verlinkungen (angepasst, um alle Keys abzudecken)
@@ -252,10 +252,10 @@ const pages = {
   friedrich_merz: "/cducsu/merz/",
   fotzenfritz: "/cducsu/merz/",
   fotzen_fritz: "/cducsu/merz/",
-  heidi_reichinnek: "/linke/reichinnek/", 
-  reichinnek: "/linke/reichinnek/", 
-  baerbel_bas: "/spd/bas/", 
-  bärbel_bas: "/spd/bas/", 
+  heidi_reichinnek: "/linke/reichinnek/",
+  reichinnek: "/linke/reichinnek/",
+  baerbel_bas: "/spd/bas/",
+  bärbel_bas: "/spd/bas/",
   bas: "/spd/bas/", // Nancy Faeser (SPD)
   musk: "/usa/musk/",
   elon_musk: "/usa/musk/",
