@@ -64,12 +64,10 @@ const institutions = [
   {
     name: "AAS",
     logo: "https://i.imgur.com/AG3dJrm.png",
-    link: "/aas/",
   },
   {
     name: "VS",
     logo: "https://i.imgur.com/AMTfatq.png",
-    link: "/vs/",
   },
 ];
 
