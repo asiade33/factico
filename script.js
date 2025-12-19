@@ -269,7 +269,6 @@ const pages = {
   oerr: "/oerr/",
   ard: "/oerr/",
   zdf: "/oerr/",
-  zwang: "/oerr/",
 };
 
 // Normalisiert die Eingabe umfassend
