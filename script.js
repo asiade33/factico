@@ -99,29 +99,41 @@ parties.forEach((party) => {
 
 // Initialize institution grid
 const institutionGrid = document.getElementById("institutionGrid");
-institutions.forEach((institution) => {
-  const card = document.createElement("div");
-  card.className = "party-card"; // Gleiche CSS-Klasse wie bei Parteien
 
-  // Erstelle den Link innerhalb der Karte
-  const link = document.createElement("a");
-  link.href = institution.link; // Der Link zur jeweiligen Institution-Seite
-  link.className = "party-link"; // Gleiche CSS-Klasse wie bei Parteien
+if (institutionGrid) {
+  // Sicherheitsabfrage: Existiert das Element überhaupt?
+  institutions.forEach((institution) => {
+    const card = document.createElement("div");
+    card.className = "party-card";
 
-  // Wenn ein Logo vorhanden ist, füge das Logo ein
-  const institutionLogo = `<img src="${institution.logo}" alt="${institution.name} Logo" class="party-logo"/>`;
+    // Entscheidung: Link oder nur Div?
+    let contentElement;
 
-  link.innerHTML = `
-    ${institutionLogo}
-    <div class="party-name">${institution.name}</div>
-  `;
+    if (institution.link) {
+      // Es gibt einen Link -> <a> Element erstellen
+      contentElement = document.createElement("a");
+      contentElement.href = institution.link;
+    } else {
+      // Kein Link -> <div> Element erstellen
+      contentElement = document.createElement("div");
+      contentElement.style.cursor = "default"; // Mauszeiger normal lassen
+    }
 
-  // Füge den Link in die Karte ein
-  card.appendChild(link);
+    // WICHTIG: Die Klasse muss bleiben, damit das CSS-Layout stimmt
+    contentElement.className = "party-link";
 
-  // Füge die Karte zum Grid hinzu
-  institutionGrid.appendChild(card);
-});
+    // Inhalt füllen
+    const logoHtml = `<img src="${institution.logo}" alt="${institution.name} Logo" class="party-logo"/>`;
+
+    contentElement.innerHTML = `
+      ${logoHtml}
+      <div class="party-name">${institution.name}</div>
+    `;
+
+    card.appendChild(contentElement);
+    institutionGrid.appendChild(card);
+  });
+}
 
 // -------------------- SUCHE AUF DER STARTSEITE --------------------
 const searchInput = document.getElementById("searchInput");
