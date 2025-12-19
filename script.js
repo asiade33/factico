@@ -195,6 +195,13 @@ const customSearchResults = {
   bas: "Bärbel Bas",
   bärbel_bas: "Bärbel Bas",
   baerbel_bas: "Bärbel Bas",
+  schlesinger: "Patricia Schlesinger",
+  patricia_schlesinger: "Patricia Schlesinger",
+  oerr: "ÖRR",
+  ard: "ÖRR",
+  zdf: "ÖRR",
+  beitrag: "ÖRR",
+  zwangsgebühr: "ÖRR",
 };
 
 // Seiten-Verlinkungen (angepasst, um alle Keys abzudecken)
@@ -259,6 +266,12 @@ const pages = {
   bas: "/spd/bas/", // Nancy Faeser (SPD)
   musk: "/usa/musk/",
   elon_musk: "/usa/musk/",
+  patricia_schlesinger: "/oerr/schlesinger/",
+  schlesinger: "/oerr/schlesinger/",
+  oerr: "/oerr/",
+  ard: "/oerr/",
+  zdf: "/oerr/",
+  zwang: "/oerr/",
 };
 
 // Normalisiert die Eingabe umfassend
