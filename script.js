@@ -255,7 +255,6 @@ const pages = {
   goering: "/gruene/goering-eckardt/", // Katrin Göring-Eckardt (Grüne)
   goering_eckardt: "/gruene/goering-eckardt/", // Katrin Göring-Eckardt (Grüne)
   goering_eckhardt: "/gruene/goering-eckardt/", // Alternative Schreibweise für Katrin Göring-Eckardt
-  goering_eckhardt: "/gruene/goering-eckardt/",
   göring: "/gruene/goering-eckardt/", // Katrin Göring-Eckardt (Grüne)
   robert_habeck: "/gruene/habeck/", // Robert Habeck (Grüne)
   habeck: "/gruene/habeck/", // Robert Habeck (Grüne)
@@ -310,9 +309,6 @@ function normalizeSearchQuery(query) {
     .replace(/[^a-z0-9_]/gi, "") // Entfernt Sonderzeichen
     .toLowerCase();
 }
-
-// In formatName: Akronyme ergänzen
-const uppercaseNames = ["spd", "fdp", "cdu/csu", "gruene"];
 
 // Handle Search
 const handleSearch = debounce((query) => {
