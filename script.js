@@ -172,6 +172,7 @@ const customSearchResults = {
   robert_habeck: "Robert Habeck",
   habeck: "Robert Habeck",
   robert: "Robert Habeck",
+  schwachkopf: "Robert Habeck", // Habeck findet man unter "Schwachkopf"
   habek: "Robert Habeck", // Häufige Verwechslung
   markus_tessa_ganserer: "Tessa Ganserer", // Zuordnung für Tessa Ganserer (ehemals Markus Ganserer)
   ganserer: "Tessa Ganserer",
@@ -207,6 +208,10 @@ const customSearchResults = {
   baerbel_bas: "Bärbel Bas",
   schlesinger: "Patricia Schlesinger",
   patricia_schlesinger: "Patricia Schlesinger",
+  andy_grote: "Andy Grote",
+  grote: "Andy Grote",
+  pimmel: "Andy Grote", // Grote findet man jetzt auch unter "Pimmel"
+  pimmelgate: "Andy Grote",
   oerr: "ÖRR",
   ard: "ÖRR",
   zdf: "ÖRR",
@@ -250,9 +255,13 @@ const pages = {
   goering: "/gruene/goering-eckardt/", // Katrin Göring-Eckardt (Grüne)
   goering_eckardt: "/gruene/goering-eckardt/", // Katrin Göring-Eckardt (Grüne)
   goering_eckhardt: "/gruene/goering-eckardt/", // Alternative Schreibweise für Katrin Göring-Eckardt
+  goering_eckhardt: "/gruene/goering-eckardt/",
   göring: "/gruene/goering-eckardt/", // Katrin Göring-Eckardt (Grüne)
   robert_habeck: "/gruene/habeck/", // Robert Habeck (Grüne)
   habeck: "/gruene/habeck/", // Robert Habeck (Grüne)
+  schwachkopf: "/gruene/habeck/",
+  habek: "/gruene/habeck/", // WICHTIG: Damit der Tippfehler auch verlinkt
+  robert: "/gruene/habeck/",
   markus_tessa_ganserer: "/gruene/ganserer/", // Tessa Ganserer (Grüne, früher Markus)
   ganserer: "/gruene/ganserer/", // Tessa Ganserer (Grüne)
   tessa_ganserer: "/gruene/ganserer/", // Tessa Ganserer (Grüne)
@@ -278,6 +287,10 @@ const pages = {
   elon_musk: "/usa/musk/",
   patricia_schlesinger: "/oerr/schlesinger/",
   schlesinger: "/oerr/schlesinger/",
+  andy_grote: "/spd/grote/",
+  grote: "/spd/grote/",
+  pimmel: "/spd/grote/",
+  pimmelgate: "/spd/grote/",
   oerr: "/oerr/",
   ard: "/oerr/",
   zdf: "/oerr/",
@@ -414,13 +427,28 @@ searchInput.addEventListener("keydown", (e) => {
 
 // Format names
 function formatName(name, query) {
-  const uppercaseNames = ["spd", "cdu/csu", "fdp"];
+  const uppercaseNames = [
+    "spd",
+    "cdu/csu",
+    "fdp",
+    "afd",
+    "bsw",
+    "örr",
+    "oerr",
+    "ard",
+    "zdf",
+  ];
+
   if (uppercaseNames.includes(name.toLowerCase())) {
     return name.toUpperCase();
   }
+
+  // Priorität: Custom Search Results (Schönere Namen aus der Liste oben)
   if (customSearchResults[name.toLowerCase()]) {
     return customSearchResults[name.toLowerCase()];
   }
+
+  // Fallback: Erster Buchstabe groß
   return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
