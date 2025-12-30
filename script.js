@@ -193,6 +193,7 @@ const customSearchResults = {
   saskia_esken: "Saskia Esken",
   esken: "Saskia Esken",
   nancy_faeser: "Nancy Faeser",
+  nancy_fäser: "Nancy Faeser",
   faeser: "Nancy Faeser",
   fäser: "Nancy Faeser",
   merz: "Friedrich Merz",
@@ -286,7 +287,7 @@ const pages = {
   reichinnek: "/linke/reichinnek/",
   baerbel_bas: "/spd/bas/",
   bärbel_bas: "/spd/bas/",
-  bas: "/spd/bas/", // Nancy Faeser (SPD)
+  bas: "/spd/bas/",
   musk: "/usa/musk/",
   elon_musk: "/usa/musk/",
   patricia_schlesinger: "/oerr/schlesinger/",
