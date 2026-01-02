@@ -967,7 +967,9 @@ body {
   color: white;
   margin-bottom: 1rem; /* Weniger Abstand */
   font-size: 0.95rem; /* Kleinere Schrift */
+  text-transform: uppercase; /* Sieht im Footer meist edler aus */
   font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
 .footer-section ul {
@@ -1020,42 +1022,42 @@ body {
 /* Container für die Icons nebeneinander */
 .footer-icons {
   display: flex;
-  gap: 15px; /* Abstand zwischen den Icons */
-  margin-top: 10px; /* Kleiner Abstand zur Überschrift "Folge uns" */
+  gap: 20px; /* Genug Platz für Finger auf Handy */
+  margin-top: 0.5rem;
+  justify-content: center; /* Zentriert die Icons im Container */
 }
 
-/* Der Link um das Icon */
+/* Basis-Link Styles */
 .footer-icon-link {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* WICHTIG: Erbt die Textfarbe deines Footers! */
-  color: inherit;
-  opacity: 0.8;
-  transition: transform 0.2s ease, opacity 0.2s;
-  text-decoration: none; /* Kein Unterstrich */
+  color: rgba(255, 255, 255, 0.8); /* Standardfarbe Weißgrau */
+  transition: transform 0.2s ease, color 0.2s;
+  text-decoration: none;
 }
 
-/* Die Größe des Icons erzwingen (damit sie nicht riesig sind) */
 .footer-icon-link svg {
   width: 24px;
   height: 24px;
-  /* fill: currentColor sorgt dafür, dass das Icon die Textfarbe annimmt */
-  fill: currentColor;
+  fill: currentColor; /* Nimmt die Textfarbe an */
 }
 
-/* Hover Effekte */
+/* Hover-Effekte: Vergrößern */
 .footer-icon-link:hover {
-  transform: scale(1.1); /* Leichtes Vergrößern */
+  transform: scale(1.15);
   opacity: 1;
 }
 
-/* Spezifische Farben beim Hover (optional) */
+/* Spezifische Farben für Dark-Mode Footer */
 
+/* TIKTOK FIX: Helles Cyan statt Schwarz, damit man es sieht! */
 .footer-icon-link.tiktok:hover {
-  color: #000000;
-} /* oder weiß bei dunklem Footer */
+  color: #00f2ea; /* TikTok Cyan (leuchtet gut auf Schwarz) */
+  /* Alternativ reines Weiß: color: #ffffff; */
+}
+
+/* INSTAGRAM: Pink/Lila */
 .footer-icon-link.insta:hover {
   color: #e1306c;
 }
