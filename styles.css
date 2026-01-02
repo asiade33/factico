@@ -3814,9 +3814,21 @@ a:hover {
   .footer-content .footer-section:nth-child(3) {
     grid-column: span 2; /* Nimmt die volle Breite ein */
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert die Icons */
+    text-align: center; /* Zentriert den Text "Folge uns" */
     margin-top: 0.5rem;
     padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05); /* Zarte Trennlinie (optional) */
+  }
+
+  /* Sicherstellen, dass auch die Überschrift wirklich mittig ist */
+  .footer-content .footer-section:nth-child(3) h4 {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* 3. Icons verkleinern (Das war dein Hauptwunsch) */
