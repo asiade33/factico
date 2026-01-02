@@ -86,21 +86,35 @@ body {
 
 /* --- SOCIAL ICONS BASIS STYLES --- */
 
-/* Icons generell */
-.social-icons {
+/* Styling für die neuen Icons */
+.nav-icon-link {
   display: flex;
-  gap: 15px;
   align-items: center;
+  color: var(--neutral-gray); /* Deine Standard-Farbe */
+  transition: var(--transition);
+  text-decoration: none;
+  opacity: 0.8;
 }
 
-.social-icons a svg {
-  width: 24px; /* Nicht zu groß, nicht zu klein */
-  height: 24px;
-  transition: transform 0.2s ease, fill 0.2s;
+/* Größe der Icons */
+.nav-icon-link svg {
+  width: 28px; /* Passend zur Schriftgröße 1.6rem */
+  height: 28px;
 }
 
-.social-icons a:hover svg {
-  transform: scale(1.15); /* Hüpft leicht beim Drüberfahren */
+/* Hover-Effekt (wie bei den Textlinks, aber ohne Unterstrich) */
+.nav-icon-link:hover {
+  transform: scale(1.1); /* Leichte Vergrößerung */
+  color: var(--accent-blue); /* Deine Hover-Farbe */
+  opacity: 1;
+}
+
+/* Spezielle Brand-Farben beim Hover (Optional - sieht schicker aus) */
+.nav-icon-link.tiktok:hover {
+  color: #000000;
+}
+.nav-icon-link.insta:hover {
+  color: #e1306c;
 }
 
 /* ==================== HEADER & NAVIGATION ==================== */
