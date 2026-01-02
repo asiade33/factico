@@ -1015,6 +1015,54 @@ body {
   margin: 0;
 }
 
+/* ==================== FOOTER SOCIAL ICONS ==================== */
+
+/* Container für die Icons nebeneinander */
+.footer-icons {
+  display: flex;
+  gap: 15px; /* Abstand zwischen den Icons */
+  margin-top: 10px; /* Kleiner Abstand zur Überschrift "Folge uns" */
+}
+
+/* Der Link um das Icon */
+.footer-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* WICHTIG: Erbt die Textfarbe deines Footers! */
+  color: inherit;
+  opacity: 0.8;
+  transition: transform 0.2s ease, opacity 0.2s;
+  text-decoration: none; /* Kein Unterstrich */
+}
+
+/* Die Größe des Icons erzwingen (damit sie nicht riesig sind) */
+.footer-icon-link svg {
+  width: 24px;
+  height: 24px;
+  /* fill: currentColor sorgt dafür, dass das Icon die Textfarbe annimmt */
+  fill: currentColor;
+}
+
+/* Hover Effekte */
+.footer-icon-link:hover {
+  transform: scale(1.1); /* Leichtes Vergrößern */
+  opacity: 1;
+}
+
+/* Spezifische Farben beim Hover (optional) */
+
+.footer-icon-link.tiktok:hover {
+  color: #000000;
+} /* oder weiß bei dunklem Footer */
+.footer-icon-link.insta:hover {
+  color: #e1306c;
+}
+
+*/
+
+
 /* !!!!!!!!!!!!!!! SPD !!!!!!!!!!!!!!! */
 .spd-root {
   --main-color: #e0001a; /* Offizielles SPD Rot (kräftiges Rot) */
