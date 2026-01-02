@@ -1000,20 +1000,17 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* ==================== PARTY-FOOTER ==================== */
+/* ==================== PARTY-FOOTER ==================== */ /* ==================== PARTY-FOOTER (Clean & Lesbar) ==================== */
 .party-footer {
-  background-color: var(--main-color);
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 3rem; /* Mehr Abstand zum Inhalt drüber */
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
+  /* Hintergrund IMMER dunkel, damit man weiße Schrift lesen kann */
+  background-color: #1a1a1a;
+  /* Die Parteifarbe kommt als feiner Strich oben wieder rein */
+  border-top: 4px solid var(--main-color);
 
-.disclaimer {
-  font-size: 0.8rem; /* Kleinere Schrift */
-  opacity: 0.8; /* Wenig mehr Sichtbarkeit */
-  margin: 0;
+  color: #cccccc; /* Helles Grau statt hartes Weiß (angenehmer) */
+  text-align: center;
+  padding: 3rem 1rem 2rem; /* Genug Luft */
+  margin-top: 4rem;
 }
 
 .party-footer-content {
@@ -1021,83 +1018,96 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 2rem;
 }
 
-/* Der "Zur Startseite" Button */
+/* ==================== BUTTON: DEZENT ("GHOST") ==================== */
+/* Vorher war er zu präsent, jetzt ist er fein und elegant */
 .footer-home-link {
-  background: rgba(255, 255, 255, 0.15); /* Etwas heller damit man es sieht */
-  color: white;
+  background: transparent; /* Kein Hintergrund mehr */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Feiner, grauer Rand */
+  color: #999; /* Text etwas dunkler, damit er nicht schreit */
+
   text-decoration: none;
-  padding: 12px 24px; /* Schön großer Klickbereich für Daumen */
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 1rem; /* Lesbare Größe wiederherstellen */
-  transition: background 0.2s, transform 0.2s;
+  padding: 8px 20px; /* Kleiner */
+  border-radius: 4px; /* Eckiger wirkt technischer/sauberer */
+  font-size: 0.85rem; /* Kleiner */
+  font-weight: normal; /* Nicht mehr fett */
+
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 10px;
+  transition: all 0.2s ease;
 }
 
 .footer-home-link:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px); /* Kleiner Hüpfer beim Drüberfahren */
+  border-color: #fff; /* Beim Drüberfahren wird der Rand weiß */
+  color: #fff; /* Text wird weiß */
+  background: rgba(255, 255, 255, 0.05); /* Ganz leichter Schimmer */
 }
 
-/* Die Icons im Party-Footer */
+/* ==================== SOCIAL ICONS ==================== */
 .party-icons {
   display: flex;
-  gap: 25px; /* Etwas mehr Abstand */
+  gap: 20px;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .party-icons .footer-icon-link {
-  color: white; /* Basis Farbe */
-  text-decoration: none;
-  transition: transform 0.2s;
+  color: #888; /* Icons standardmäßig grau (dezent) */
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
 }
 
 .party-icons .footer-icon-link svg {
-  width: 32px; /* Icons groß genug für Mobile */
-  height: 32px;
+  width: 24px; /* Größe dezent halten */
+  height: 24px;
   fill: currentColor;
 }
 
 .party-icons .footer-icon-link:hover {
-  transform: scale(1.2);
-  /* Optional: Leuchtet beim Hover auf */
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  color: white; /* Werden weiß beim Drüberfahren */
+  transform: scale(1.1);
 }
 
-/* Unten: Copyright & Rechtliches */
+.party-icons .footer-icon-link.tiktok:hover {
+  color: #00f2ea;
+}
+.party-icons .footer-icon-link.insta:hover {
+  color: #e1306c;
+}
+
+/* ==================== RECHTLICHES (Ganz unten) ==================== */
 .party-footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 2rem;
   padding-top: 1.5rem;
-  font-size: 0.9rem;
-  opacity: 0.9;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Sehr feine Trennlinie */
+  font-size: 0.8rem;
+  color: #666; /* Rechtstexte schön im Hintergrund halten */
+}
+
+.party-footer-bottom p {
+  margin-bottom: 5px;
 }
 
 .legal-links {
-  margin-top: 10px;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .legal-links a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #666;
   text-decoration: none;
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
 }
 
 .legal-links a:hover {
-  color: white;
-  border-bottom: 1px solid white;
+  color: #999;
+  text-decoration: underline;
 }
 
-/* ==================== BACK TO TOP BUTTON ==================== */
+/* ==================== NACH OBEN BUTTON (Kleiner) ==================== */
 #backToTop {
   display: flex;
   align-items: center;
@@ -1105,23 +1115,22 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 50px; /* Etwas größer für Daumen */
-  height: 50px;
-  background-color: #111; /* Dunkelgrau/Schwarz */
+  width: 40px; /* Kleiner als vorher */
+  height: 40px;
+  background-color: #000;
   color: white;
   text-decoration: none;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 5px; /* Eckig mit abgerundeten Kanten passt oft besser zu modernem Web */
+  font-size: 1.2rem;
+  opacity: 0.7; /* Standardmäßig leicht transparent */
+  transition: opacity 0.3s, background-color 0.3s;
   z-index: 9999;
-  transition: transform 0.3s, background-color 0.3s;
 }
 
 #backToTop:hover {
-  transform: translateY(-5px);
-  background-color: #333;
+  opacity: 1;
+  background-color: var(--main-color); /* Highlight in Parteifarbe beim Hover */
 }
-
 /* ==================== FOOTER SOCIAL ICONS ==================== */
 
 /* Container für die Icons nebeneinander */
