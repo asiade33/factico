@@ -20,50 +20,54 @@
 
     <!-- !!!! HEADER !!!! -->
     <header class="header" id="header">
-      <nav class="nav-container">
-        <!-- LOGO (Unverändert) -->
-        <a href="#" class="factico-logo">
-          <img
-            src="https://i.imgur.com/6Fyu7WL.png"
-            alt="factico."
-            class="factico-logo-img"
-          />
-          factico.
-        </a>
-
-        <!-- NAV ITEMS & ICONS -->
-        <div class="nav-items">
-          <a href="#about" class="nav-link">Über uns</a>
-          <a href="#methodik" class="nav-link">Methodik</a>
-          <a href="#parties" class="nav-link">Parteien</a>
-
-          <!-- NEU: TIKTOK & INSTAGRAM ICONS -->
-          <!-- Wir nutzen einen Trenner (Pipe |) oder einfach den Abstand, hier nutzen wir den Abstand -->
-          <a
-            href="https://www.tiktok.com/@factico.eu"
-            target="_blank"
-            class="nav-icon-link tiktok"
-            aria-label="TikTok"
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.65-1.58-1.09v8.32c-.01 2.5-1.43 4.79-3.66 5.96-2.22 1.18-4.94.99-7- .51-2.07-1.49-3-4.1-2.39-6.55.61-2.45 2.66-4.32 5.17-4.71V14.6c-1.41.25-2.58 1.34-2.83 2.74-.24 1.4.52 2.78 1.81 3.29 1.28.52 2.75.14 3.63-.94.88-1.09 1.15-2.5.73-3.84-.03-2.91-.01-5.83-.01-8.74 0-1.87 0-3.74 0-5.61.02-.32.02-.65.43-.68z"
-              />
-            </svg>
+      <!-- Hier bleibt deine originale Wrapper-Struktur erhalten -->
+      <nav class="navbar" aria-label="Hauptnavigation">
+        <div class="nav-container">
+          <!-- LOGO (Unverändert) -->
+          <a href="#" class="factico-logo">
+            <img
+              src="https://i.imgur.com/6Fyu7WL.png"
+              alt="factico. Logo"
+              class="factico-logo-img"
+            />
+            factico.
           </a>
 
-          <a
-            href="https://www.instagram.com/factico.eu"
-            target="_blank"
-            class="nav-icon-link insta"
-            aria-label="Instagram"
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
-              />
-            </svg>
-          </a>
+          <!-- NAV ITEMS: Hier kommen die Icons dazu -->
+          <div class="nav-items">
+            <a href="#about" class="nav-link">Über uns</a>
+            <a href="#methodik" class="nav-link">Methodik</a>
+            <a href="#parties" class="nav-link">Parteien</a>
+
+            <!-- TIKTOK ICON -->
+            <a
+              href="https://www.tiktok.com/@factico.eu"
+              target="_blank"
+              class="nav-icon-link tiktok"
+              aria-label="TikTok"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.65-1.58-1.09v8.32c-.01 2.5-1.43 4.79-3.66 5.96-2.22 1.18-4.94.99-7- .51-2.07-1.49-3-4.1-2.39-6.55.61-2.45 2.66-4.32 5.17-4.71V14.6c-1.41.25-2.58 1.34-2.83 2.74-.24 1.4.52 2.78 1.81 3.29 1.28.52 2.75.14 3.63-.94.88-1.09 1.15-2.5.73-3.84-.03-2.91-.01-5.83-.01-8.74 0-1.87 0-3.74 0-5.61.02-.32.02-.65.43-.68z"
+                />
+              </svg>
+            </a>
+
+            <!-- INSTAGRAM ICON -->
+            <a
+              href="https://www.instagram.com/factico.eu"
+              target="_blank"
+              class="nav-icon-link insta"
+              aria-label="Instagram"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
+                />
+              </svg>
+            </a>
+          </div>
+          <!-- Ende nav-items -->
         </div>
       </nav>
     </header>
