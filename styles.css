@@ -1000,21 +1000,126 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* PARTY-Footer */
+/* ==================== PARTY-FOOTER ==================== */
 .party-footer {
   background-color: var(--main-color);
-  color: white; /* Weißer Text */
-  text-align: center; /* Zentrierter Text */
-  font-size: 0.8em; /* Sehr kleine Schriftgröße */
-  padding: 2px 0; /* Minimales vertikales Padding */
-  margin-top: 10px; /* Reduzierter Abstand zum oberen Inhalt */
-  border-top: 1px solid #ccc; /* Dünne Trennlinie */
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem; /* Mehr Abstand zum Inhalt drüber */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .disclaimer {
   font-size: 0.8rem; /* Kleinere Schrift */
   opacity: 0.8; /* Wenig mehr Sichtbarkeit */
   margin: 0;
+}
+
+.party-footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Der "Zur Startseite" Button */
+.footer-home-link {
+  background: rgba(255, 255, 255, 0.15); /* Etwas heller damit man es sieht */
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px; /* Schön großer Klickbereich für Daumen */
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem; /* Lesbare Größe wiederherstellen */
+  transition: background 0.2s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-home-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px); /* Kleiner Hüpfer beim Drüberfahren */
+}
+
+/* Die Icons im Party-Footer */
+.party-icons {
+  display: flex;
+  gap: 25px; /* Etwas mehr Abstand */
+  justify-content: center;
+}
+
+.party-icons .footer-icon-link {
+  color: white; /* Basis Farbe */
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.party-icons .footer-icon-link svg {
+  width: 32px; /* Icons groß genug für Mobile */
+  height: 32px;
+  fill: currentColor;
+}
+
+.party-icons .footer-icon-link:hover {
+  transform: scale(1.2);
+  /* Optional: Leuchtet beim Hover auf */
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+/* Unten: Copyright & Rechtliches */
+.party-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.legal-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.legal-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+}
+
+.legal-links a:hover {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+/* ==================== BACK TO TOP BUTTON ==================== */
+#backToTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px; /* Etwas größer für Daumen */
+  height: 50px;
+  background-color: #111; /* Dunkelgrau/Schwarz */
+  color: white;
+  text-decoration: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+#backToTop:hover {
+  transform: translateY(-5px);
+  background-color: #333;
 }
 
 /* ==================== FOOTER SOCIAL ICONS ==================== */
@@ -3857,6 +3962,14 @@ a:hover {
     display: flex; /* Zurück zu Flex für den Balken */
     flex-direction: column;
     gap: 5px;
+  }
+
+  #backToTop {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
   }
 
   /* Search Container */
