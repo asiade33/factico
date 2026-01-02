@@ -84,6 +84,25 @@ body {
   background: transparent;
 }
 
+/* --- SOCIAL ICONS BASIS STYLES --- */
+
+/* Icons generell */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icons a svg {
+  width: 24px; /* Nicht zu groß, nicht zu klein */
+  height: 24px;
+  transition: transform 0.2s ease, fill 0.2s;
+}
+
+.social-icons a:hover svg {
+  transform: scale(1.15); /* Hüpft leicht beim Drüberfahren */
+}
+
 /* ==================== HEADER & NAVIGATION ==================== */
 .header {
   position: fixed;
