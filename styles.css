@@ -1000,39 +1000,38 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* ==================== PARTY-FOOTER ==================== */ /* ==================== PARTY-FOOTER (Clean & Lesbar) ==================== */
+/* ==================== PARTY-FOOTER ==================== */
 .party-footer {
-  /* Hintergrund IMMER dunkel, damit man weiße Schrift lesen kann */
-  background-color: #1a1a1a;
-  /* Die Parteifarbe kommt als feiner Strich oben wieder rein */
+  /* Zwingt den Hintergrund auf Dunkelgrau, egal was die Partei-Farbe ist */
+  background-color: #1a1a1a !important;
+
+  /* Nur der Strich oben bekommt die Parteifarbe */
   border-top: 4px solid var(--main-color);
 
-  color: #cccccc; /* Helles Grau statt hartes Weiß (angenehmer) */
+  /* Zwingt die Schrift auf Hellgrau/Weiß */
+  color: #e0e0e0 !important;
+
   text-align: center;
-  padding: 3rem 1rem 2rem; /* Genug Luft */
+  padding: 3rem 1rem 2rem;
   margin-top: 4rem;
 }
 
-.party-footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+/* Sicherstellen, dass auch alle Links im Footer hell sind */
+.party-footer a,
+.party-footer p,
+.party-footer span {
+  color: #e0e0e0 !important;
 }
 
-/* ==================== BUTTON: DEZENT ("GHOST") ==================== */
-/* Vorher war er zu präsent, jetzt ist er fein und elegant */
+/* Home Button Style */
 .footer-home-link {
-  background: transparent; /* Kein Hintergrund mehr */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Feiner, grauer Rand */
-  color: #999; /* Text etwas dunkler, damit er nicht schreit */
-
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ccc !important; /* Helle Schrift erzwingen */
   text-decoration: none;
-  padding: 8px 20px; /* Kleiner */
-  border-radius: 4px; /* Eckiger wirkt technischer/sauberer */
-  font-size: 0.85rem; /* Kleiner */
-  font-weight: normal; /* Nicht mehr fett */
-
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 0.9rem;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1040,9 +1039,9 @@ body {
 }
 
 .footer-home-link:hover {
-  border-color: #fff; /* Beim Drüberfahren wird der Rand weiß */
-  color: #fff; /* Text wird weiß */
-  background: rgba(255, 255, 255, 0.05); /* Ganz leichter Schimmer */
+  border-color: #fff;
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* ==================== SOCIAL ICONS ==================== */
