@@ -1044,6 +1044,46 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* Spezieller Style für den Button im Party-Footer */
+.kofi-button-party {
+  background-color: #2a2a2a; /* Etwas heller als der Hintergrund */
+  color: white !important;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ff5e5b; /* Roter Rand passend zu Ko-fi */
+  transition: all 0.2s ease;
+}
+
+.kofi-button-party svg {
+  width: 20px;
+  height: 20px;
+  fill: #ff5e5b; /* Rotes Herz/Tasse */
+}
+
+.kofi-button-party:hover {
+  background-color: #ff5e5b;
+  color: white !important;
+  box-shadow: 0 0 15px rgba(255, 94, 91, 0.4);
+}
+.kofi-button-party:hover svg {
+  fill: white;
+}
+
+/* Abstand anpassen im Party-Footer */
+.party-support {
+  margin: 1rem 0; /* Luft nach oben und unten */
+}
+/* Damit die Icons danach nicht zu weit weg rutschen */
+.party-icons {
+  margin-top: 1rem !important;
+}
+
 /* ==================== SUPPORT ==================== */
 
 .support-section {
@@ -3954,66 +3994,80 @@ a:hover {
     border-radius: 10px; /* Abgerundete Ecken */
   }
 
-  /* Footer */
-  /* 1. Footer-Grid anpassen */
+  /* ------------------- HAUPT-FOOTER (Startseite) ------------------- */
+
+  /* Das 2x2 Raster */
   .footer-content {
-    /* 2 Spalten für Rechtliches & Kontakt */
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem 1rem; /* Mehr Abstand vertikal, weniger horizontal */
-    justify-items: center;
+    grid-template-columns: 1fr 1fr; /* Zwei gleich große Spalten */
+    gap: 2rem 1rem; /* Luft: Viel Vertikal, weniger Horizontal */
     padding: 0 1rem;
+    justify-items: center; /* Alles mittig in der jeweiligen Zelle */
   }
 
-  /* 2. Der "Folge uns" Block soll mittig unter den anderen beiden stehen */
-  /* Wir sprechen das 3. Element an (Social Section) */
-  .footer-content .footer-section:nth-child(3) {
-    grid-column: span 2; /* Nimmt die volle Breite ein */
-    width: 100%;
+  /* Support-Sektion (Unten Links) */
+  .support-section {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Zentriert die Icons */
-    text-align: center; /* Zentriert den Text "Folge uns" */
-    margin-top: 0.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Zarte Trennlinie (optional) */
-  }
-
-  /* Sicherstellen, dass auch die Überschrift wirklich mittig ist */
-  .footer-content .footer-section:nth-child(3) h4 {
-    width: 100%;
+    align-items: center;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin-top: 0; /* Sauber einpassen */
   }
 
-  /* 3. Icons verkleinern (Das war dein Hauptwunsch) */
-  .footer-icon-link svg {
-    width: 20px; /* Kleiner als Desktop (24px) */
-    height: 20px;
+  /* Text kleiner, damit er in die Spalte passt */
+  .support-text {
+    font-size: 0.75rem;
+    max-width: 130px;
+    line-height: 1.2;
+    margin-bottom: 8px;
   }
 
-  /* Abstand der Icons zueinander verringern */
-  .footer-icons {
-    gap: 15px; /* Etwas enger zusammen */
+  /* Button kompakt machen */
+  .kofi-button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    width: 100%;
+    justify-content: center;
   }
 
-  /* Schriftgrößen im Footer generell leicht anpassen */
+  /* Social Media & Kontakt (Überschriften) */
   .footer-section h4 {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
 
+  /* Links etwas kleiner */
   .footer-section a {
     font-size: 0.85rem;
   }
 
-  /* Den Party-Footer (Balken) auch fixen, falls er stört */
-  .party-footer .footer-content {
-    display: flex; /* Zurück zu Flex für den Balken */
-    flex-direction: column;
-    gap: 5px;
+  /* Social Icons (Unten Rechts) */
+  .footer-icon-link svg {
+    width: 22px;
+    height: 22px;
   }
 
+  .footer-icons {
+    gap: 15px;
+  }
+
+  /* ------------------- PARTY-FOOTER (Politiker-Seiten) ------------------- */
+
+  /* Hier muss es ".party-footer-content" heißen */
+  .party-footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Abstände nicht zu riesig auf Handy */
+    width: 100%;
+  }
+
+  /* Der Spenden-Button im Party-Footer auf Handy */
+  .kofi-button-party {
+    width: 100%; /* Volle Breite */
+    justify-content: center;
+  }
+
+  /* ------------------- NACH OBEN BUTTON ------------------- */
   #backToTop {
     bottom: 15px;
     right: 15px;
