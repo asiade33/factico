@@ -104,7 +104,7 @@ function renderInstitutions() {
     // Achte darauf, dass du "party-logo" Klasse nutzt, damit das Design stimmt
     card.innerHTML = `
       ${badgeHTML}
-      <img src="${inst.logo}" alt="${inst.name}" class="party-logo" style="max-height: 80px; width: auto; margin-bottom: 1rem;">
+      <img src="${inst.logo}" alt="${inst.name}" class="party-logo">
       <h3 class="party-name">${inst.name}</h3>
     `;
 

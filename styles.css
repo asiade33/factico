@@ -631,11 +631,35 @@ body {
 
 /* ==================== INSTITUTIONEN STATUS STYLES ==================== */
 
-/* WICHTIG: Damit der Stempel innerhalb der Karte bleibt */
+/* Die Karte soll Platz bieten */
 #institutions .party-card {
-  position: relative;
-  overflow: hidden; /* Schneidet den Stempel am Rand ab */
-  transition: transform 0.2s ease, filter 0.2s ease;
+  /* Fixe Höhe oder Min-Höhe sorgt für Einheitlichkeit */
+  height: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Das Logo darf sich breit machen */
+#institutions .party-logo {
+  width: 100%; /* Nutze die volle Breite der Karte */
+  height: 150px; /* Reserviere viel Platz für die Höhe */
+
+  /* WICHTIG: contain sorgt dafür, dass das Logo so groß wie möglich wird, 
+     OHNE verzerrt/abgeschnitten zu werden */
+  object-fit: contain;
+
+  margin-bottom: 1rem;
+  /* Keine künstliche Begrenzung mehr */
+  max-height: none;
+}
+
+/* Schrift etwas größer im Desktop */
+#institutions .party-name {
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 /* Stil für INAKTIVE Karten (ohne Link) */
