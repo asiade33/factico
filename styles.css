@@ -1047,9 +1047,9 @@ body {
 /* ==================== SOCIAL ICONS ==================== */
 .party-icons {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   justify-content: center;
-  margin-top: 1.5rem;
+  margin-top: 3rem;
 }
 
 .party-icons .footer-icon-link {
