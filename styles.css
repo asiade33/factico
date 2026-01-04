@@ -3889,45 +3889,65 @@ a:hover {
   }
 
   #institutions .party-grid {
-    /* Das ist der Schlüssel: Zwingt exakt 3 Spalten (je 33%) */
+    /* Erzwingt exakt 3 gleich große Spalten */
+    display: grid;
     grid-template-columns: repeat(3, 1fr) !important;
 
-    /* Wenig Abstand dazwischen, damit die Karten Platz haben */
+    /* Abstände: Klein genug, damit es passt */
     gap: 0.5rem;
-    padding: 0 5px;
 
-    /* Scrollen verbieten, wir wollen alle sehen */
-    overflow-x: hidden;
-  }
-
-  /* Die Karte selbst muss kompakter werden */
-  #institutions .party-card {
-    min-width: 0; /* Erlaubt der Karte, kleiner als 200px zu werden */
+    /* Verhindert seitliches Scrollen/Überlaufen */
     width: 100%;
-    padding: 10px 5px; /* Wenig Innenabstand */
-    min-height: 100px;
+    padding: 0 10px;
+    box-sizing: border-box; /* Wichtig: Padding rechnet nicht zur Breite dazu */
   }
 
-  /* Das Logo muss kleiner werden, sonst sprengt es die Karte */
+  /* Die Karte selbst */
+  #institutions .party-card {
+    /* WICHTIG: Damit die Karte schrumpfen darf, sonst sprengt sie das Grid */
+    min-width: 0 !important;
+
+    width: 100%;
+    padding: 5px; /* Minimales Padding innen */
+
+    /* Optional: Einheitliche Höhe, sieht sauberer aus */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  /* --- DAS BILD-FIXING --- */
   #institutions .party-logo {
-    max-height: 40px !important; /* Kleines Logo */
+    /* Bild soll die Karte füllen (Breite) */
+    width: 100% !important;
+    height: auto !important;
+
+    /* Vorherige Begrenzung aufheben */
+    max-height: none !important;
+
+    /* Damit es nicht pixelig wird, aber Platz nutzt */
+    object-fit: contain;
+
+    /* Etwas Abstand zum Text unten */
     margin-bottom: 5px !important;
+    display: block;
   }
 
-  /* Der Name darunter kleiner */
+  /* Schrift anpassen (muss klein sein bei 3 Spalten) */
   #institutions .party-name {
-    font-size: 0.75rem; /* Kleine Schrift (ca 12px) */
-    word-break: break-word; /* Falls Namen lang sind */
+    font-size: 0.7rem;
+    line-height: 1.1;
+    word-break: break-word; /* Lange Wörter umbrechen */
   }
 
-  /* Der "Demnächst"-Stempel muss winzig werden */
+  /* Badge anpassen */
   #institutions .coming-soon-badge {
-    font-size: 0.45rem; /* Sehr kleine Schrift */
-    padding: 2px 15px;
+    font-size: 0.4rem;
+    padding: 8px 20px; /* Breiterer Streifen */
     top: 5px;
-    right: -15px;
-    /* Damit er nicht zu viel vom Logo verdeckt */
-    opacity: 0.9;
+    right: -22px;
   }
 
   /* Hero Section */
