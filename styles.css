@@ -1049,7 +1049,7 @@ body {
   display: flex;
   gap: 25px;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 3.5rem !important;
 }
 
 .party-icons .footer-icon-link {
