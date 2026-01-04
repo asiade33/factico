@@ -4257,3 +4257,34 @@ a:hover {
     height: 6px;
   }
 }
+
+/* ==================== TABLET & NEST HUB OPTIMIERUNG (768px - 1150px) ==================== */
+@media (max-width: 1150px) {
+  /* 1. Container flexibel machen */
+  /* Das verhindert, dass Inhalte rechts rauslaufen, wenn der Screen nur 1024px breit ist */
+  .footer-content,
+  .nav-container,
+  .header-container,
+  .bio-container,
+  #institutions .party-grid,
+  .party-highlights,
+  .party-footer-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 20px !important; /* Sicherheitsabstand Links */
+    padding-right: 20px !important; /* Sicherheitsabstand Rechts */
+    box-sizing: border-box;
+  }
+
+  /* 2. Schriftgrößen leicht anpassen (Optional) */
+  /* Damit Überschriften auf dem Nest Hub nicht zweizeilig werden */
+  h1.party-politician-name {
+    font-size: 2.5rem; /* Etwas kleiner als Desktop */
+  }
+
+  /* 3. Institutionen-Grid auf Tablet/Nest Hub */
+  /* Hier passen 3 locker nebeneinander, aber wir passen die Lücken an */
+  #institutions .party-grid {
+    gap: 1rem; /* Etwas weniger Abstand als auf großem Desktop */
+  }
+}
