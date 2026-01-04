@@ -3917,7 +3917,7 @@ a:hover {
     /* Exakt 3 Spalten */
     grid-template-columns: repeat(3, 1fr) !important;
     /* Kleinerer Abstand, damit sie nebeneinander passen ohne sich zu berühren */
-    gap: 8px;
+    gap: 10px !important; /* 10 Pixel Luft zwischen den Karten */
     padding: 0 5px;
     width: 100%;
     box-sizing: border-box;
