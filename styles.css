@@ -3999,7 +3999,7 @@ a:hover {
   /* Das 2x2 Raster */
   .footer-content {
     grid-template-columns: 1fr 1fr; /* Zwei gleich große Spalten */
-    gap: 2rem 1rem; /* Luft: Viel Vertikal, weniger Horizontal */
+    gap: 2rem 0.5rem; /* Luft: Viel Vertikal, weniger Horizontal */
     padding: 0 1rem;
     justify-items: center; /* Alles mittig in der jeweiligen Zelle */
   }
@@ -4017,17 +4017,21 @@ a:hover {
   /* Text kleiner, damit er in die Spalte passt */
   .support-text {
     font-size: 0.75rem;
-    max-width: 130px;
+    max-width: 100%;
     line-height: 1.2;
     margin-bottom: 8px;
   }
 
   /* Button kompakt machen */
   .kofi-button {
-    padding: 8px 12px;
-    font-size: 0.8rem;
+    box-sizing: border-box;
     width: 100%;
+    max-width: 100%;
+
+    padding: 8px 5px; /* Weniger seitliches Padding */
+    font-size: 0.75rem; /* Schrift etwas kleiner, damit sie passt */
     justify-content: center;
+    white-space: nowrap; /* Text in einer Zeile halten */
   }
 
   /* Social Media & Kontakt (Überschriften) */
@@ -4057,13 +4061,27 @@ a:hover {
   .party-footer-content {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Abstände nicht zu riesig auf Handy */
+    align-items: center !important; /* WICHTIG: Das zwingt "Startseite" in die Mitte */
     width: 100%;
+    padding: 0 1rem; /* Sicherheitsabstand zum Rand */
+    box-sizing: border-box;
+  }
+
+  /* Home Button Mobile Anpassung */
+  .footer-home-link {
+    width: auto; /* Soll sich dem Inhalt anpassen */
+    justify-content: center;
+    margin-left: auto; /* Trick zum Zentrieren falls Flex versagt */
+    margin-right: auto;
   }
 
   /* Der Spenden-Button im Party-Footer auf Handy */
   .kofi-button-party {
-    width: 100%; /* Volle Breite */
+    box-sizing: border-box; /* WICHTIG: Rand gehört zur Breite */
+    width: 100%;
+    max-width: 300px; /* Nicht breiter als 300px werden */
+    padding: 10px 15px;
+    margin: 0 auto; /* Zentrieren */
     justify-content: center;
   }
 
