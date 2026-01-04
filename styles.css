@@ -4258,33 +4258,60 @@ a:hover {
   }
 }
 
-/* ==================== TABLET & NEST HUB OPTIMIERUNG (768px - 1150px) ==================== */
+/* ==================== TABLET / NEST HUB SCHUTZSCHILD (Max 1150px) ==================== */
 @media (max-width: 1150px) {
-  /* 1. Container flexibel machen */
-  /* Das verhindert, dass Inhalte rechts rauslaufen, wenn der Screen nur 1024px breit ist */
-  .footer-content,
-  .nav-container,
+  /* 1. Globaler Schutz gegen horizontales Scrollen */
+  /* Das verhindert, dass IRGENDWAS den Bildschirm zur Seite schiebt */
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* 2. Alle Haupt-Container zwingen, sich anzupassen */
   .header-container,
-  .bio-container,
-  #institutions .party-grid,
-  .party-highlights,
-  .party-footer-content {
+  .nav-container,
+  .bio-container,        /* WICHTIG: Bio-Bereich */
+  .party-highlights,     /* Skandale */
+  .party-highlight,      /* Einzelne Skandal-Karte */
+  .party-facts,          /* Fakten-Sektion */
+  .party-members,        /* Mitglieder-Liste */
+  .footer-content, 
+  .party-footer-content,
+  .bio-text,             /* Text im Bio-Bereich */
+  section {
+    /* Fängt alle Sektionen ab */
     width: 100% !important;
     max-width: 100% !important;
-    padding-left: 20px !important; /* Sicherheitsabstand Links */
-    padding-right: 20px !important; /* Sicherheitsabstand Rechts */
-    box-sizing: border-box;
+    box-sizing: border-box; /* Rand gehört zur Breite dazu */
   }
 
-  /* 2. Schriftgrößen leicht anpassen (Optional) */
-  /* Damit Überschriften auf dem Nest Hub nicht zweizeilig werden */
-  h1.party-politician-name {
-    font-size: 2.5rem; /* Etwas kleiner als Desktop */
+  /* 3. Sicherheitsabstand (Padding) für den Inhalt */
+  /* Damit Text auf dem Nest Hub nicht am Display-Rand klebt */
+  .header-container,
+  .bio-container,
+  .party-highlights,
+  .footer-content,
+  .party-footer,
+  .party-facts {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
-  /* 3. Institutionen-Grid auf Tablet/Nest Hub */
-  /* Hier passen 3 locker nebeneinander, aber wir passen die Lücken an */
-  #institutions .party-grid {
-    gap: 1rem; /* Etwas weniger Abstand als auf großem Desktop */
+  /* 4. Der Bild-Killer-Schutz */
+  /* Verhindert, dass das Merz-Bild in der Bio das Layout sprengt */
+  img,
+  .bio-image,
+  .party-logo,
+  .factico-logo-img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 5. Bio-Sektion Flexibilität */
+  /* Falls Bild und Text nebeneinander zu eng werden, sollen sie untereinander rutschen */
+  /* Optional: Wenn du willst, dass sie ab 1100px schon untereinander stehen */
+  .bio-container {
+    flex-wrap: wrap; /* Erlaubt Umbruch */
   }
 }
