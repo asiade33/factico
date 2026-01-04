@@ -3888,6 +3888,48 @@ a:hover {
     font-size: 0.9em;
   }
 
+  #institutions .party-grid {
+    /* Das ist der Schlüssel: Zwingt exakt 3 Spalten (je 33%) */
+    grid-template-columns: repeat(3, 1fr) !important;
+
+    /* Wenig Abstand dazwischen, damit die Karten Platz haben */
+    gap: 0.5rem;
+    padding: 0 5px;
+
+    /* Scrollen verbieten, wir wollen alle sehen */
+    overflow-x: hidden;
+  }
+
+  /* Die Karte selbst muss kompakter werden */
+  #institutions .party-card {
+    min-width: 0; /* Erlaubt der Karte, kleiner als 200px zu werden */
+    width: 100%;
+    padding: 10px 5px; /* Wenig Innenabstand */
+    min-height: 100px;
+  }
+
+  /* Das Logo muss kleiner werden, sonst sprengt es die Karte */
+  #institutions .party-logo {
+    max-height: 40px !important; /* Kleines Logo */
+    margin-bottom: 5px !important;
+  }
+
+  /* Der Name darunter kleiner */
+  #institutions .party-name {
+    font-size: 0.75rem; /* Kleine Schrift (ca 12px) */
+    word-break: break-word; /* Falls Namen lang sind */
+  }
+
+  /* Der "Demnächst"-Stempel muss winzig werden */
+  #institutions .coming-soon-badge {
+    font-size: 0.45rem; /* Sehr kleine Schrift */
+    padding: 2px 15px;
+    top: 5px;
+    right: -15px;
+    /* Damit er nicht zu viel vom Logo verdeckt */
+    opacity: 0.9;
+  }
+
   /* Hero Section */
   .hero {
     padding: 4rem 1rem 2rem; /* Weniger Padding auf mobilen Geräten */
