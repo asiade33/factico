@@ -52,24 +52,68 @@ const parties = [
     logo: "https://i.imgur.com/av3Eoww.png",
     link: "/afd/",
   },
-];
-
-// STARTSEITE: KARTEN DER INSTITUTIONEN MIT LINKS
+]; // STARTSEITE: INSTITUTIONEN RENDERN
 const institutions = [
   {
     name: "ÖRR",
-    logo: "https://i.imgur.com/moOJRDv.png",
-    link: "/oerr/",
+    logo: "https://i.imgur.com/moOJRDv.png", // Dein ÖRR Logo Link
+    link: "/oerr/", // Hat einen Link -> Wird aktiv
   },
   {
     name: "AAS",
-    logo: "https://i.imgur.com/AG3dJrm.png",
+    logo: "https://i.imgur.com/AG3dJrm.png", // Dein AAS Logo Link
+    // Kein Link -> Wird inaktiv
   },
   {
     name: "VS",
-    logo: "https://i.imgur.com/AMTfatq.png",
+    logo: "https://i.imgur.com/AMTfatq.png", // Dein VS Logo Link
+    // Kein Link -> Wird inaktiv
   },
 ];
+
+function renderInstitutions() {
+  // WICHTIG: Wir suchen genau den Grid-Container in der Institutions-Sektion
+  const container = document.querySelector("#institutions .party-grid");
+
+  if (!container) return; // Abbruch, falls Element nicht existiert (z.B. auf Unterseite)
+
+  container.innerHTML = ""; // Container leeren, damit nichts doppelt ist
+
+  institutions.forEach((inst) => {
+    // Check: Ist ein Link vorhanden?
+    const hasLink = inst.link && inst.link.length > 0;
+
+    // Wenn Link da ist -> <a> Tag, sonst -> <div> Tag (damit nicht klickbar)
+    const card = document.createElement(hasLink ? "a" : "div");
+
+    // Wir nutzen deine bestehende Klasse "party-card"
+    // und fügen "disabled" hinzu, wenn kein Link da ist.
+    card.className = `party-card ${hasLink ? "active" : "disabled"}`;
+
+    if (hasLink) {
+      card.href = inst.link;
+    }
+
+    // Badge-Logik für inaktive Karten
+    let badgeHTML = "";
+    if (!hasLink) {
+      badgeHTML = `<div class="coming-soon-badge">Demnächst</div>`;
+    }
+
+    // HTML Aufbau (angepasst an deine Party-Karten Struktur)
+    // Achte darauf, dass du "party-logo" Klasse nutzt, damit das Design stimmt
+    card.innerHTML = `
+      ${badgeHTML}
+      <img src="${inst.logo}" alt="${inst.name}" class="party-logo" style="max-height: 80px; width: auto; margin-bottom: 1rem;">
+      <h3 class="party-name">${inst.name}</h3>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+// Starten, sobald die Seite geladen ist
+document.addEventListener("DOMContentLoaded", renderInstitutions);
 
 // Initialize party grid
 const partyGrid = document.getElementById("partyGrid");

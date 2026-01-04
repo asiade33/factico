@@ -629,10 +629,47 @@ body {
   overflow-x: visible; /* Kein horizontales Scrollen */
 }
 
-/* Optional: Größere Karten für Institutionen */
+/* ==================== INSTITUTIONEN STATUS STYLES ==================== */
+
+/* WICHTIG: Damit der Stempel innerhalb der Karte bleibt */
 #institutions .party-card {
-  max-width: 300px; /* Begrenze maximale Breite */
-  margin: 0 auto; /* Zentriere die Karten */
+  position: relative;
+  overflow: hidden; /* Schneidet den Stempel am Rand ab */
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Stil für INAKTIVE Karten (ohne Link) */
+#institutions .party-card.disabled {
+  cursor: default; /* Normaler Mauszeiger statt Hand */
+  opacity: 0.6; /* Macht es blasser */
+  filter: grayscale(100%); /* Komplett Schwarz-Weiß */
+  background-color: #f0f0f0; /* Optional: Hintergrund etwas grauer */
+  border-color: #ccc;
+  transform: none !important; /* Kein Hover-Effekt */
+  box-shadow: none !important;
+}
+
+/* Stil für AKTIVE Karten (mit Link) */
+#institutions .party-card.active:hover {
+  transform: translateY(-5px); /* Dein gewohnter Hover-Effekt */
+}
+
+/* Der "DEMNÄCHST" Stempel */
+.coming-soon-badge {
+  position: absolute;
+  top: 12px;
+  right: -30px; /* Schiebt es in die Ecke */
+  background: #ff5e5b; /* Signalrot */
+  color: white;
+  font-size: 0.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 4px 30px;
+  transform: rotate(45deg); /* Schrägstellung */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  text-transform: uppercase;
+  pointer-events: none; /* Klicks gehen durch */
 }
 
 .international-personalities .content-block {
