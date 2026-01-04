@@ -1095,9 +1095,16 @@ body {
 }
 
 .support-text {
-  font-size: 0.85rem;
-  color: #888 !important; /* Dezent */
-  margin: 0;
+  color: rgba(255, 255, 255, 0.95) !important;
+
+  font-size: 0.9rem; /* Gut lesbare Größe */
+  font-weight: 600; /* Fett gedruckt fällt mehr auf */
+  margin: 0 0 8px 0; /* Sauberer Abstand zum Button nach unten */
+  text-align: center; /* Zentriert über dem Button sieht immer besser aus */
+
+  /* Falls du den langen Text behalten willst, sorgt das hier für hübsche Zeilenabstände */
+  line-height: 1.4;
+
   font-style: italic;
 }
 
