@@ -3889,65 +3889,59 @@ a:hover {
   }
 
   #institutions .party-grid {
-    /* Erzwingt exakt 3 gleich große Spalten */
     display: grid;
+    /* Exakt 3 Spalten */
     grid-template-columns: repeat(3, 1fr) !important;
-
-    /* Abstände: Klein genug, damit es passt */
-    gap: 0.5rem;
-
-    /* Verhindert seitliches Scrollen/Überlaufen */
+    /* Kleinerer Abstand, damit sie nebeneinander passen ohne sich zu berühren */
+    gap: 8px;
+    padding: 0 5px;
     width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box; /* Wichtig: Padding rechnet nicht zur Breite dazu */
+    box-sizing: border-box;
   }
 
-  /* Die Karte selbst */
   #institutions .party-card {
-    /* WICHTIG: Damit die Karte schrumpfen darf, sonst sprengt sie das Grid */
+    /* WICHTIG: Verhindert Überlappen */
     min-width: 0 !important;
+    overflow: hidden; /* Schneidet alles ab, was über den Rand geht */
 
     width: 100%;
-    padding: 5px; /* Minimales Padding innen */
+    margin: 0;
+    padding: 5px 2px; /* Sehr wenig Padding innen */
 
-    /* Optional: Einheitliche Höhe, sieht sauberer aus */
-    height: 100%;
+    /* Höhe kompakt halten */
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
   }
 
-  /* --- DAS BILD-FIXING --- */
+  /* --- DAS BILD KOMPAKT MACHEN --- */
   #institutions .party-logo {
-    /* Bild soll die Karte füllen (Breite) */
     width: 100% !important;
-    height: auto !important;
 
-    /* Vorherige Begrenzung aufheben */
-    max-height: none !important;
-
-    /* Damit es nicht pixelig wird, aber Platz nutzt */
+    /* HIER war das Problem der Höhe: Wir setzen ein Limit */
+    height: 50px !important;
+    /* Das Bild passt sich in die 50px Box ein, ohne verzerrt zu werden */
     object-fit: contain;
 
-    /* Etwas Abstand zum Text unten */
-    margin-bottom: 5px !important;
-    display: block;
+    margin-bottom: 4px !important;
+    max-height: 50px !important; /* Doppelte Sicherheit */
   }
 
-  /* Schrift anpassen (muss klein sein bei 3 Spalten) */
+  /* Schrift anpassen */
   #institutions .party-name {
-    font-size: 0.7rem;
+    font-size: 0.65rem; /* Kleinere Schrift für 3 Spalten */
     line-height: 1.1;
-    word-break: break-word; /* Lange Wörter umbrechen */
+    margin-top: 0;
   }
 
   /* Badge anpassen */
   #institutions .coming-soon-badge {
-    font-size: 0.4rem;
-    padding: 8px 20px; /* Breiterer Streifen */
-    top: 5px;
-    right: -22px;
+    font-size: 0.35rem;
+    padding: 10px 20px; /* Breiter Balken damit er den Eck schneidet */
+    top: -8px; /* Höher schieben */
+    right: -25px; /* Weiter nach rechts */
+    transform: rotate(45deg);
   }
 
   /* Hero Section */
