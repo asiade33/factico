@@ -3697,6 +3697,21 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* ==================== GLOBAL TRANSITION APPLY ==================== */
+/* Wir erzwingen deine globale Transition für alle interaktiven Footer-Elemente */
+
+.kofi-button,
+.kofi-button-party,
+.footer-home-link,
+.footer-icon-link,
+.footer-icon-link svg, /* Auch das Icon selbst soll sanft färben */
+.legal-links a,
+#backToTop {
+  /* Hier holen wir deine Definition aus dem :root */
+  transition: var(--transition) !important;
+}
+
 /* ==================== RESPONSIVE DESIGN ==================== */
 
 @media (max-width: 768px) {
