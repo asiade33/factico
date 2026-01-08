@@ -1325,6 +1325,12 @@ body {
   color: #e1306c;
 }
 
+/* YouTube Brand Color */
+.footer-icon-link.youtube:hover,
+.nav-icon-link.youtube:hover {
+  color: #ff0000; /* YouTube Rot */
+}
+
 /* !!!!!!!!!!!!!!! SPD !!!!!!!!!!!!!!! */
 .spd-root {
   --main-color: #e0001a; /* Offizielles SPD Rot (kräftiges Rot) */
