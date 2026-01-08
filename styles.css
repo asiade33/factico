@@ -1232,23 +1232,27 @@ body {
 
 /* ----------------------------------------------------- */
 /*  SMART COLOR SYSTEM (Erkennt Farbe anhand des Links)  */
+/*  Gilt für Header, Footer und Partei-Footer            */
 /* ----------------------------------------------------- */
 
 /* INSTAGRAM (Pink/Lila) */
 .party-icons a[href*="insta"]:hover,
-.footer-icons a[href*="insta"]:hover {
+.footer-icons a[href*="insta"]:hover,
+.nav-icon-link[href*="insta"]:hover {
   color: #e1306c !important;
 }
 
 /* TIKTOK (Cyan) */
 .party-icons a[href*="tiktok"]:hover,
-.footer-icons a[href*="tiktok"]:hover {
+.footer-icons a[href*="tiktok"]:hover,
+.nav-icon-link[href*="tiktok"]:hover {
   color: #00f2ea !important;
 }
 
 /* YOUTUBE (Rot) */
 .party-icons a[href*="youtube"]:hover,
-.footer-icons a[href*="youtube"]:hover {
+.footer-icons a[href*="youtube"]:hover,
+.nav-icon-link[href*="youtube"]:hover {
   color: #ff0000 !important;
 }
 
