@@ -1194,7 +1194,8 @@ body {
   box-shadow: 0 6px 20px rgba(255, 94, 91, 0.5); /* Leuchtet stärker */
 }
 
-/* ==================== SOCIAL ICONS ==================== */
+/* ==================== SOCIAL ICONS & HOVER SYSTEM ==================== */
+
 .party-icons {
   display: flex;
   gap: 25px;
@@ -1202,29 +1203,53 @@ body {
   margin-top: 2rem !important;
 }
 
-.party-icons .footer-icon-link {
-  color: #888; /* Icons standardmäßig grau (dezent) */
+/* Basis-Style für ALLE Icons (Startseite & Unterseiten) */
+.party-icons .footer-icon-link,
+.footer-icons .footer-icon-link {
+  color: #888; /* Standardfarbe Grau */
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Keine Unterstriche bei Icons */
 }
 
-.party-icons .footer-icon-link svg {
-  width: 24px; /* Größe dezent halten */
+/* SVG Größe fixieren */
+.party-icons .footer-icon-link svg,
+.footer-icons .footer-icon-link svg {
+  width: 24px;
   height: 24px;
   fill: currentColor;
 }
 
-.party-icons .footer-icon-link:hover {
-  color: white; /* Werden weiß beim Drüberfahren */
-  transform: scale(1.1);
+/* Generischer Hover-Effekt (Bewegung für alle) */
+.party-icons .footer-icon-link:hover,
+.footer-icons .footer-icon-link:hover {
+  color: white; /* Fallback auf Weiß, falls kein Link matched */
+  transform: scale(1.15); /* Der Zoom-Effekt */
+  opacity: 1;
 }
 
-.party-icons .footer-icon-link.tiktok:hover {
-  color: #00f2ea;
+/* ----------------------------------------------------- */
+/*  SMART COLOR SYSTEM (Erkennt Farbe anhand des Links)  */
+/* ----------------------------------------------------- */
+
+/* INSTAGRAM (Pink/Lila) */
+.party-icons a[href*="insta"]:hover,
+.footer-icons a[href*="insta"]:hover {
+  color: #e1306c !important;
 }
-.party-icons .footer-icon-link.insta:hover {
-  color: #e1306c;
+
+/* TIKTOK (Cyan) */
+.party-icons a[href*="tiktok"]:hover,
+.footer-icons a[href*="tiktok"]:hover {
+  color: #00f2ea !important;
+}
+
+/* YOUTUBE (Rot) */
+.party-icons a[href*="youtube"]:hover,
+.footer-icons a[href*="youtube"]:hover {
+  color: #ff0000 !important;
 }
 
 /* ==================== RECHTLICHES (Ganz unten) ==================== */
