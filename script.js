@@ -369,7 +369,7 @@ const pages = {
   daniel_guenther: "/cducsu/guenther/",
   guenther: "/cducsu/guenther/",
   nius: "/cducsu/guenther/#nius_lanz",
-  zensur: "/cducsu/guenther/#nius_lanz",
+  zensur_guenther: "/cducsu/guenther/#nius_lanz",
   pressefreiheit: "/cducsu/guenther/#nius_lanz",
   oerr: "/oerr/",
   ard: "/oerr/",
