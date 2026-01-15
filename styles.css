@@ -926,6 +926,31 @@ body {
   border: 0;
 }
 
+/* ==================== HERO VIDEO (STARTSEITE) ==================== */
+/* Basiert auf .video-container, aber zentriert und ohne Maske */
+.hero-video-container {
+  width: 100%;
+  max-width: 900px; /* Gleiche Breite wie deine großen Videos */
+  margin: 2rem auto; /* WICHTIG: 'auto' zentriert das Video horizontal */
+
+  border-radius: 15px; /* Deine Standard-Rundung */
+  overflow: hidden;
+
+  /* Stärkerer Schatten, damit es auf dem Hero-Blau "schwebt" */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border: 4px solid rgba(255, 255, 255, 0.5); /* Edler, weißer Rahmen */
+
+  /* Moderne Seitenverhältnis-Regel (wie in deinem anderen Code) */
+  aspect-ratio: 16 / 9;
+  background: black;
+}
+
+.hero-video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* Kleiner Video-Container (nur Layout) */
 .smallvideo-container {
   display: flex;
