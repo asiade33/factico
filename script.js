@@ -362,9 +362,10 @@ const pages = {
   oerr: "/örr/",
   ard: "/örr/",
   zdf: "/örr/",
-  pflanzensprengstoff: "ÖRR (Pflanzensprengstoff)", // So sieht der Nutzer sofort, wo es hingeht
-  pflanze: "ÖRR (Pflanzensprengstoff)",
-  faktenfinder: "ÖRR (Faktenfinder)",
+  pflanzensprengstoff: "/oerr/",
+  pflanze: "/oerr/",
+  c4: "/oerr/",
+  faktenfinder: "/oerr/",
   meinungsfreiheit_habeck: "/gruene/habeck/",
   meinungsfreiheit_faeser: "/spd/faeser/",
   meinungsfreiheit_masz: "/fdp/strack-zimmermann/",
