@@ -269,6 +269,10 @@ const customSearchResults = {
   zdf: "ÖRR",
   beitrag: "ÖRR",
   zwangsgebühr: "ÖRR",
+  pflanzensprengstoff: "ÖRR (Pflanzensprengstoff)",
+  pflanze: "ÖRR (Pflanzensprengstoff)",
+  c4: "ÖRR (Pflanzensprengstoff)",
+  faktenfinder: "ÖRR (Faktenfinder)",
   meinungsfreiheit_habeck: "Robert Habeck (Schwachkopf-Affäre)",
   meinungsfreiheit_faeser: "Nancy Faeser (Demokratiefördergesetz)",
   meinungsfreiheit_masz: "Marie-Agnes Strack-Zimmermann (Anzeigenhauptmeister)",
@@ -360,7 +364,6 @@ const pages = {
   zdf: "/örr/",
   pflanzensprengstoff: "ÖRR (Pflanzensprengstoff)", // So sieht der Nutzer sofort, wo es hingeht
   pflanze: "ÖRR (Pflanzensprengstoff)",
-  c4: "ÖRR (Pflanzensprengstoff)",
   faktenfinder: "ÖRR (Faktenfinder)",
   meinungsfreiheit_habeck: "/gruene/habeck/",
   meinungsfreiheit_faeser: "/spd/faeser/",
