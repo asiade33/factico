@@ -183,7 +183,7 @@ if (institutionGrid) {
 const searchInput = document.getElementById("searchInput");
 const searchResults = document.getElementById("searchResults");
 
-// Zuordnung für benutzerdefinierte Suchen
+// Zuordnung für benutzerdefinierte Suchen (Display-Namen)
 const customSearchResults = {
   spd: "SPD",
   cdu: "CDU/CSU",
@@ -206,6 +206,8 @@ const customSearchResults = {
   die_linke: "Die Linke",
   olaf_scholz: "Olaf Scholz",
   scholz: "Olaf Scholz",
+  cum_ex: "Olaf Scholz",
+  Hafenfest: "Olaf Scholz",
   alice_weidel: "Alice Weidel",
   weidel: "Alice Weidel",
   katrin_goering_eckardt: "Katrin Göring-Eckardt",
@@ -269,7 +271,7 @@ const customSearchResults = {
   zwangsgebühr: "ÖRR",
 };
 
-// Seiten-Verlinkungen (angepasst, um alle Keys abzudecken)
+// Seiten-Verlinkungen (Ziel-URLs)
 const pages = {
   spd: "/spd/", // Partei SPD
   cdu: "/cducsu/", // Partei CDU
@@ -292,6 +294,8 @@ const pages = {
   die_linke: "/linke/", // Partei Die Linke
   olaf_scholz: "/spd/scholz/", // Politiker Olaf Scholz (SPD)
   scholz: "/spd/scholz/", // Olaf Scholz (SPD)
+  hafenfest: "/spd/scholz/", // Olaf Scholz (SPD)
+  cum_ex: "/spd/scholz/", // Olaf Scholz (SPD)
   lars_klingbeil: "/spd/klingbeil/", // Lars Klingbeil (SPD)
   klingbeil: "/spd/klingbeil/", // Lars Klingbeil (SPD)
   saskia_esken: "/spd/esken/", // Saskia Esken (SPD)
@@ -345,9 +349,13 @@ const pages = {
   anzeigenhauptmeister: "/fdp/strack-zimmermann/",
   masz: "/fdp/strack-zimmermann/",
   kriegstreiber: "/fdp/strack-zimmermann/",
-  oerr: "/oerr/",
-  ard: "/oerr/",
-  zdf: "/oerr/",
+  oerr: "/örr/",
+  ard: "/örr/",
+  zdf: "/örr/",
+  pflanzensprengstoff: "ÖRR (Pflanzensprengstoff)", // So sieht der Nutzer sofort, wo es hingeht
+  pflanze: "ÖRR (Pflanzensprengstoff)",
+  c4: "ÖRR (Pflanzensprengstoff)",
+  faktenfinder: "ÖRR (Faktenfinder)",
 };
 
 // Normalisiert die Eingabe umfassend
@@ -478,28 +486,30 @@ searchInput.addEventListener("keydown", (e) => {
 
 // Format names
 function formatName(name, query) {
+  const lowerName = name.toLowerCase();
+
+  // 1. Priorität: Custom Search Results (Unsere schönen Namen wie "ÖRR")
+  // WICHTIG: Das muss GANZ OBEN stehen, damit "oerr" sofort zu "ÖRR" wird.
+  if (customSearchResults[lowerName]) {
+    return customSearchResults[lowerName];
+  }
+
+  // 2. Liste für automatische Großschreibung (Nur noch als Fallback)
   const uppercaseNames = [
     "spd",
     "cdu/csu",
     "fdp",
     "afd",
     "bsw",
-    "örr",
-    "oerr",
-    "ard",
-    "zdf",
+    // "oerr" hier rausnehmen oder drin lassen, ist egal,
+    // da Schritt 1 es jetzt eh abfängt.
   ];
 
-  if (uppercaseNames.includes(name.toLowerCase())) {
+  if (uppercaseNames.includes(lowerName)) {
     return name.toUpperCase();
   }
 
-  // Priorität: Custom Search Results (Schönere Namen aus der Liste oben)
-  if (customSearchResults[name.toLowerCase()]) {
-    return customSearchResults[name.toLowerCase()];
-  }
-
-  // Fallback: Erster Buchstabe groß
+  // 3. Fallback: Erster Buchstabe groß
   return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
