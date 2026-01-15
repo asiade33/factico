@@ -269,6 +269,12 @@ const customSearchResults = {
   zdf: "ÖRR",
   beitrag: "ÖRR",
   zwangsgebühr: "ÖRR",
+  meinungsfreiheit_habeck: "Robert Habeck (Schwachkopf-Affäre)",
+  meinungsfreiheit_faeser: "Nancy Faeser (Demokratiefördergesetz)",
+  meinungsfreiheit_masz: "Marie-Agnes Strack-Zimmermann (Anzeigenhauptmeister)",
+  zensur_habeck: "Robert Habeck",
+  zensur_faeser: "Nancy Faeser",
+  zensur_masz: "Marie-Agnes Strack-Zimmermann",
 };
 
 // Seiten-Verlinkungen (Ziel-URLs)
@@ -356,6 +362,12 @@ const pages = {
   pflanze: "ÖRR (Pflanzensprengstoff)",
   c4: "ÖRR (Pflanzensprengstoff)",
   faktenfinder: "ÖRR (Faktenfinder)",
+  meinungsfreiheit_habeck: "/gruene/habeck/",
+  meinungsfreiheit_faeser: "/spd/faeser/",
+  meinungsfreiheit_masz: "/fdp/strack-zimmermann/",
+  zensur_habeck: "/gruene/habeck/",
+  zensur_faeser: "/spd/faeser/",
+  zensur_masz: "/fdp/strack-zimmermann/",
 };
 
 // Normalisiert die Eingabe umfassend
