@@ -304,8 +304,9 @@ const pages = {
   die_linke: "/linke/", // Partei Die Linke
   olaf_scholz: "/spd/scholz/", // Politiker Olaf Scholz (SPD)
   scholz: "/spd/scholz/", // Olaf Scholz (SPD)
-  hafenfest: "/spd/scholz/", // Olaf Scholz (SPD)
-  cum_ex: "/spd/scholz/", // Olaf Scholz (SPD)
+  hafenfest: "/spd/scholz/#hafenfest",
+  cum_ex: "/spd/scholz/#cumex", // Olaf Scholz (SPD)
+  wirecard: "/spd/scholz/#wirecard",
   lars_klingbeil: "/spd/klingbeil/", // Lars Klingbeil (SPD)
   klingbeil: "/spd/klingbeil/", // Lars Klingbeil (SPD)
   saskia_esken: "/spd/esken/", // Saskia Esken (SPD)
@@ -362,10 +363,10 @@ const pages = {
   oerr: "/oerr/",
   ard: "/oerr/",
   zdf: "/oerr/",
-  pflanzensprengstoff: "/oerr/",
-  pflanze: "/oerr/",
-  c4: "/oerr/",
-  faktenfinder: "/oerr/",
+  pflanzensprengstoff: "/oerr/#pflanzensprengstoff",
+  pflanze: "/oerr/#pflanzensprengstoff",
+  c4: "/oerr/#pflanzensprengstoff",
+  faktenfinder: "/oerr/#pflanzensprengstoff",
   meinungsfreiheit_habeck: "/gruene/habeck/",
   meinungsfreiheit_faeser: "/spd/faeser/",
   meinungsfreiheit_masz: "/fdp/strack-zimmermann/",
