@@ -951,6 +951,29 @@ body {
   border: none;
 }
 
+/* ==================== DUAL VIDEO GRID ==================== */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 2rem; 
+  width: 100%;
+  max-width: 1200px; 
+  margin: 2rem auto 0 auto;
+}
+
+.video-grid .hero-video-container {
+  margin: 0; 
+  max-width: 100%; 
+}
+
+.video-caption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  text-align: center; 
+  line-height: 1.4;
+}
+
 /* Kleiner Video-Container (nur Layout) */
 .smallvideo-container {
   display: flex;
