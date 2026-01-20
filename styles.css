@@ -974,6 +974,22 @@ body {
   line-height: 1.4;
 }
 
+/* Sauberes NEU-Badge */
+.badge-new {
+  display: inline-block;
+  background-color: #cc0000; /* YouTube Rot (oder dein #d32f2f) */
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 12px; /* Pillenform */
+  margin-left: 8px;
+  vertical-align: middle;
+  transform: translateY(-1px); /* Optische Korrektur der Höhe */
+}
+
 /* Kleiner Video-Container (nur Layout) */
 .smallvideo-container {
   display: flex;
